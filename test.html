@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Section</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #fdfdfd;
+      font-family: Arial, sans-serif;
+    }
+    .faq-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .faq-section h2 {
+      font-weight: bold;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    .faq-section h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: orange;
+      display: block;
+      margin: 10px auto 0;
+    }
+    .accordion-button:not(.collapsed) {
+      color: orange;
+      font-weight: bold;
+      background-color: #fff;
+      box-shadow: none;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: orange;
+    }
+    .accordion-item {
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="faq-section container">
+    <h2>FAQ (Frequently Asked Questions)</h2>
+
+    <div class="accordion" id="faqAccordion">
+      <!-- Q1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            Q1. Is Skillwaala course really free?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <strong>Ans:</strong> Yes, Skillwaala courses are 100% free, with no hidden charges or subscription fees. We are India’s education mentors for IT-Btech in "pay what it’s worth" style, where we empower learners by providing free quality education in Web Development, Programming, and Full-Stack courses.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            Q2. Will I get a certificate after completing the course?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, Skillwaala provides certificates after successful completion of the course.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            Q3. How can we enroll in Skillwaala’s courses?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can enroll directly by visiting the official Skillwaala website.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            Q4. Is there internship opportunities available?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, after completion of courses, Skillwaala provides internships for deserving students.
+          </div>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            Q5. Can I learn courses as a fresher or student?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely! Our courses are designed for beginners, students, and even working professionals.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

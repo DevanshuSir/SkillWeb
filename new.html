@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skillwaala</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fff7f5, #fefefe);
+    }
+  .navbar {
+  background: #fff;
+  padding: 10px 25px;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+  
+}
+
+.custom-nav {
+border: 2px solid #ccc;
+border-radius: 15px;
+padding: 2px 10px;
+margin: 2px;
+}
+
+.custom-nav .nav-link {
+  font-weight: 500;
+  color: #333 ;
+  padding: 6px 12px;
+  
+  
+}
+
+.custom-nav .nav-link:hover{
+     color: #F26434;
+}
+
+.custom-nav .divider {
+  color: #F26434;
+  font-size: 20px;
+  margin: 0 6px;
+}
+
+.btn-login {
+  border: 1px solid #f36f45;
+  color: #f36f45;
+  border-radius: 10px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-login:hover {
+  background: #f36f45;
+  color: #fff;
+}
+
+    .hero-section {
+      padding: 80px 0;
+    }
+    .hero-section h1 {
+      font-weight: 700;
+      color: #222;
+    }
+    .hero-section p {
+      color: #555;
+      margin: 15px 0 25px;
+    }
+    .btn-orange {
+      background: #f36f45;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn-orange:hover {
+      background: #d9552d;
+      color: #fff;
+    }
+    .phone-mockup {
+      position: relative;
+      text-align: center;
+    }
+    .phone-mockup img {
+      max-width: 280px;
+      z-index: 2;
+      position: relative;
+    }
+
+
+    /* Skillwaala Section */
+.skillwaala-section {
+  background: #ffffff; /* peach bg same as screenshot */
+  padding: 60px 20px; /* spacing from top-bottom */
+}
+
+/* White Card */
+.skillwaala-section .card {
+  display: flex;
+  background: #fce5dc;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  margin: 0 auto; /* center card inside section */
+  padding: 30px;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Left Image */
+.skillwaala-section .left img {
+  width: 500px;
+  border-radius: 12px;
+}
+
+/* Right Content */
+.skillwaala-section .right {
+  flex: 2;
+}
+
+.skillwaala-section .right .skill {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.skillwaala-section .right h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.skillwaala-section .right h3 {
+  font-size: 18px;
+  color: #ff6600;
+  margin-bottom: 18px;
+}
+
+.skillwaala-section .right p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Features */
+.skillwaala-section .features {
+  margin-bottom: 22px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.skillwaala-section .features ul {
+  list-style: none;
+}
+
+.skillwaala-section .features li {
+  margin-bottom: 7px;
+  font-size: 14px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.skillwaala-section .features li::before {
+  content: "✔";
+  color: #ff6600;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+/* CTA Button */
+.skillwaala-section .cta {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block; /* button ko block banaya */
+  margin: 0 auto; /* horizontal center */
+}
+
+.skillwaala-section .cta:hover {
+  background: #e65c00;
+}
+
+
+ .course_section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #d35400;
+      margin: 10px auto 0;
+      border-radius: 4px;
+    }
+
+    .courses-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .arrow {
+      font-size: 32px;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    .arrow:hover {
+      color: #d35400;
+      transform: scale(1.2);
+    }
+
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .tag.blue { background: linear-gradient(to right, #007bff, #00c6ff); }
+    .tag.green { background: linear-gradient(to right, #28a745, #5efc82); }
+    .tag.purple { background: linear-gradient(to right, #6f42c1, #d633ff); }
+
+    .course-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .course-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+      /* Trending Section */
+    .trending-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      border-radius: 20px;
+      background: #fcebe7;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .trending-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c2c2c;
+    }
+
+    .trending-section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    /* Course Card */
+    .course-card {
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.3s;
+      min-height: 160px;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .course-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .course-card p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* Background variations */
+    .gray-card {
+      background: #e6e6e6;
+    }
+
+    .white-card {
+      background: #fff;
+    }
+
+    /* Enroll Now Button */
+    .enroll-box button {
+      background: #ff3b2d;
+      color: #fff;
+      border: none;
+      padding: 14px 40px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .enroll-box button:hover {
+      background: #e23327;
+    }
+
+
+    
+    .training-section {
+      max-width: 1100px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .training-section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    /* Nav Buttons */
+    .nav-pills .nav-link {
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 600;
+      color: #fff;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .nav-pills .nav-link.active {
+      transform: scale(1.05);
+    }
+
+    .nav-digital { background: #007bff; }
+    .nav-content { background: #28a745; }
+    .nav-animation { background: #8e44ad; }
+
+    /* Program Box */
+    .program-box {
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      color: #fff;
+    }
+
+    .program-box h5 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .program-box p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .program-box button {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .program-box button:hover {
+      opacity: 0.9;
+    }
+
+    /* List Animation */
+    .features-list li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      opacity: 0;
+       text-align: left;     
+      transform: translateY(10px);
+      animation: fadeInUp 0.6s forwards;
+      position: relative;
+      padding-left: 22px;
+    }
+
+     .features-list li::before{
+      content: "✔";
+  color: #ff6600;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0;
+     }
+
+    .features-list li:nth-child(1) { animation-delay: 0.2s; }
+    .features-list li:nth-child(2) { animation-delay: 0.4s; }
+    .features-list li:nth-child(3) { animation-delay: 0.6s; }
+    .features-list li:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Box Colors same as button */
+    .digital-box { background: #007bff; }
+    .content-box { background: #28a745; }
+    .animation-box { background: #8e44ad; }
+
+
+
+    .course-college .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border: none;
+      transition: transform 0.3s ease;
+    }
+     .course-college .card:hover {
+      transform: translateY(-5px);
+    }
+     .course-college .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+     .course-college .card ul li {
+      text-align: left;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+     .course-college .card ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+    }
+     .course-college .btn-custom-blue {
+      background-color: #2563eb;
+      color: white;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 500;
+    }
+    .course-college .btn-custom-blue:hover {
+      background-color: #1d4ed8;
+      color: #fff;
+    }
+     .course-college .btn-custom-green {
+      background-color: #16a34a;
+      color: white;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 500;
+    }
+     .course-college .btn-custom-green:hover {
+      background-color: #15803d;
+      color: #fff;
+    }
+    .trusted-section {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-top: 40px;
+    }
+    .trusted-section h4 {
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    .trusted-logo {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    .trusted-logo i {
+      font-size: 24px;
+      color: #2563eb;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+
+    
+    .testimonial-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .testimonial-section h2 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-section p {
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    /* Logos */
+     .testimonial-section .logos img {
+      height: 30px;
+      margin: 0 15px;
+    }
+
+    /* Cards */
+     .testimonial-section .testimonial-card {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      margin-bottom: 20px;
+      height: 100%;
+    }
+
+     .testimonial-section .stars {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+     .testimonial-section .testimonial-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+     .testimonial-section .author {
+      font-weight: bold;
+    }
+
+     .testimonial-section .role {
+      font-size: 13px;
+      color: #eaeaea;
+    }
+
+    /* CTA */
+     .testimonial-section .cta-btn {
+      background-color: orange;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+     .testimonial-section .cta-btn:hover {
+      background-color: darkorange;
+    }
+
+
+    footer {
+      background: #fff5ef;
+      color: #333;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .footer-logo img {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+      font-size: 14px;
+      margin: 4px 0;
+      color: #444;
+    }
+
+    .footer-logo a {
+      color: #e65a29;
+      text-decoration: none;
+      margin: 0 4px;
+      font-size: 14px;
+    }
+
+    .footer-logo a:hover {
+      color: #ff5722;
+    }
+
+    .footer-column h3 {
+      background: #f6d5c4;
+      text-align: center;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      background: #ffe9e1;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .footer-column ul li {
+      margin: 8px 0;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ff5722;
+    }
+
+    .footer-bottom {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .footer-contacts {
+      background: #ff5722;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .footer-contacts p {
+      margin: 0;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .courses-wrapper {
+        flex-direction: column;
+      }
+      .arrow {
+        display: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+  .custom-nav {
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .custom-nav .divider {
+    display: none; /* Mobile me divider hide kar diya */
+  }
+
+  .custom-nav .nav-link {
+    padding: 10px;
+    width: 100%; /* poore width me aa jayega */
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+    
+  </style>
+</head>
+<body>
+
+<!-- Navbar --> 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="./media/ok quality logo.png" alt="Logo" width="40" >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Skill Space</a></li>
+        <span class="divider">|</span>
+        <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+        <span class="divider">|</span>
+        <li class="nav-item"><a class="nav-link" href="#">Internship</a></li>
+        <span class="divider">|</span>
+        <li class="nav-item"><a class="nav-link" href="#">Hire from us</a></li>
+        <span class="divider">|</span>
+        <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+        <span class="divider">|</span>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+      </ul>
+      <a href="#" class="btn btn-login">Login</a>
+    </div>
+  </div>
+</nav>
+
+ 
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-md-6">
+        <h1>Skillwaala – Free Courses to Build Your Digital Career</h1>
+        <p>Upskill for Free. Learn From Experts. Build Your Future <br>
+        Skillwaala is a free education initiative by a reputed IT company – BR Softech.</p>
+        <a href="#" class="btn-orange">Explore Our FREE Courses</a>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-md-6 text-center phone-mockup">
+        <!-- Phone Mockup -->
+        <img src="./media/web icon design.png" alt="Phone Mockup">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Skillwaala Section -->
+  <section class="skillwaala-section">
+    <div class="card">
+      <div class="row align-items-center g-4">
+        <!-- Left Section (Image) -->
+        <div class="col-lg-5 col-md-6 text-center left">
+          <img src="./media/girl.png" alt="Skillwaala Student" class="img-fluid"/>
+        </div>
+
+        <!-- Right Section (Content) -->
+        <div class="col-lg-7 col-md-6 right">
+          <div class="skill">
+            <h2>Skillwaala - The Future of Free Learning</h2>
+            <h3>Get Certified At Zero Cost</h3>
+            <p>
+              <b>Skillwaala</b>, powered by <b>BR Softech</b>, is redefining
+              education by making career focused courses 100% free. We are not
+              just another learning platform; it’s your launchpad to a career in
+              the corporate world. From Digital Marketing and Content Writing to
+              Animation and Web Development, our AI-driven programs are designed
+              to make you <b>job-ready</b> for the real world.
+            </p>
+          </div>
+
+          <!-- Features Box -->
+          <div class="features row">
+            <div class="col-md-6">
+              <ul>
+                <li>Free Courses with No Hidden Costs</li>
+                <li>Learn Directly from Industry Experts</li>
+                <li>Certification Backed by BR Softech</li>
+                <li>Exclusive Offline Internship Program</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Career Counselling</li>
+                <li>Live Mentorship</li>
+                <li>Placement Assistance</li>
+                <li>Interview Preparation</li>
+              </ul>
+            </div>
+          </div>
+
+        
+
+          <!-- CTA Button -->
+          <button class="cta">Start Your Upskilling Journey Now</button>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+
+    <!-- ✅ Courses Section -->
+  <section class="course_section">
+    <h2 class="section-title">Explore Our In-Demand Courses</h2>
+
+    <div class="courses-wrapper">
+      <div class="arrow">&#9664;</div> <!-- Left Arrow -->
+
+      <div class="courses-container">
+        <div class="course-card">
+          <span class="tag blue">Digital Marketing</span>
+          <h3>Digital Marketing Mastery Program</h3>
+          <p>Master SEO, social media, paid ads, and analytics with our Digital Marketing course. Learn how to create campaigns that deliver results and become job-ready.</p>
+        </div>
+
+        <div class="course-card">
+          <span class="tag green">Content Writing</span>
+          <h3>Content Writing Course</h3>
+          <p>Create impact with your words. Our Content Writing course covers blogging, copywriting, and AI-assisted writing techniques for a thriving career.</p>
+        </div>
+
+        <div class="course-card">
+          <span class="tag purple">Animation</span>
+          <h3>Complete Animation Program</h3>
+          <p>Unleash your creativity with 2D/3D animation, motion graphics, video editing, and industry tools to create engaging visuals for films, games, and digital platforms.</p>
+        </div>
+      </div>
+
+      <div class="arrow">&#9654;</div> <!-- Right Arrow -->
+    </div>
+  </section>
+
+    <section class="trending-section">
+    <h2>Trending Courses to Jumpstart Your Career</h2>
+    <p>
+      Explore the hottest courses at Skillwaala, designed to give you hands-on
+      skills for the modern digital world.
+    </p>
+
+    <!-- Course Cards Grid (Bootstrap Grid) -->
+    <div class="container">
+      <div class="row g-4">
+        <!-- Top Row (Gray Cards) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card gray-card h-100">
+            <h3>Canva Design Essentials</h3>
+            <p>
+              Master Canva to create stunning visuals, social media posts,
+              presentations, and marketing material.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card gray-card h-100">
+            <h3>Miro Mastery</h3>
+            <p>
+              Learn to use Miro for team collaboration, mind mapping, and project
+              planning like a pro.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card gray-card h-100">
+            <h3>Scripting & Screenwriting Fundamentals</h3>
+            <p>
+              Learn how to craft compelling stories for films, web series, and
+              digital content. Transform your ideas into professional scripts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Row (White Cards) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card white-card h-100">
+            <h3>Figma UI/UX Design</h3>
+            <p>
+              A must-have skill for digital designers. Get hands-on experience
+              designing websites and apps with Figma.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card white-card h-100">
+            <h3>AI Tools Mastery</h3>
+            <p>
+              Explore cutting-edge AI tools for content creation, automation, and
+              productivity enhancement to stay ahead in your career.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="course-card white-card h-100">
+            <h3>DaVinci Resolve</h3>
+            <p>
+              Discover how to edit videos like a pro with DaVinci Resolve, the
+              industry’s go-to software for content creators.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enroll Now Button -->
+      <div class="enroll-box mt-4 text-center">
+        <button>Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+    <section class="training-section p-4">
+    <h2 class="section-title"  >Skillwaala’s Offline Training Programs</h2>
+
+    <!-- Nav Pills -->
+    <ul class="nav nav-pills justify-content-center mb-4" id="programTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link nav-digital active" id="digital-tab" data-bs-toggle="pill" data-bs-target="#digital" type="button" role="tab">Digital Marketing</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link nav-content" id="content-tab" data-bs-toggle="pill" data-bs-target="#content" type="button" role="tab">Content Writing</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link nav-animation" id="animation-tab" data-bs-toggle="pill" data-bs-target="#animation" type="button" role="tab">Animation</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      
+      <!-- Digital Marketing -->
+      <div class="tab-pane fade show active" id="digital" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <div class="program-box digital-box">
+              <h5>📊 Digital Marketing Training Program</h5>
+              <p>
+                Step into the world of digital marketing with our training program
+                designed for practical exposure. Apply your knowledge with Skillwaala’s
+                real campaigns and projects.
+              </p>
+              <button class="form-control">Apply for Training Program</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="features-list list-unstyled">
+              <li> Hands-on experience with SEO, SEM, and social media campaigns</li>
+              <li> Work on real client projects and marketing strategies</li>
+              <li> Earn certificates from Skillwaala</li>
+              <li> Mentorship from experienced professionals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Writing -->
+      <div class="tab-pane fade" id="content" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <div class="program-box content-box">
+              <h5>✍️ Content Writing Training Program</h5>
+              <p>
+                Develop powerful writing skills to create engaging blogs, web content,
+                and marketing material. Build a strong portfolio to start your career.
+              </p>
+              <button class="form-control">Apply for Training Program</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="features-list list-unstyled">
+              <li> Learn SEO-based content writing</li>
+              <li> Work on real brand writing assignments</li>
+              <li> Portfolio building with expert feedback</li>
+              <li> Internship opportunities for top students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animation -->
+      <div class="tab-pane fade" id="animation" role="tabpanel">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <div class="program-box animation-box">
+              <h5>🎨 Animation Training Program</h5>
+              <p>
+                Learn professional animation tools and techniques. Master 2D/3D
+                animation, motion graphics, and visual storytelling.
+              </p>
+              <button class="form-control">Apply for Training Program</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="features-list list-unstyled">
+              <li> Hands-on with industry tools (After Effects, Blender, etc.)</li>
+              <li> Work on real creative projects</li>
+              <li> Showcase work in Skillwaala’s portfolio platform</li>
+              <li> Learn from expert animators</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="course-college">
+     <div class="container py-5">
+    <div class="row g-4">
+      <!-- First Card -->
+      <div class="col-md-6">
+        <div class="card p-4 h-100">
+          <h5><i class="bi bi-journal-text"></i> Course + Internship</h5>
+          <p class="text-muted">This internship is exclusively for Skillwaala course learners. It allows students to apply what they have learned in our comprehensive online courses.</p>
+          <ul>
+            <li>Hands-on experience aligned with your Skillwaala course</li>
+            <li>Mentorship from industry professionals</li>
+            <li>Portfolio-ready projects and real-world exposure</li>
+            <li>Earn certifications to boost your career</li>
+          </ul>
+          <div class="mt-3">
+            <button class="btn btn-custom-blue w-100">Apply For Training Program</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="col-md-6">
+        <div class="card p-4 h-100">
+          <h5><i class="bi bi-mortarboard"></i> College Students Internship</h5>
+          <p class="text-muted">This internship program is designed for college students who require mandatory internships, providing real industry exposure for learners pursuing B.Tech, BCA, MCA, M.Tech or any other degree.</p>
+          <ul>
+            <li>Internships aligned with your degree requirements</li>
+            <li>Work on live projects under expert guidance</li>
+            <li>Certificates recognized by top MNCs</li>
+            <li>Exposure to the corporate world</li>
+          </ul>
+          <div class="mt-3">
+            <button class="btn btn-custom-green w-100">Apply For Training Program</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trusted Section -->
+    <div class="trusted-section mt-5">
+      <h4 class="text-center">Trusted by Leading <span class="text-primary">Colleges</span> & Institutions</h4>
+      <div class="row text-center justify-content-center">
+        <div class="col-6 col-md-2 trusted-logo">
+          <i class="bi bi-award"></i>
+          Biyani Group Of Colleges
+        </div>
+        <div class="col-6 col-md-2 trusted-logo">
+          <i class="bi bi-award"></i>
+          Banasthali Vidyapith
+        </div>
+        <div class="col-6 col-md-2 trusted-logo">
+          <i class="bi bi-award"></i>
+          Leeds University
+        </div>
+        <div class="col-6 col-md-2 trusted-logo">
+          <i class="bi bi-award"></i>
+          SRIT
+        </div>
+        <div class="col-6 col-md-2 trusted-logo">
+          <i class="bi bi-award"></i>
+          APEX
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+   <section class="testimonial-section">
+    <div class="container">
+      <h2>Hear From Our Learners</h2>
+      <p>
+        At Skillwaala, nothing speaks louder than the success of our learners. From students to working professionals, thousands have upskilled and built their careers through our free online courses and certificates.
+      </p>
+
+      <!-- Logos -->
+      <div class="logos mb-4">
+        <img src="./media/Google-Review-Logo.png" alt="Google">
+        <img src="./media/t_udemy-new-20212512.png" alt="Udemy">
+        <img src="./media/Trustpilot-Logo.png" alt="Trustpilot">
+      </div>
+
+      <!-- Cards -->
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>The Content Writing course exceeded my expectations. The instructors are industry experts and the curriculum is very comprehensive.</p>
+            <hr>
+            <div class="author">Rajesh Kumar</div>
+            <div class="role">Content Writer</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>The Content Writing course exceeded my expectations. The instructors are industry experts and the curriculum is very comprehensive.</p>
+            <hr>
+            <div class="author">Rajesh Kumar</div>
+            <div class="role">Content Writer</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>The Content Writing course exceeded my expectations. The instructors are industry experts and the curriculum is very comprehensive.</p>
+            <hr>
+            <div class="author">Rajesh Kumar</div>
+            <div class="role">Content Writer</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>The Content Writing course exceeded my expectations. The instructors are industry experts and the curriculum is very comprehensive.</p>
+            <hr>
+            <div class="author">Rajesh Kumar</div>
+            <div class="role">Content Writer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-4">
+        <button class="cta-btn">Apply for Course Internship</button>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer>
+    <div class="container py-5">
+      <div class="row g-4">
+        
+        <!-- First Column -->
+        <div class="col-lg-3 col-md-6 footer-logo">
+          <img src="./media/ok quality logo.png" alt="Skillwaala Logo">
+          <p><strong>Social Links:</strong></p>
+          <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">LinkedIn</a> |
+            <a href="#">WhatsApp</a>
+          </p>
+          <p><strong>Email:</strong> info@skillwaala.com</p>
+          <p><strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar, Jaipur</p>
+          <p><strong>Contact:</strong> +91 7705697799</p>
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-lg-2 col-md-6 footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Web Stories</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Third Column -->
+        <div class="col-lg-4 col-md-6 footer-column">
+          <h3>Trending Courses</h3>
+          <div class="row g-3">
+            <div class="col-6">
+              <ul>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">SEO Course</a></li>
+                <li><a href="#">Social Media Marketing</a></li>
+                <li><a href="#">Performance Marketing</a></li>
+                <li><a href="#">Animation Course</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Video Editing</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li><a href="#">Content Writing</a></li>
+                <li><a href="#">Full-Stack Web Dev</a></li>
+                <li><a href="#">English Spoken</a></li>
+                <li><a href="#">Mobile App Dev</a></li>
+                <li><a href="#">Data Science</a></li>
+                <li><a href="#">Business Analyst</a></li>
+                <li><a href="#">2D Animation</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Column -->
+        <div class="col-lg-3 col-md-6 footer-column">
+          <h3>Industrial Trainings</h3>
+          <ul>
+            <li><a href="#">B.Tech</a></li>
+            <li><a href="#">M.Tech</a></li>
+            <li><a href="#">BCA</a></li>
+            <li><a href="#">MCA</a></li>
+            <li><a href="#">B.Sc</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+      <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+    </div>
+
+    <!-- Contacts Strip -->
+    <div class="footer-contacts">
+      <p>Business No: +91 7780879789</p>
+      <p>Email: info@skillwaala.com</p>
+      <p>Email: hr@skillwaala.com</p>
+    </div>
+  </footer>
+  
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
