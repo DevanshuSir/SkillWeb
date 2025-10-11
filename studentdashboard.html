@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Dashboard</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/studentdashboard.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar hide" id="sidebar">
+      <div class="brand">
+        <img src="https://via.placeholder.com/36x36.png?text=S" alt="logo" />
+        <div>
+          <div style="font-weight: 700">SKILLWAALA</div>
+          <div class="small text-muted">Instructor</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section-title">Main Menu</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link active"
+          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-people"></i> Total Student Enroll</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-book"></i> Active Courses</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-calendar"></i> Upcoming Live Classes</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-question-circle"></i> Community Quarry</a
+        >
+      </nav>
+
+      <div class="section-title mt-3">Account</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
+        <a href="#" class="nav-link"
+          ><i class="bi bi-box-arrow-right"></i> Logout</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-life-preserver"></i> Support</a
+        >
+      </nav>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle-btn" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / Dashboard</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <input
+              class="form-control form-control-sm"
+              style="width: 220px"
+              placeholder="Search..."
+            />
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-4">Welcome, Ranjeet Singh!</h6>
+              <div class="small text-light">Student</div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-light btn-sm">Became an Instructor</button>
+            <button class="btn btn-danger btn-sm">Instrustor Dashboard</button>
+          </div>
+        </div>
+
+        <div class="stats-row mt-3">
+          <div class="stat-card">
+            <div>
+              <div>Enroll Courses</div>
+              <h5>12</h5>
+            </div>
+            <i
+              class="bi bi-journal-bookmark bg-danger px-2 py-1 opacity-75 text-light rounded"
+            ></i>
+          </div>
+          <div class="stat-card">
+            <div>
+              <div>Completed Courses</div>
+              <h5>08</h5>
+            </div>
+            <i
+              class="bi bi-play-circle bg-success px-2 py-1 opacity-75 text-light rounded"
+            ></i>
+          </div>
+          <div class="stat-card">
+            <div>
+              <div>Learning Hours</div>
+              <h5>38H</h5>
+            </div>
+            <i
+              class="bi bi-check2-circle bg-info px-2 py-1 opacity-75 text-light rounded"
+            ></i>
+          </div>
+          <div class="stat-card">
+            <div>
+              <div>Average Score</div>
+              <h5>92%</h5>
+            </div>
+            <i
+              class="bi bi-people bg-warning px-2 py-1 opacity-75 text-light rounded"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <div class="details container-fluid py-4 px-3">
+        <div class="row g-4 dashboard-row">
+          <!-- Left Column -->
+          <div class="col-lg-8">
+            <!-- Continue Learning -->
+            <div class="card mb-4 p-4">
+              <h5 class="fw-semibold">Continue Learning</h5>
+              <p class="text-muted mb-4">Pick up where you left off</p>
+
+              <div class="d-flex flex-column gap-3">
+                <div class="course-card card p-3">
+                  <i class="bi bi-play-circle-fill"></i>
+                  <div>
+                    <h6 class="mb-1 fw-semibold">
+                      Complete UI/UX Design Course
+                    </h6>
+                    <small class="text-muted">
+                      Module 4 – Color Theory & Typography
+                    </small>
+                  </div>
+                  <div class="ms-auto text-end">
+                    <small class="text-muted">14 mins left</small>
+                  </div>
+                </div>
+
+                <div class="course-card card p-3">
+                  <i class="bi bi-play-circle-fill"></i>
+                  <div>
+                    <h6 class="mb-1 fw-semibold">
+                      Complete UI/UX Design Course
+                    </h6>
+                    <small class="text-muted">
+                      Module 5 – Design Systems & Prototyping
+                    </small>
+                  </div>
+                  <div class="ms-auto text-end">
+                    <small class="text-muted">22 mins left</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-4">
+                <button class="btn btn-primary px-4 py-2">
+                  View All Course
+                </button>
+              </div>
+            </div>
+
+            <!-- Learning Progress -->
+            <div class="card p-4">
+              <h5 class="fw-semibold mb-3">Learning Progress</h5>
+              <canvas id="learningChart" height="120"></canvas>
+              <div class="d-flex justify-content-between mt-3 text-muted">
+                <small>This Month: 38h</small>
+                <small>Total Hours: 192h</small>
+                <small>Avg/Week: 9.3h</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-lg-4">
+            <!-- Upcoming Assignments -->
+            <div class="card p-4 mb-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-semibold mb-0">Upcoming Assignments</h6>
+                <a href="#" class="text-decoration-none small text-primary">
+                  View All
+                </a>
+              </div>
+              <hr />
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h6 class="mb-1">UI Design Project Submission</h6>
+                    <small class="text-muted">
+                      UI/UX Design Course<br />
+                      Oct 15, 2025 — 11:59 PM
+                    </small>
+                  </div>
+                  <span class="badge bg-light text-primary border"
+                    >Project</span
+                  >
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h6 class="mb-1">UI Design Project Submission</h6>
+                    <small class="text-muted">
+                      UI/UX Design Course<br />
+                      Oct 15, 2025 — 11:59 PM
+                    </small>
+                  </div>
+                  <span class="badge bg-light text-primary border"
+                    >Project</span
+                  >
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h6 class="mb-1">UI Design Project Submission</h6>
+                    <small class="text-muted">
+                      UI/UX Design Course<br />
+                      Oct 15, 2025 — 11:59 PM
+                    </small>
+                  </div>
+                  <span class="badge bg-light text-primary border"
+                    >Project</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card p-4">
+              <h6 class="fw-semibold mb-3">Recent Activity</h6>
+              <div class="d-flex flex-column gap-3">
+                <div>
+                  <span class="activity-dot"></span>
+                  <span class="fw-semibold">Completed:</span> Design Principles
+                  Module<br />
+                  <small class="text-muted"
+                    >UI/UX Design Course — 2 hours ago</small
+                  >
+                </div>
+
+                <div>
+                  <span class="activity-dot"></span>
+                  <span class="fw-semibold">Completed:</span> Color Theory
+                  Module<br />
+                  <small class="text-muted"
+                    >UI/UX Design Course — 3 hours ago</small
+                  >
+                </div>
+
+                <div>
+                  <span class="activity-dot"></span>
+                  <span class="fw-semibold">Completed:</span> Wireframing
+                  Basics<br />
+                  <small class="text-muted"
+                    >UI/UX Design Course — 5 hours ago</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Courses Section -->
+      <div class="mt-5 mb-5 p-5 container-fluid">
+        <div class="section-header">
+          <h4>My Enrolled Courses</h4>
+        </div>
+
+        <div class="tab-content" id="courseTabsContent">
+          <div class="tab-pane fade show active" id="all">
+            <div class="row g-4">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="course-card">
+                  <img
+                    src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_08_MicrosoftTeams-image-13-2-1.jpg"
+                    class="course-img"
+                  />
+                  <div class="course-body">
+                    <span class="course-level">Beginner</span>
+                    <h6 class="course-title">
+                      Complete UI/UX Design Course - Beginner to Advanced
+                    </h6>
+                    <p class="course-instructor">By Harsh Goswami</p>
+
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                    <button class="btn btn-learn">Continue Learning</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat Other Courses Here -->
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="course-card">
+                  <img
+                    src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_08_MicrosoftTeams-image-13-2-1.jpg"
+                    class="course-img"
+                  />
+                  <div class="course-body">
+                    <span class="course-level">Beginner</span>
+                    <h6 class="course-title">
+                      Complete UI/UX Design Course - Beginner to Advanced
+                    </h6>
+                    <p class="course-instructor">By Harsh Goswami</p>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                    <button class="btn btn-learn">Continue Learning</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="course-card">
+                  <img
+                    src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_08_MicrosoftTeams-image-13-2-1.jpg"
+                    class="course-img"
+                  />
+                  <div class="course-body">
+                    <span class="course-level">Beginner</span>
+                    <h6 class="course-title">
+                      Complete UI/UX Design Course - Beginner to Advanced
+                    </h6>
+                    <p class="course-instructor">By Harsh Goswami</p>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                    <button class="btn btn-learn">Continue Learning</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="active">
+            <p class="text-muted">Active courses will appear here.</p>
+          </div>
+          <div class="tab-pane fade" id="completed">
+            <p class="text-muted">Completed courses will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const toggleBtn = document.getElementById("sidebarToggle");
+
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth <= 991) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("hide");
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 991) {
+          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+            sidebar.classList.remove("show");
+          }
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 991) {
+          sidebar.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

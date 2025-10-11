@@ -1,0 +1,70 @@
+body {
+  background: #fff7f2;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  background: linear-gradient(rgba(255, 115, 0, 0.8), rgba(255, 115, 0, 0.8)),
+    url("https://img.freepik.com/premium-photo/top-view-image-computer-laptop-putting-colorful-working-desk-surrounded-by-notebook-glasses-pen-flowers-marker-pens-pencil-orderly-workspace-concept_35674-2246.jpg?semt=ais_hybrid&w=740&q=80")
+      no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h2 {
+  font-weight: 700;
+}
+
+.filter-btns .btn {
+  border-radius: 20px;
+  margin: 5px;
+}
+.filter-btns .btn.active {
+  background-color: #ff6900;
+  color: #fff;
+}
+
+.course-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.course-card .btn {
+  background-color: #ff6900;
+  color: #fff;
+}
+.course-card .btn:hover {
+  background-color: #fff;
+  color: #ff6900;
+  border: 1px solid #ff6900;
+}
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.course-badge {
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.4s ease;
+}
+.card-img-wrapper:hover .card-img-top {
+  transform: scale(1.1);
+}

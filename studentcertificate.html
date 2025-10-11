@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student certificate</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/studentcertificate.css" />
+  </head>
+  <body>
+    <aside class="sidebar hide" id="sidebar">
+      <div class="brand">
+        <img src="https://via.placeholder.com/36x36.png?text=S" alt="logo" />
+        <div>
+          <div style="font-weight: 700">SKILLWAALA</div>
+          <div class="small text-muted">Instructor</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section-title">Main Menu</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link active"
+          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-people"></i> Total Student Enroll</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-book"></i> Active Courses</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-calendar"></i> Upcoming Live Classes</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-question-circle"></i> Community Quarry</a
+        >
+      </nav>
+
+      <div class="section-title mt-3">Account</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
+        <a href="#" class="nav-link"
+          ><i class="bi bi-box-arrow-right"></i> Logout</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-life-preserver"></i> Support</a
+        >
+      </nav>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle-btn" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / Dashboard</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <input
+              class="form-control form-control-sm"
+              style="width: 220px"
+              placeholder="Search..."
+            />
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-4">Welcome, Ranjeet Singh!</h6>
+              <div class="small text-light">Student</div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-light btn-sm">Became an Instructor</button>
+            <button class="btn btn-danger btn-sm">Instrustor Dashboard</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="tab-buttons">
+          <button class="active">Current</button>
+          <button>Past</button>
+          <button>Upcoming Certificates</button>
+        </div>
+
+        <div class="certificate-section">
+          <h5 class="certificate-heading">
+            This Certificate was issued to <strong>ranjeet singh</strong>
+          </h5>
+          <p class="certificate-subtext">
+            Continue learning and achieve your goals
+          </p>
+
+          <div class="row align-items-start mt-4">
+            <!-- Left: Certificate Image -->
+            <div class="col-lg-8 col-md-7">
+              <div class="certificate-card">
+                <img
+                  src="https://d1csarkz8obe9u.cloudfront.net/themedlandingpages/tlp_hero_certificate-template-908f1750642c3cceba19cbc67086b678.jpg?ts%20=%201745913213"
+                  alt="Certificate"
+                  class="certificate-img"
+                />
+              </div>
+            </div>
+
+            <!-- Right: Certificate Details -->
+            <div class="col-lg-4 col-md-5 mt-3 mt-md-0">
+              <div class="details-card">
+                <h6>Learner Name:</h6>
+                <p>ranjeet singh</p>
+
+                <h6>Institute Name:</h6>
+                <p>Skillwaala</p>
+
+                <h6>Course Name:</h6>
+                <p>Graphic Design</p>
+
+                <h6>Certificate ID:</h6>
+                <p>G522/23-12</p>
+
+                <h6>Issued On:</h6>
+                <p>Monday, Oct 07, 2025</p>
+
+                <div class="issuer">
+                  <p>This Certificate has been issued by</p>
+                  <img
+                    src="./media/ok quality logo.png"
+                    alt="Skillwaala"
+                    width="120"
+                  />
+                </div>
+
+                <button class="download-btn">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const toggleBtn = document.getElementById("sidebarToggle");
+
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth <= 991) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("hide");
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 991) {
+          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+            sidebar.classList.remove("show");
+          }
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 991) {
+          sidebar.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>
