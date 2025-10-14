@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Instructor Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/instructorprofile.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar hide" id="sidebar">
+      <div class="brand">
+        <img src="https://via.placeholder.com/36x36.png?text=S" alt="logo" />
+        <div>
+          <div style="font-weight: 700">SKILLWAALA</div>
+          <div class="small text-muted">Instructor</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section-title">Main Menu</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link active"
+          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        >
+        <a href="#" class="nav-link"><i class="bi bi-people"></i> My Profile</a>
+        <a href="#" class="nav-link"
+          ><i class="bi bi-book"></i>Active Courses Count</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-badge-4k-fill"></i> Upcoming Live Classes</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-box-arrow-in-down"></i> Uploded Videos</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-bell-fill"></i> Notifications</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-chat-dots-fill"></i> Community Quarry</a
+        >
+      </nav>
+
+      <div class="section-title mt-3">Account</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
+        <a href="#" class="nav-link"
+          ><i class="bi bi-box-arrow-right"></i> Logout</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-life-preserver"></i> Support</a
+        >
+      </nav>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle-btn" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / My Profile</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <input
+              class="form-control form-control-sm"
+              style="width: 220px"
+              placeholder="Search..."
+            />
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-2">Devanshu Sir</h6>
+              <div class="fs-5 text-light">Instructor</div>
+              <p class="fs-6">
+                “Empowering learners through creativity & technology”
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-light btn-sm">Edit Profile</button>
+            <button class="btn btn-light btn-sm">Share Profile</button>
+            <button class="btn btn-warning btn-sm">Change Cover</button>
+            <button class="btn btn-success btn-sm">Student Dashboard</button>
+          </div>
+        </div>
+
+        <div class="container my-4">
+          <!-- Stats Section -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-4 col-sm-6 col-12">
+              <div class="dashboard-card card-green">
+                Enrolled Students <br />
+                <h4>850+</h4>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+              <div class="dashboard-card card-blue">
+                Courses Published <br />
+                <h4>12</h4>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+              <div class="dashboard-card card-yellow">
+                Active Courses <br />
+                <h4>2</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Left Section -->
+            <div class="col-lg-6 col-md-12">
+              <div class="profile-section">
+                <h5>Personal Information</h5>
+                <form class="mt-3">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Full Name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Address"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Contact No."
+                    />
+                  </div>
+                </form>
+
+                <h6 class="mt-4">About / Bio Section</h6>
+                <p class="small text-muted">
+                  Professional educator with 8 years of experience teaching web
+                  development and design. I help learners master essential tech
+                  skills through project-based learning and real-world cases.
+                </p>
+
+                <h6>Achievements / Badges</h6>
+                <div class="mb-3">
+                  <span class="p-2 badge bg-warning text-dark me-2"
+                    >🏅 Top Instructor 2025</span
+                  >
+                  <span class="p-2 badge bg-primary"
+                    >🎓 12 Courses Published</span
+                  >
+                </div>
+
+                <div class="mt-4 d-flex flex-wrap gap-2">
+                  <button class="btn btn-secondary">Change Password</button>
+                  <button class="btn btn-success">Submit</button>
+                  <button class="btn btn-logout">Logout</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-lg-6 col-md-12">
+              <div class="course-section">
+                <h5>Expertise & Skills</h5>
+                <div class="mb-3">
+                  <span class="badge-custom">HTML</span>
+                  <span class="badge-custom">CSS</span>
+                  <span class="badge-custom">Bootstrap</span>
+                  <span class="badge-custom">JavaScript</span>
+                  <span class="badge-custom">React</span>
+                  <span class="badge-custom">UI/UX</span>
+                </div>
+
+                <h5 class="mt-4">Course By Instructor</h5>
+                <div class="row g-3">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="course-card p-2">
+                      <img
+                        src="https://img-c.udemycdn.com/course/750x422/548278_b005_9.jpg"
+                        class="w-100 mb-2"
+                        alt="Course"
+                      />
+                      <h6>Complete UI/UX Design Course</h6>
+                      <p class="small text-muted">Beginner to Advanced</p>
+                      <button class="btn btn-sm btn-outline-success w-100">
+                        Published
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="course-card p-2">
+                      <img
+                        src="https://img-c.udemycdn.com/course/750x422/548278_b005_9.jpg"
+                        class="w-100 mb-2"
+                        alt="Course"
+                      />
+                      <h6>Complete UI/UX Design Course</h6>
+                      <p class="small text-muted">Beginner to Advanced</p>
+                      <button class="btn btn-sm btn-outline-success w-100">
+                        Published
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center mt-3">
+                  <button class="btn btn-custom">Add New Courses</button>
+                </div>
+
+                <h5 class="mt-4">Student Feedback / Reviews</h5>
+                <div class="review">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                    alt=""
+                  />
+                  <div>
+                    <strong>Ritik Sharma</strong><br />
+                    <small>Great instructor and mentor!</small>
+                  </div>
+                </div>
+                <div class="review">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                    alt=""
+                  />
+                  <div>
+                    <strong>Ritik Sharma</strong><br />
+                    <small>Good and clear teaching style.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const toggleBtn = document.getElementById("sidebarToggle");
+
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth <= 991) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("hide");
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 991) {
+          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+            sidebar.classList.remove("show");
+          }
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 991) {
+          sidebar.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

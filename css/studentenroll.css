@@ -44,6 +44,15 @@ body {
   height: 34px;
   border-radius: 6px;
 }
+.topbar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  flex-wrap: wrap;
+}
 .sidebar .nav-link {
   color: #131313;
   border-radius: 8px;
