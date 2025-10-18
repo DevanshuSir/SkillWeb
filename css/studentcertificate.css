@@ -15,6 +15,7 @@ body {
   background: #fff;
   padding: 10px 25px;
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 
 .custom-nav {
@@ -169,8 +170,8 @@ footer {
   margin-bottom: 1rem;
 }
 .brand img {
-  width: 34px;
-  height: 34px;
+  width:50px;
+  height:50px;
   border-radius: 6px;
 }
 .sidebar .nav-link {
@@ -195,14 +196,13 @@ footer {
   padding-left: 0.4rem;
 }
 .sidebar-toggle-btn {
-  position: fixed;
+position: absolute;
   top: 10px;
   left: 20px;
   background: #fff;
   border-radius: 50%;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,5 +407,43 @@ footer {
   }
   .profile-hero button {
     flex: 1 1 100%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .custom-nav {
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .custom-nav .divider {
+    display: none;
+  }
+
+  .custom-nav .nav-link {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .topbar input {
+    width: 100% !important;
   }
 }

@@ -19,11 +19,65 @@
   </head>
   <body>
 
-            <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <aside class="sidebar hide" id="sidebar">
+      <div class="brand">
+        <img src="./media/ok quality logo.png" alt="logo" />
+        <div>
+          <div style="font-weight: 700">SKILLWAALA</div>
+          <div class="small text-muted">Student</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section-title">Main Menu</div>
+      <nav class="nav flex-column">
+        <a href="./studentdashboard.html" class="nav-link active"
+          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        >
+        <a href="./studentprofile.html" class="nav-link"
+          ><i class="bi bi-people"></i> My Profile</a
+        >
+        <a href="./studentenroll.html" class="nav-link"
+          ><i class="bi bi-book"></i>Enroll Courses</a
+        >
+        <a href="./studentcertificate.html" class="nav-link"
+          ><i class="bi bi-calendar"></i> My Certificate</a
+        >
+        <a href="./studentattendance.html" class="nav-link"
+          ><i class="bi bi-question-circle"></i> Attendance record</a
+        >
+          <a href="./studentwishlist.html" class="nav-link"
+          ><i class="bi bi-cart4"></i> Wishlist</a
+        >
+      </nav>
+
+      <div class="section-title mt-3">Account</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
+        <a href="#" class="nav-link"
+          ><i class="bi bi-box-arrow-right"></i> Logout</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-life-preserver"></i> Support</a
+        >
+      </nav>
+    </aside>
+
+   
+    <!-- Main Content -->
+    <main class="main">
+
+                  <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
+       <!-- Sidebar Toggle -->
+    <div class="sidebar-toggle-btn" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </div>
+
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">
-          <img src="./media/ok quality logo.png" alt="Logo" width="40" />
+        
         </a>
         <button
           class="navbar-toggler"
@@ -62,57 +116,7 @@
       </div>
     </nav>
 
-    <!-- Sidebar -->
-    <aside class="sidebar hide" id="sidebar">
-      <div class="brand">
-        <img src="https://via.placeholder.com/36x36.png?text=S" alt="logo" />
-        <div>
-          <div style="font-weight: 700">SKILLWAALA</div>
-          <div class="small text-muted">Instructor</div>
-        </div>
-      </div>
-      <hr />
-      <div class="section-title">Main Menu</div>
-      <nav class="nav flex-column">
-        <a href="./studentdashboard.html" class="nav-link active"
-          ><i class="bi bi-speedometer2"></i> Dashboard</a
-        >
-        <a href="./studentprofile.html" class="nav-link"
-          ><i class="bi bi-people"></i> My Profile</a
-        >
-        <a href="./studentenroll.html" class="nav-link"
-          ><i class="bi bi-book"></i>Enroll Courses</a
-        >
-        <a href="./studentcertificate.html" class="nav-link"
-          ><i class="bi bi-calendar"></i> My Certificate</a
-        >
-        <a href="./studentattendance.html" class="nav-link"
-          ><i class="bi bi-question-circle"></i> Attendance record</a
-        >
-          <a href="./studentwishlist.html" class="nav-link"
-          ><i class="bi bi-cart4"></i> Wishlist</a
-        >
-      </nav>
 
-      <div class="section-title mt-3">Account</div>
-      <nav class="nav flex-column">
-        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
-        <a href="#" class="nav-link"
-          ><i class="bi bi-box-arrow-right"></i> Logout</a
-        >
-        <a href="#" class="nav-link"
-          ><i class="bi bi-life-preserver"></i> Support</a
-        >
-      </nav>
-    </aside>
-
-    <!-- Sidebar Toggle -->
-    <div class="sidebar-toggle-btn" id="sidebarToggle">
-      <i class="bi bi-list"></i>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main">
       <div class="container-fluid p-3 p-md-4">
          <div class="topbar">
           <h6 class="mb-0 text-muted">Home / Enroll Courses</h6>
@@ -126,7 +130,7 @@
           </div>
         </div>
         </div>
-      <div class="container my-4">
+      <div class="container py-4 px-3">
         <!-- Dashboard Header -->
         <div class="dashboard-header">
           <div class="user-info">
@@ -277,9 +281,9 @@
           </div>
         </div>
       </div>
-    </main>
 
-         <!-- Footer -->
+
+               <!-- Footer -->
     <footer>
       <div class="container py-5">
         <div class="row g-4">
@@ -370,6 +374,10 @@
         <p>Email: hr@skillwaala.com</p>
       </div>
     </footer>
+
+    </main>
+
+
 
     <script>
       const sidebar = document.getElementById("sidebar");

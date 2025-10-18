@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Instructor Profile</title>
+    <title>Instructor Course Count</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/instructorprofile.css" />
+<link rel="stylesheet" href="./css/instructoractivecourse.css">
   </head>
   <body>
 
@@ -30,10 +30,10 @@
       <hr />
       <div class="section-title">Main Menu</div>
       <nav class="nav flex-column">
-        <a href="./instructor.html" class="nav-link active"
+        <a href="#" class="nav-link active"
           ><i class="bi bi-speedometer2"></i> Dashboard</a
         >
-        <a href="./instructorprofile.html" class="nav-link"><i class="bi bi-people"></i> My Profile</a>
+        <a href="#" class="nav-link"><i class="bi bi-people"></i> My Profile</a>
         <a href="#" class="nav-link"
           ><i class="bi bi-book"></i>Active Courses Count</a
         >
@@ -47,7 +47,7 @@
           ><i class="bi bi-bell-fill"></i> Notifications</a
         >
         <a href="#" class="nav-link"
-          ><i class="bi bi-chat-dots-fill"></i> Community Query</a
+          ><i class="bi bi-chat-dots-fill"></i> Community Quarry</a
         >
       </nav>
 
@@ -67,7 +67,6 @@
 
     <!-- Main Content -->
     <main class="main">
-
                   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
           <!-- Sidebar Toggle Button -->
@@ -76,7 +75,7 @@
     </div>
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">
-          
+         
         </a>
         <button
           class="navbar-toggler"
@@ -114,10 +113,9 @@
         </div>
       </div>
     </nav>
-
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
-          <h6 class="mb-0 text-muted">Home / My Profile</h6>
+          <h6 class="mb-0 text-muted">Home / Active Courses Count</h6>
           <div class="d-flex align-items-center gap-2 flex-wrap">
             <input
               class="form-control form-control-sm"
@@ -150,166 +148,89 @@
           </div>
         </div>
 
-        <div class="container-fluid my-4">
-          <!-- Stats Section -->
-          <div class="row g-3 mb-4">
-            <div class="col-md-4 col-sm-6 col-12">
-              <div class="dashboard-card card-green">
-                Enrolled Students <br />
-                <h4>850+</h4>
-              </div>
+    
+      </div>
+
+        <div class="container py-4">
+
+
+    <!-- Course Cards Grid -->
+    <div class="row gy-4">
+      <!-- Card Example -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card course-card">
+          <img src="https://www.webdevelopmentinstitute.com/media/uploads/course/Web-Design-Expert.webp" alt="Course">
+          <div class="card-body">
+            <div class="course-footer mb-2">
+              <span class="course-status">Active</span>
+              <i class="bi bi-three-dots"></i>
             </div>
-            <div class="col-md-4 col-sm-6 col-12">
-              <div class="dashboard-card card-blue">
-                Courses Published <br />
-                <h4>12</h4>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-12">
-              <div class="dashboard-card card-yellow">
-                Active Courses <br />
-                <h4>2</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <!-- Left Section -->
-            <div class="col-lg-6 col-md-12">
-              <div class="profile-section">
-                <h5>Personal Information</h5>
-                <form class="mt-3">
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Full Name"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Address"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Contact No."
-                    />
-                  </div>
-                </form>
-
-                <h6 class="mt-4">About / Bio Section</h6>
-                <p class="small text-muted">
-                  Professional educator with 8 years of experience teaching web
-                  development and design. I help learners master essential tech
-                  skills through project-based learning and real-world cases.
-                </p>
-
-                <h6>Achievements / Badges</h6>
-                <div class="mb-3">
-                  <span class="p-2 badge bg-warning text-dark me-2"
-                    >🏅 Top Instructor 2025</span
-                  >
-                  <span class="p-2 badge bg-primary"
-                    >🎓 12 Courses Published</span
-                  >
-                </div>
-
-                <div class="mt-4 d-flex flex-wrap gap-2">
-                  <button class="btn btn-secondary">Change Password</button>
-                  <button class="btn btn-success">Submit</button>
-                  <button class="btn btn-logout">Logout</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Section -->
-            <div class="col-lg-6 col-md-12">
-              <div class="course-section">
-                <h5>Expertise & Skills</h5>
-                <div class="mb-3">
-                  <span class="badge-custom">HTML</span>
-                  <span class="badge-custom">CSS</span>
-                  <span class="badge-custom">Bootstrap</span>
-                  <span class="badge-custom">JavaScript</span>
-                  <span class="badge-custom">React</span>
-                  <span class="badge-custom">UI/UX</span>
-                </div>
-
-                <h5 class="mt-4">Course By Instructor</h5>
-                <div class="row g-3">
-                  <div class="col-md-6 col-sm-12">
-                    <div class="course-card p-2">
-                      <img
-                        src="https://img-c.udemycdn.com/course/750x422/548278_b005_9.jpg"
-                        class="w-100 mb-2"
-                        alt="Course"
-                      />
-                      <h6>Complete UI/UX Design Course</h6>
-                      <p class="small text-muted">Beginner to Advanced</p>
-                      <button class="btn btn-sm btn-outline-success w-100">
-                        Published
-                      </button>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-sm-12">
-                    <div class="course-card p-2">
-                      <img
-                        src="https://img-c.udemycdn.com/course/750x422/548278_b005_9.jpg"
-                        class="w-100 mb-2"
-                        alt="Course"
-                      />
-                      <h6>Complete UI/UX Design Course</h6>
-                      <p class="small text-muted">Beginner to Advanced</p>
-                      <button class="btn btn-sm btn-outline-success w-100">
-                        Published
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="text-center mt-3">
-                  <button class="btn btn-custom">Add New Courses</button>
-                </div>
-
-                <h5 class="mt-4">Student Feedback / Reviews</h5>
-                <div class="review">
-                  <img
-                    src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
-                    alt=""
-                  />
-                  <div>
-                    <strong>Ritik Sharma</strong><br />
-                    <small>Great instructor and mentor!</small>
-                  </div>
-                </div>
-                <div class="review">
-                  <img
-                    src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
-                    alt=""
-                  />
-                  <div>
-                    <strong>Ritik Sharma</strong><br />
-                    <small>Good and clear teaching style.</small>
-                  </div>
-                </div>
-              </div>
+            <h6>Complete UI/UX Design Course - Beginner to Advanced</h6>
+            <p class="mb-1 text-muted" style="font-size:13px;">10,843 Students</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-success">Published</span>
+              <button class="btn btn-sm btn-outline-primary">Edit</button>
             </div>
           </div>
         </div>
       </div>
-             <!-- Footer -->
+
+      <!-- Repeat the same card structure for 8 more cards -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card course-card">
+          <img src="https://www.webdevelopmentinstitute.com/media/uploads/course/Web-Design-Expert.webp" alt="Course">
+          <div class="card-body">
+            <div class="course-footer mb-2">
+              <span class="course-status">Active</span>
+              <i class="bi bi-three-dots"></i>
+            </div>
+            <h6>Complete UI/UX Design Course - Beginner to Advanced</h6>
+            <p class="mb-1 text-muted" style="font-size:13px;">10,843 Students</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-success">Published</span>
+              <button class="btn btn-sm btn-outline-primary">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly... -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card course-card">
+          <img src="https://www.webdevelopmentinstitute.com/media/uploads/course/Web-Design-Expert.webp" alt="Course">
+          <div class="card-body">
+            <div class="course-footer mb-2">
+              <span class="course-status">Active</span>
+              <i class="bi bi-three-dots"></i>
+            </div>
+            <h6>Complete UI/UX Design Course - Beginner to Advanced</h6>
+            <p class="mb-1 text-muted" style="font-size:13px;">10,843 Students</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-success">Published</span>
+              <button class="btn btn-sm btn-outline-primary">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Engagement Section -->
+    <div class="engagement mt-5">
+      <h6>Engagement Highlight</h6>
+      <ul>
+        <li><span></span>Next Live Class: Monday, 14 Oct, 6:00 (React Integration)</li>
+        <li><span></span>Attending Student Queries: 12 Unanswered messages</li>
+        <li><span></span>Total Weekly Teaching Hours: 32 h</li>
+      </ul>
+
+      <div class="engagement-footer">
+        Consistency Creates Impact - Keep guiding students and inspiring Progress every day!
+      </div>
+    </div>
+  </div>
+    </main>
+
+        <!-- Footer -->
     <footer>
       <div class="container py-5">
         <div class="row g-4">
@@ -400,9 +321,6 @@
         <p>Email: hr@skillwaala.com</p>
       </div>
     </footer>
-    </main>
-
- 
 
     <script>
       const sidebar = document.getElementById("sidebar");
@@ -430,5 +348,6 @@
         }
       });
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

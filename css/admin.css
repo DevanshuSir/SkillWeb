@@ -339,3 +339,30 @@ footer {
     flex: 1 1 100%;
   }
 }
+
+
+@media (max-width: 992px) {
+  .custom-nav {
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .custom-nav .divider {
+    display: none;
+  }
+
+  .custom-nav .nav-link {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
