@@ -12,14 +12,16 @@ body {
   overflow-x: hidden;
 }
 
-.navbar {
-  background: #fff;
-  padding: 10px 25px;
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
-  position: relative;
- 
-  
-}
+    .navbar {
+        background: #fff;
+        padding: 10px 25px;
+            box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 18%);
+        position: sticky;
+        top: 0px;
+        left: 0px;
+z-index: 1000;
+        
+      }
 
 .custom-nav {
   border: 2px solid #ccc;
@@ -89,8 +91,7 @@ body {
 
 }
 .brand img {
-  width:50px;
-  height: 50px;
+  width:70px;
   border-radius: 6px;
 }
 .sidebar .nav-link {

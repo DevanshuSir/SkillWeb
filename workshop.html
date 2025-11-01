@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        background: #fff;
+        padding: 10px 25px;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .custom-nav {
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 2px 10px;
+        margin: 2px;
+      }
+
+      .custom-nav .nav-link {
+        font-weight: 500;
+        color: #333;
+        padding: 6px 12px;
+      }
+
+      .custom-nav .nav-link:hover {
+        color: #f26434;
+      }
+
+      .custom-nav .divider {
+        color: #f26434;
+        font-size: 20px;
+        margin: 0 6px;
+      }
+
+      .btn-login {
+        border: 1px solid #f36f45;
+        color: #f36f45;
+        border-radius: 10px;
+        padding: 6px 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-login:hover {
+        background: #f36f45;
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .custom-nav {
+          border: none;
+          border-radius: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 0;
+        }
+
+        .custom-nav .divider {
+          display: none;
+        }
+
+        .custom-nav .nav-link {
+          padding: 10px;
+          width: 100%;
+          border-bottom: 1px solid #eee;
+        }
+
+        .btn-login {
+          margin-top: 10px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      footer {
+        background: #fff5ef;
+        color: #333;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-logo img {
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      .footer-logo p {
+        font-size: 14px;
+        margin: 4px 0;
+        color: #444;
+      }
+
+      .footer-logo a {
+        color: #e65a29;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 14px;
+      }
+
+      .footer-logo a:hover {
+        color: #ff5722;
+      }
+
+      .footer-column h3 {
+        background: #f6d5c4;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        background: #ffe9e1;
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .footer-column ul li {
+        margin: 8px 0;
+      }
+
+      .footer-column ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-column ul li a:hover {
+        color: #ff5722;
+      }
+
+      .footer-bottom {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .footer-contacts {
+        background: #ff5722;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      .footer-contacts p {
+        margin: 0;
+      }
+
+      .register-section {
+        background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+        color: #fff;
+        border-radius: 15px;
+        text-align: center;
+        padding: 40px 20px;
+        margin: 30px auto;
+        max-width: 1000px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .register-section h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .register-section p {
+        font-size: 16px;
+        margin-bottom: 25px;
+      }
+
+      .register-section .btn {
+        background: linear-gradient(90deg, #ff6600, #ff0000);
+        border: none;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .register-section .btn:hover {
+        opacity: 0.85;
+      }
+
+      .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh;
+        background-image: linear-gradient(to bottom, #ffffff, #f0f0fe);
+      }
+
+      .hero-card {
+        padding: 40px 40px;
+        max-width: 1200px;
+        width: 100%;
+        background-image: radial-gradient(#d7e3ff 1px, transparent 1px);
+        background-size: 40px 40px;
+        position: relative;
+      }
+
+      .hero-card h1 {
+        font-weight: 700;
+        color: #111;
+        font-size: 2.5rem;
+      }
+
+      .hero-card h2 {
+        font-weight: 500;
+        color: #555;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-card p {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 35px;
+        line-height: 1.6;
+      }
+
+      /* Right Image */
+      .hero-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .learingtext {
+        color: #fe6334;
+      }
+
+      .btn-learn {
+        background: linear-gradient(to right, #f66428, #e80006);
+        color: white;
+        font-weight: 600;
+        border-radius: 25px;
+        padding: 7px 80px;
+        border: none;
+        transition: all 0.3s;
+      }
+
+      .btn-learn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 80, 0, 0.4);
+      }
+
+     
+
+       h3.section-title {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    /* ---------- Our Workshop Section ---------- */
+    .workshop-card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .workshop-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .workshop-card i {
+      font-size: 26px;
+      color: #ff6b00;
+      margin-bottom: 10px;
+    }
+
+    .workshop-card h6 {
+      font-weight: 500;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* ---------- Upcoming Workshop Section ---------- */
+    .upcoming-section {
+      background-color: #f5f7ff;
+      border-radius: 12px;
+      padding: 50px 30px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .upcoming-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .upcoming-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .upcoming-card img {
+      width: 180px;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .upcoming-content {
+      padding: 15px 20px;
+      flex: 1;
+    }
+
+    .upcoming-content h5 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .upcoming-content p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-live {
+      background: #ff3b3b;
+      color: white;
+      font-weight: 600;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border: none;
+    }
+
+    .btn-register {
+      background: #ff6b00;
+      color: white;
+      font-weight: 600;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border: none;
+    }
+
+    .btn-register:hover {
+      background: #e05f00;
+    }
+
+    @media (max-width: 768px) {
+      .upcoming-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .upcoming-card img {
+        width: 100%;
+        height: auto;
+      }
+      .upcoming-content {
+        padding: 20px;
+      }
+    }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(90deg, #ff7a00, #ff3434);
+        color: white;
+        text-align: center;
+        padding: 30px 10px;
+        border-radius: 0;
+      }
+
+      .cta-section h3 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+      }
+
+      .courses-section {
+        padding: 60px 0;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(to bottom, #fde7e7, #ff5722);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .courses-section h2 {
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .slider {
+        display: flex;
+        gap: 30px;
+        animation: scroll 15s linear infinite;
+      }
+
+      .slider:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .course-card {
+        flex: 0 0 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .course-img {
+        width: 100%;
+        height: 160px;
+        background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")
+          center/cover;
+        position: relative;
+      }
+
+      .live-tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #ff4500;
+        color: white;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .course-content {
+        padding: 15px;
+      }
+
+      .course-content h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .course-content p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .facebook-btn {
+        background: #1877f2;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .slider {
+          animation: scroll 20s linear infinite;
+        }
+        .course-card {
+          flex: 0 0 240px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .course-card {
+          flex: 0 0 200px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .custom-card {
+          margin-bottom: 25px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-card {
+          padding: 40px 25px;
+        }
+
+        .hero-card h1 {
+          font-size: 1.9rem;
+        }
+
+        .hero-card h2 {
+          font-size: 1.1rem;
+        }
+
+        .hero-card p {
+          font-size: 0.95rem;
+        }
+
+        .btn-learn,
+        .btn-outline {
+          padding: 10px 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-card {
+          text-align: center;
+        }
+
+        .btn-group {
+          flex-direction: column;
+        }
+
+        .btn-group button {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="150" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Skill Space</a>
+            </li>
+            <span class="divider">|</span>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Course</a>
+            </li>
+
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="hero-card">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1>
+              Unlock Career-Ready Skills with
+              <span class="learingtext"> Skillwaala Workshops </span>
+            </h1>
+
+            <p>
+              Skillwaala workshops bring you immersive, instructor-led learning
+              experiences focused on real-world application and skill mastery.
+              Whether you are a student exploring your career path or a working
+              professional looking for a career switch, our workshop helps you
+              gain practical, job-ready skills. 
+            </p>
+            <div class="">
+              <a href="./loginreg.html"><button class="btn-learn">Join Workshop</button></a>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <img
+              src="https://img.freepik.com/premium-vector/word-cloud-background-concept-workshop-business-training-seminar-employee-brainstorming-information-concept-vector-illustration_616200-4488.jpg"
+              alt="Learning Illustration"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- ---------- Our Workshop Section ---------- -->
+  <section class="container py-5">
+    <h3 class="section-title">Our Workshop</h3>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6">
+        <div class="workshop-card">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h6>Digital Marketing</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="workshop-card">
+          <i class="fa-solid fa-shapes"></i>
+          <h6>Animation</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="workshop-card">
+          <i class="fa-solid fa-pen-nib"></i>
+          <h6>Content Writing</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="workshop-card">
+          <i class="fa-solid fa-code"></i>
+          <h6>Web Development</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="workshop-card">
+          <i class="fa-solid fa-robot"></i>
+          <h6>AI Tools</h6>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="workshop-card">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h6>Digital Marketing</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Upcoming Workshop Section ---------- -->
+  <section class="container upcoming-section">
+    <h3 class="section-title">Upcoming Workshops</h3>
+    <div class="row g-4">
+
+      <div class="col-lg-6 col-md-12">
+        <div class="upcoming-card">
+          <img src="https://almashines.s3.dualstack.ap-southeast-1.amazonaws.com/assets/images/eventlogos/sizea/36176231726652028.jpg" alt="AI Tools" />
+          <div class="upcoming-content">
+            <h5>AI Tools</h5>
+            <p>Learn AI tool in this workshop</p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn-live">Live</button>
+              <span>Nov 13</span>
+              <a href="./loginreg.html"><button class="btn-register ms-auto">Register</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <div class="upcoming-card">
+          <img src="https://almashines.s3.dualstack.ap-southeast-1.amazonaws.com/assets/images/eventlogos/sizea/36176231726652028.jpg" alt="App Development" />
+          <div class="upcoming-content">
+            <h5>App Development</h5>
+            <p>Learn app development in this workshop</p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn-live">Live</button>
+              <span>Nov 13</span>
+              <a href="./loginreg.html"><button class="btn-register ms-auto">Register</button></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h3>Transform Your Skill, Shape Your Career With Skillwaala</h3>
+    
+    </section>
+
+
+
+    <section class="courses-section">
+      <div class="container">
+        <h2>Discover More Courses on Skillwaala</h2>
+        <div class="slider d-flex">
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Content Writing</h5>
+              <p>
+                Master the art of storytelling, brand voice, and persuasive
+                writing with hands-on content marketing tools and frameworks .
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Animation Mastery Course</h5>
+              <p>
+                Bring your creativity to life with 2D Animation, motion
+                graphics, and video storytelling using industry-standard tools.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Full-Stack Web Development Program</h5>
+              <p>
+                Go from beginner to pro with a complete roadmap covering HTML,
+                CSS, JavaScript, React, Node.js, and backend integration.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>English Speaking</h5>
+              <p>
+                Interactive lessons and quizzes that make English learning easy
+                and fun.
+              </p>
+            </div>
+          </a>
+
+          <!-- Duplicate cards for seamless scrolling -->
+          <a href="#" class="course-card text-decoration-none text-dark">
+            <div class="course-img">
+              <span class="live-tag">Live</span>
+            </div>
+            <div class="course-content">
+              <h5>Digital Marketing</h5>
+              <p>
+                Learn everything from SEO, Google Ads, and Social Media
+                Marketing to AI-powered marketing strategies.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Register Box Section -->
+          <section class="register-section">
+            <h2>Skillwaala Free Training Program</h2>
+            <p>Kickstart your Career with Skillwaala.</p>
+            <a href="#" class="btn">Register Now</a>
+          </section>
+
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-6 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+            <p><strong>Social Links:</strong></p>
+            <p>
+              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+              <a href="#">LinkedIn</a> |
+              <a href="#">WhatsApp</a>
+            </p>
+            <p><strong>Email:</strong> info@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
+              Jaipur
+            </p>
+            <p><strong>Contact:</strong> +91 7705697799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-6 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Web Stories</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-6 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="#">Digital Marketing</a></li>
+                  <li><a href="#">SEO Course</a></li>
+                  <li><a href="#">Social Media Marketing</a></li>
+                  <li><a href="#">Performance Marketing</a></li>
+                  <li><a href="#">Animation Course</a></li>
+                  <li><a href="#">Graphic Design</a></li>
+                  <li><a href="#">Video Editing</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li><a href="#">Content Writing</a></li>
+                  <li><a href="#">Full-Stack Web Dev</a></li>
+                  <li><a href="#">English Spoken</a></li>
+                  <li><a href="#">Mobile App Dev</a></li>
+                  <li><a href="#">Data Science</a></li>
+                  <li><a href="#">Business Analyst</a></li>
+                  <li><a href="#">2D Animation</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-3 col-md-6 footer-column">
+            <h3>Industrial Trainings</h3>
+            <ul>
+              <li><a href="#">B.Tech</a></li>
+              <li><a href="#">M.Tech</a></li>
+              <li><a href="#">BCA</a></li>
+              <li><a href="#">MCA</a></li>
+              <li><a href="#">B.Sc</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7780879789</p>
+        <p>Email: info@skillwaala.com</p>
+        <p>Email: hr@skillwaala.com</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

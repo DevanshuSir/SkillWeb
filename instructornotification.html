@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Instructor Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/instructorprofile.css" />
+
+
+    <style>
+        :root {
+  --sidebar-width: 240px;
+  --brand-gradient: linear-gradient(90deg, #5838f7 0%, #c538cc 100%);
+  --muted: #6b7280;
+  --bg: #f6f7fb;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  overflow-x: hidden;
+}
+.navbar {
+  background: #fff;
+  padding: 10px 25px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.custom-nav {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 2px 10px;
+  margin: 2px;
+}
+
+.custom-nav .nav-link {
+  font-weight: 500;
+  color: #333;
+  padding: 6px 12px;
+}
+
+.custom-nav .nav-link:hover {
+  color: #f26434;
+}
+
+.custom-nav .divider {
+  color: #f26434;
+  font-size: 20px;
+  margin: 0 6px;
+}
+
+.btn-login {
+  border: 1px solid #f36f45;
+  color: #f36f45;
+  border-radius: 10px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-login:hover {
+  background: #f36f45;
+  color: #fff;
+}
+
+footer {
+  background: #fff5ef;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #444;
+}
+
+.footer-logo a {
+  color: #e65a29;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 14px;
+}
+
+.footer-logo a:hover {
+  color: #ff5722;
+}
+
+.footer-column h3 {
+  background: #f6d5c4;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  background: #ffe9e1;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ff5722;
+}
+
+.footer-bottom {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer-contacts {
+  background: #ff5722;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.footer-contacts p {
+  margin: 0;
+}
+.sidebar {
+  width: var(--sidebar-width);
+  transition: all 0.3s ease;
+  background: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1050;
+  padding: 20px 14px;
+}
+
+.sidebar.hide {
+  transform: translateX(-100%);
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.sidebar .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.brand img {
+  width: 70px;
+  border-radius: 6px;
+}
+.sidebar .nav-link {
+  color: #131313;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.15s ease;
+}
+.sidebar .nav-link:hover {
+  background: linear-gradient(to right, #ff6600, #fb3233);
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .section-title {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0.8rem 0 0.2rem 0;
+  padding-left: 0.4rem;
+}
+
+.sidebar-toggle-btn {
+ position: absolute;
+  top: 10px;
+  left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main {
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.hide ~ .main {
+  margin-left: 0;
+}
+
+.topbar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  flex-wrap: wrap;
+}
+
+.profile-hero {
+  background: var(--brand-gradient);
+  color: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.08);
+  flex-wrap: wrap;
+}
+.profile-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+
+
+ .notification-section {
+      background: #f7f7f7;
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    .notification-section h5 {
+      color: #5d2dee;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .stats-box {
+      border-radius: 10px;
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+      font-weight: 600;
+    }
+
+    .stats-box.green { background-color: #9dd6af; }
+    .stats-box.blue { background-color: #b9b4e7; }
+    .stats-box.purple { background-color: #d8b4e7; }
+    .stats-box.orange { background-color: #e7c89b; }
+
+    .stats-box span {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 5px;
+    }
+
+    .filter-bar input, .filter-bar select {
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+    }
+
+    .notification-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .notification-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .notification-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    .notification-text h6 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .notification-text p {
+      margin: 0;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .time-badge {
+      background-color: #edf2ff;
+      color: #3340aa;
+      border-radius: 20px;
+      padding: 5px 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .bottom-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 25px;
+    }
+
+    .toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-weight: 600;
+    }
+
+    .toggle-btn.red {
+      background-color: #343a40;
+    }
+
+    .form-switch .form-check-input {
+      width: 40px;
+      height: 20px;
+    }
+
+    @media(max-width:768px){
+      .notification-section { padding: 20px; }
+      .notification-card { flex-direction: column; align-items: flex-start; }
+      .notification-left { width: 100%; }
+      .bottom-buttons { flex-direction: column; gap: 15px; }
+    }
+
+
+@media (max-width: 768px) {
+  .profile-section,
+  .course-section {
+    padding: 20px;
+  }
+  .course-card img {
+    height: 130px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .main {
+    margin-left: 0;
+  }
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar-toggle-btn {
+    width: 36px;
+    height: 36px;
+    top: 10px;
+    left: 10px;
+  }
+  .topbar input {
+    width: 100% !important;
+  }
+  .profile-hero button {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-nav {
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .custom-nav .divider {
+    display: none;
+  }
+
+  .custom-nav .nav-link {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+    </style>
+
+  </head>
+  <body>
+
+
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar hide" id="sidebar">
+      <div class="brand">
+        <img src="./media/ok quality logo.png" alt="logo" />
+        <div>
+          <div style="font-weight: 700">SKILLWAALA</div>
+          <div class="small text-muted">Instructor</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section-title">Main Menu</div>
+      <nav class="nav flex-column">
+        <a href="./instructor.html" class="nav-link active"
+          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        >
+        <a href="./instructorprofile.html" class="nav-link"
+          ><i class="bi bi-people"></i> My Profile</a
+        >
+        <a href="./instructorsactivecourse.html" class="nav-link"
+          ><i class="bi bi-book"></i>Active Courses Count</a
+        >
+        <a href="./upcomingliveclass.html" class="nav-link"
+          ><i class="bi bi-badge-4k-fill"></i> Upcoming Live Classes</a
+        >
+        <a href="./uploadedvideos.html" class="nav-link"
+          ><i class="bi bi-box-arrow-in-down"></i> Uploded Videos</a
+        >
+          <a href="./instructornotification.html" class="nav-link"
+          ><i class="bi bi-bell-fill"></i> Notifications</a
+        >
+              <a href="#" class="nav-link"
+          ><i class="bi bi-chat-dots-fill"></i> Community Query</a
+        >
+      </nav>
+
+      <div class="section-title mt-3">Account</div>
+      <nav class="nav flex-column">
+        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
+        <a href="#" class="nav-link"
+          ><i class="bi bi-box-arrow-right"></i> Logout</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="bi bi-life-preserver"></i> Support</a
+        >
+      </nav>
+    </aside>
+
+
+
+    <!-- Main Content -->
+    <main class="main">
+
+                  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+          <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle-btn" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </div>
+      <div class="container">
+               <a class="navbar-brand fw-bold" href="#">
+          <img src="./media/ok quality logo.png" alt="Logo" width="100" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Skill Space</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          </ul>
+          <a href="./loginreg.html" class="btn btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+      <div class="container-fluid p-3 p-md-4">
+        <div class="topbar">
+          <h6 class="mb-0 text-muted">Home / Notifications</h6>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <input
+              class="form-control form-control-sm"
+              style="width: 220px"
+              placeholder="Search..."
+            />
+            <i class="bi bi-bell fs-5"></i>
+          </div>
+        </div>
+
+        <div class="profile-hero mt-3">
+          <div class="profile-left">
+            <img
+              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
+              class="profile-avatar"
+            />
+            <div>
+              <h6 class="mb-0 fs-2">Devanshu Sir</h6>
+              <div class="fs-5 text-light">Instructor</div>
+              <p class="fs-6">
+                “Empowering learners through creativity & technology”
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-light btn-sm">Edit Profile</button>
+            <button class="btn btn-light btn-sm">Share Profile</button>
+            <button class="btn btn-warning btn-sm">Change Cover</button>
+            <button class="btn btn-success btn-sm">Student Dashboard</button>
+          </div>
+        </div>
+
+              <div class="notification-section mt-4">
+    <h5>Stay updated with your all latest Course Activities, student instructions, and system alerts.</h5>
+
+    <div class="row g-3 text-center mb-4">
+      <div class="col-6 col-md-3">
+        <div class="stats-box green">
+          New Student Enrolment
+          <span>12</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stats-box blue">
+          New Comments / Questions
+          <span>8</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stats-box purple">
+          Video Upload Update
+          <span>8</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stats-box orange">
+          System / Platform Alerts
+          <span>2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row filter-bar mb-4 g-2">
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Filter By Course / Student / System">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option>All this month</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option>Sort</option>
+        </select>
+      </div>
+      <div class="col-md-3 text-md-end">
+        <button class="btn btn-danger px-4">+ Mark all as read</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-primary"></div>
+            <div class="notification-text">
+              <h6>Ritik Sharma</h6>
+              <p>Enroll in After Effects Mastery Course</p>
+            </div>
+          </div>
+          <div class="time-badge">10 Hours</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-info"></div>
+            <div class="notification-text">
+              <h6>React Js / Node Integration</h6>
+              <p>New activity update</p>
+            </div>
+          </div>
+          <div class="time-badge">19 Hours</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-warning"></div>
+            <div class="notification-text">
+              <h6>Career satsang</h6>
+              <p>New Student joined (Web Development Student)</p>
+            </div>
+          </div>
+          <div class="time-badge">19 Hours</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-orange" style="background-color: #f7a34b;"></div>
+            <div class="notification-text">
+              <h6>Our Course Fullstack</h6>
+              <p>Reached 1000 Views Milestone!</p>
+            </div>
+          </div>
+          <div class="time-badge">3 days ago</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-success"></div>
+            <div class="notification-text">
+              <h6>Fuji Sekh</h6>
+              <p>Join our Graphic Design Course</p>
+            </div>
+          </div>
+          <div class="time-badge">27 mins ago</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-success"></div>
+            <div class="notification-text">
+              <h6>Fuji Sekh</h6>
+              <p>Join our Graphic Design Course</p>
+            </div>
+          </div>
+          <div class="time-badge">27 mins ago</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-purple" style="background-color: #b097e9;"></div>
+            <div class="notification-text">
+              <h6>Our Course Fullstack</h6>
+              <p>Reached 1000 Views Milestone!</p>
+            </div>
+          </div>
+          <div class="time-badge">1 day ago</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-left">
+            <div class="notification-icon bg-orange" style="background-color: #f7a34b;"></div>
+            <div class="notification-text">
+              <h6>Our Course Fullstack</h6>
+              <p>Reached 1000 Views Milestone!</p>
+            </div>
+          </div>
+          <div class="time-badge">1 day ago</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-buttons">
+      <div class="toggle-btn">
+        Keep Your Notification On
+        <div class="form-check form-switch m-0">
+          <input class="form-check-input" type="checkbox" id="notifSwitch" checked>
+        </div>
+      </div>
+
+      <div class="toggle-btn red">
+        Customize Alerts In Account
+        <div class="form-check form-switch m-0">
+          <input class="form-check-input" type="checkbox" id="alertSwitch">
+        </div>
+      </div>
+    </div>
+
+  </div>
+      </div>
+             <!-- Footer -->
+    <footer>
+      <div class="container py-5">
+        <div class="row g-4">
+
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-6 footer-logo">
+            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+            <p><strong>Social Links:</strong></p>
+            <p>
+              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+              <a href="#">LinkedIn</a> |
+              <a href="#">WhatsApp</a>
+            </p>
+            <p><strong>Email:</strong> info@skillwaala.com</p>
+            <p>
+              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
+              Jaipur
+            </p>
+            <p><strong>Contact:</strong> +91 7705697799</p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-2 col-md-6 footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Web Stories</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-4 col-md-6 footer-column">
+            <h3>Trending Courses</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <ul>
+                  <li><a href="#">Digital Marketing</a></li>
+                  <li><a href="#">SEO Course</a></li>
+                  <li><a href="#">Social Media Marketing</a></li>
+                  <li><a href="#">Performance Marketing</a></li>
+                  <li><a href="#">Animation Course</a></li>
+                  <li><a href="#">Graphic Design</a></li>
+                  <li><a href="#">Video Editing</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li><a href="#">Content Writing</a></li>
+                  <li><a href="#">Full-Stack Web Dev</a></li>
+                  <li><a href="#">English Spoken</a></li>
+                  <li><a href="#">Mobile App Dev</a></li>
+                  <li><a href="#">Data Science</a></li>
+                  <li><a href="#">Business Analyst</a></li>
+                  <li><a href="#">2D Animation</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-3 col-md-6 footer-column">
+            <h3>Industrial Trainings</h3>
+            <ul>
+              <li><a href="#">B.Tech</a></li>
+              <li><a href="#">M.Tech</a></li>
+              <li><a href="#">BCA</a></li>
+              <li><a href="#">MCA</a></li>
+              <li><a href="#">B.Sc</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-contacts">
+        <p>Business No: +91 7780879789</p>
+        <p>Email: info@skillwaala.com</p>
+        <p>Email: hr@skillwaala.com</p>
+      </div>
+    </footer>
+    </main>
+
+ 
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const toggleBtn = document.getElementById("sidebarToggle");
+
+      toggleBtn.addEventListener("click", () => {
+        if (window.innerWidth <= 991) {
+          sidebar.classList.toggle("show");
+        } else {
+          sidebar.classList.toggle("hide");
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 991) {
+          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+            sidebar.classList.remove("show");
+          }
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 991) {
+          sidebar.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>
