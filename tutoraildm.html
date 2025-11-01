@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seo Quiz</title>
+    <title>Tutorial DM</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,11 +25,7 @@
       .navbar {
         background: #fff;
         padding: 10px 25px;
-        box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 18%);
-        position: sticky;
-        top: 0px;
-        left: 0px;
-        z-index: 1000;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
       }
 
       .custom-nav {
@@ -221,38 +217,34 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 40vh;
-        padding: 30px 15px;
-        background-color: #d7e3ff;
+        min-height: 70vh;
+        background-image: linear-gradient(to bottom, #e80106, #f24f1e);
+        color: white;
       }
 
       .hero-card {
-        background: #ffffff;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        padding: 60px 40px;
-        max-width: 1100px;
+        padding: 40px 40px;
+        max-width: 1200px;
         width: 100%;
-        background-image: radial-gradient(#d7e3ff 1px, transparent 1px);
         background-size: 40px 40px;
         position: relative;
       }
 
       .hero-card h1 {
         font-weight: 700;
-        color: #111;
+        color: #ddd;
         font-size: 2.5rem;
       }
 
       .hero-card h2 {
         font-weight: 500;
-        color: #555;
+        color: #fff7f7;
         font-size: 1.25rem;
         margin-bottom: 20px;
       }
 
       .hero-card p {
-        color: #555;
+        color: #ddd;
         font-size: 1rem;
         margin-bottom: 35px;
         line-height: 1.6;
@@ -266,16 +258,11 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       }
 
-      .learingtext {
-        color: #f36f45;
-      }
-
       .btn-learn {
-        background: linear-gradient(to right, #ff3b3b, #ff6600);
-        color: white;
+        background-color: white;
         font-weight: 600;
-        border-radius: 8px;
-        padding: 12px 24px;
+        border-radius: 25px;
+        padding: 7px 80px;
         border: none;
         transition: all 0.3s;
       }
@@ -285,222 +272,9 @@
         box-shadow: 0 4px 15px rgba(255, 80, 0, 0.4);
       }
 
-      .btn-outline {
-        border: none;
-        background: rgba(0, 0, 0, 0.09);
-        color: #555;
+      h3.section-title {
         font-weight: 600;
-        padding: 12px 24px;
-        border-radius: 8px;
-        transition: all 0.3s;
-      }
-
-      .btn-outline:hover {
-        color: #111;
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      .quiz-section {
-        padding: 60px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .quiz-container {
-        /* background: #fff; */
-        border-radius: 15px;
-        box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.08);
-        padding: 50px;
-        max-width: 1100px;
-        width: 100%;
-        background-color: #f8fafd;
-      }
-
-      .quiz-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .quiz-header h2 {
-        font-weight: 700;
-        font-size: 1.8rem;
-        color: #222;
-      }
-
-      .quiz-header i {
-        font-size: 2.2rem;
-        color: #111;
-      }
-
-      .quiz-container p {
-        color: #555;
-        font-size: 1rem;
-        margin: 10px 0 30px;
-      }
-
-      .quiz-info {
-        border: 1px solid #ccc;
-        border-radius: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 25px;
-        flex-wrap: wrap;
-        margin-bottom: 60px;
-      }
-
-      .quiz-info div {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #444;
-        font-weight: 500;
-        margin-bottom: 10px;
-      }
-
-      .quiz-info span {
-        background-color: #444;
-        color: white;
-        border-radius: 5px;
-        padding: 5px 15px;
-        font-weight: 600;
-        font-size: 0.9rem;
-      }
-
-      .btn-start {
-        background: linear-gradient(to right, #ff6600, #ff0000);
-        color: #fff;
-        font-weight: 600;
-        padding: 10px 100px;
-        border: none;
-
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 10px rgba(255, 80, 0, 0.3);
-      }
-
-      .btn-start:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 15px rgba(255, 80, 0, 0.4);
-      }
-
-      @media (max-width: 768px) {
-        .quiz-container {
-          padding: 35px 25px;
-        }
-
-        .quiz-header h2 {
-          font-size: 1.5rem;
-        }
-
-        .quiz-info {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 20px;
-        }
-
-        .quiz-info div {
-          width: 100%;
-          justify-content: space-between;
-        }
-
-        .btn-start {
-          width: 100%;
-          text-align: center;
-          margin-top: 10px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .quiz-header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .quiz-header i {
-          margin-top: 10px;
-        }
-      }
-
-      .benefits-section {
-        background: linear-gradient(to bottom, #ffffff, #eef7ff);
-        border-radius: 10px;
-        padding: 40px 30px;
-        max-width: 1100px;
-        margin: 60px auto;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-      }
-
-      .benefits-section h3 {
-        font-weight: 700;
-        color: #222;
-        font-size: 1.5rem;
         margin-bottom: 30px;
-        text-align: left;
-      }
-
-      .benefit-item {
-        margin-bottom: 25px;
-        position: relative;
-        padding-left: 25px;
-      }
-
-      .benefit-item::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 7px;
-        width: 10px;
-        height: 10px;
-        background-color: #ff7b00; /* orange color dot */
-        border-radius: 50%;
-      }
-
-      .benefit-title {
-        font-weight: 600;
-        color: #222;
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-      }
-
-      .benefit-item p {
-        color: #555;
-        font-size: 0.95rem;
-        margin: 0;
-        line-height: 1.6;
-      }
-
-      .benefit-divider {
-        width: 100%;
-        height: 1px;
-        background-color: #e0e0e0;
-        margin: 15px 0;
-      }
-
-      @media (max-width: 768px) {
-        .benefits-section {
-          padding: 30px 20px;
-        }
-
-        .benefits-section h3 {
-          font-size: 1.3rem;
-        }
-
-        .benefit-item p {
-          font-size: 0.9rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .benefit-title {
-          font-size: 1rem;
-        }
-        .benefit-item p {
-          font-size: 0.85rem;
-        }
       }
 
       .courses-section {
@@ -533,6 +307,83 @@
         }
         100% {
           transform: translateX(-50%);
+        }
+      }
+
+      .topics-box {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .topics-box h5 {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .topics-box ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .topics-box li {
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .topics-box li:hover,
+      .topics-box li.active {
+        background: #ff6a00;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .cta-box {
+        background: linear-gradient(135deg, #ff6a00, #ff9340);
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        padding: 0px 20px;
+        
+    
+      }
+
+      .cta-box h5{
+           font-weight: bold;
+    padding: 56px;
+      }
+
+      .cta-box img {
+          width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+   
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #ff6a00;
+        color: white;
+      }
+
+      .accordion-item {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        margin-bottom: 15px;
+      }
+
+      .accordion-body a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .accordion-body a:hover {
+        color: #ff6a00;
+      }
+
+      @media (max-width: 992px) {
+        .left-col {
+          margin-bottom: 30px;
         }
       }
 
@@ -590,64 +441,6 @@
         padding: 5px 10px;
         font-size: 12px;
         border-radius: 5px;
-      }
-
-      .faq-section-2 {
-        padding: 80px 0;
-        background: #fff;
-      }
-
-      .faq-section-2 h2 {
-        text-align: center;
-        font-weight: 700;
-        font-size: 28px;
-        margin-bottom: 10px;
-      }
-
-      .faq-section-2 p {
-        text-align: center;
-        color: #555;
-        font-size: 15px;
-        margin-bottom: 40px;
-      }
-
-      .faq-box-2 {
-        max-width: 900px;
-        margin: auto;
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        padding: 30px;
-      }
-
-      .accordion-item-2 {
-        border: none;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      }
-
-      .accordion-item-2 .accordion-button {
-        font-weight: 500;
-        background: #fff;
-        border: none;
-        box-shadow: none;
-        padding: 15px 20px;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-      }
-
-      .accordion-item-2 .accordion-button:not(.collapsed) {
-        background: #f4f6ff;
-        color: #2c3ebd;
-      }
-
-      .accordion-body-2 {
-        color: #555;
-        font-size: 15px;
-        background: #fff;
-        padding: 20px;
       }
 
       @media (max-width: 768px) {
@@ -732,7 +525,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="./skillspace.html">Skill Space</a>
+              <a class="nav-link active" href="#">Skill Space</a>
             </li>
             <span class="divider">|</span>
 
@@ -762,29 +555,22 @@
       <div class="hero-card">
         <div class="row">
           <div class="col-lg-8">
-            <h1>
-              Test Your <span class="learingtext"> Seo Mastery </span>
-            </h1>
+            <h1>Master Digital Marketing — Learn, Build, Grow</h1>
 
             <p>
-              Challenge your writing skills with SkillSpace’s Content Writing
-              Quiz, designed by industry experts to evaluate your grasp of
-              grammar, storytelling, SEO writing, and professional content
-              creation.
+              A complete guide to mastering SEQ social media, ads, and marketing
+              automation.
             </p>
-            <div class="btn-group d-flex gap-3 flex-wrap">
-              <a href="./quiztest.html"
-                ><button class="btn-learn">Start Quiz</button></a
-              >
-              <a href="./course.html"
-                ><button class="btn-outline">Explore All Courses</button></a
+            <div class="">
+              <a href="./loginreg.html"
+                ><button class="btn-learn">Take Course</button></a
               >
             </div>
           </div>
           <!-- Right Image -->
           <div class="col-lg-4 text-center mt-4 mt-lg-0">
             <img
-              src="https://media.istockphoto.com/id/1154370446/photo/funny-raccoon-in-green-sunglasses-showing-a-rock-gesture-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kkZiaB9Q-GbY5gjf6WWURzEpLzNrpjZp_tn09GB21bI="
+              src="https://img.freepik.com/premium-vector/word-cloud-background-concept-workshop-business-training-seminar-employee-brainstorming-information-concept-vector-illustration_616200-4488.jpg"
               alt="Learning Illustration"
               class="hero-image"
             />
@@ -793,90 +579,222 @@
       </div>
     </section>
 
-    <section class="quiz-section" id="startquiz">
-      <div class="quiz-container">
-        <div class="quiz-header">
-          <h2>SEO Quiz</h2>
-          <i class="bi bi-lightbulb"></i>
+    <div class="container py-5">
+      <div class="row">
+        <!-- LEFT SIDE -->
+        <div class="col-lg-4 left-col">
+          <div class="topics-box">
+            <h5>Topics</h5>
+            <ul>
+              <li class="active" onclick="showModule('seo')">SEO</li>
+              <li onclick="showModule('smm')">Social Media Marketing</li>
+              <li onclick="showModule('ads')">Google Ads</li>
+              <li onclick="showModule('email')">Email Marketing</li>
+            </ul>
+          </div>
+
+          <div class="cta-box">
+            <h5>
+              Take your first step towards becoming a certified Digital
+              Marketer.
+            </h5>
+            <img
+              src="./media/simple-computer-laptop-isolated.png"
+              alt="Laptop"
+            />
+          </div>
         </div>
-        <p>
-          So, what are you waiting for? Click the "Start Quiz" button and get
-          started!
-        </p>
 
-        <div class="quiz-info">
-          <div><span>31</span> Total Number of Questions</div>
-          <div><span>20 Min</span> Total Time for Questions</div>
+        <!-- RIGHT SIDE -->
+        <div class="col-lg-8">
+          <!-- SEO MODULE -->
+          <div id="seo" class="module-section">
+            <div class="accordion" id="seoAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                  >
+                    Module 1 - Search Engine Optimization
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="page1.html" target="_blank"
+                          >Introduction to SEO</a
+                        >
+                      </li>
+                      <li>
+                        <a href="page2.html" target="_blank"
+                          >On-page Optimization</a
+                        >
+                      </li>
+                      <li>
+                        <a href="page3.html" target="_blank">Off-page SEO</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                  >
+                    Module 2 - Keyword Research
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="page4.html" target="_blank">Keyword Tools</a>
+                      </li>
+                      <li>
+                        <a href="page5.html" target="_blank"
+                          >Competitor Analysis</a
+                        >
+                      </li>
+                      <li>
+                        <a href="page6.html" target="_blank"
+                          >Long-tail Keywords</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER MODULES -->
+          <div id="smm" class="module-section d-none">
+            <div class="accordion" id="smmAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#smmOne"
+                  >
+                    Module 1 - Social Media Basics
+                  </button>
+                </h2>
+                <div id="smmOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="fb.html" target="_blank">Facebook Marketing</a>
+                      </li>
+                      <li>
+                        <a href="insta.html" target="_blank"
+                          >Instagram Marketing</a
+                        >
+                      </li>
+                      <li>
+                        <a href="linkedin.html" target="_blank"
+                          >LinkedIn Strategy</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="ads" class="module-section d-none">
+            <div class="accordion" id="adsAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adsOne"
+                  >
+                    Module 1 - Google Ads Overview
+                  </button>
+                </h2>
+                <div id="adsOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="introads.html" target="_blank">Intro to Ads</a>
+                      </li>
+                      <li>
+                        <a href="campaigns.html" target="_blank"
+                          >Campaign Setup</a
+                        >
+                      </li>
+                      <li>
+                        <a href="metrics.html" target="_blank"
+                          >Performance Metrics</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="email" class="module-section d-none">
+            <div class="accordion" id="emailAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#emailOne"
+                  >
+                    Module 1 - Email Marketing Fundamentals
+                  </button>
+                </h2>
+                <div id="emailOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="introemail.html" target="_blank"
+                          >Email Tools</a
+                        >
+                      </li>
+                      <li>
+                        <a href="template.html" target="_blank"
+                          >Template Design</a
+                        >
+                      </li>
+                      <li>
+                        <a href="automation.html" target="_blank"
+                          >Email Automation</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="text-end">
-          <a href="./quiztest.html"
-            ><button class="btn-start">Start Quiz</button></a
-          >
-        </div>
       </div>
-    </section>
-
-    <section class="benefits-section">
-      <h3>Benefits of Taking the SkillSpace Quiz</h3>
-
-      <div class="benefit-item">
-        <div class="benefit-title">Identify Your Strengths</div>
-        <p>
-          This quiz helps you pinpoint which areas you naturally excel in. It
-          will help you plan your learning journey more strategically.
-        </p>
-        <div class="benefit-divider"></div>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-title">Bridge Knowledge Gaps</div>
-        <p>
-          Even if you have taken a course or worked in these fields, there are
-          always blind spots. The quiz reveals where your understanding can be
-          improved, helping you focus on the right upskilling areas.
-        </p>
-        <div class="benefit-divider"></div>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-title">Benchmark Against Industry Standards</div>
-        <p>
-          Each quiz question is designed to reflect real industry practices, not
-          textbook theory. By attempting the quiz, you will know how your skill
-          level compares with that of industry professionals.
-        </p>
-        <div class="benefit-divider"></div>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-title">Prepare for Job Interviews</div>
-        <p>
-          Many recruiters assess practical knowledge. The SkillSpace quiz lets
-          you rehearse interview-style questions, giving you an extra edge in
-          placements and internships.
-        </p>
-        <div class="benefit-divider"></div>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-title">Learn, Compete, and Grow</div>
-        <p>
-          With gamified learning elements, this quiz transforms traditional
-          testing into an engaging challenge. Compare your score with others,
-          climb the leaderboard, and enjoy the thrill of learning with
-          competition.
-        </p>
-      </div>
-    </section>
+    </div>
 
     <section class="courses-section">
       <div class="container">
         <h2>Discover More Courses on Skillwaala</h2>
         <div class="slider d-flex">
-          <a
-            href="./dmbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
+          <a href="#" class="course-card text-decoration-none text-dark">
             <div class="course-img">
               <span class="live-tag">Live</span>
             </div>
@@ -889,10 +807,7 @@
             </div>
           </a>
 
-          <a
-            href="./contentwriting.html"
-            class="course-card text-decoration-none text-dark"
-          >
+          <a href="#" class="course-card text-decoration-none text-dark">
             <div class="course-img">
               <span class="live-tag">Live</span>
             </div>
@@ -905,10 +820,7 @@
             </div>
           </a>
 
-          <a
-            href="./animationbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
+          <a href="#" class="course-card text-decoration-none text-dark">
             <div class="course-img">
               <span class="live-tag">Live</span>
             </div>
@@ -921,10 +833,7 @@
             </div>
           </a>
 
-          <a
-            href="./webbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
+          <a href="#" class="course-card text-decoration-none text-dark">
             <div class="course-img">
               <span class="live-tag">Live</span>
             </div>
@@ -937,10 +846,7 @@
             </div>
           </a>
 
-          <a
-            href="./englishcourse.html"
-            class="course-card text-decoration-none text-dark"
-          >
+          <a href="#" class="course-card text-decoration-none text-dark">
             <div class="course-img">
               <span class="live-tag">Live</span>
             </div>
@@ -954,10 +860,7 @@
           </a>
 
           <!-- Duplicate cards for seamless scrolling -->
-          <a
-            href="./dmbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
+          <a href="#" class="course-card text-decoration-none text-dark">
             <div class="course-img">
               <span class="live-tag">Live</span>
             </div>
@@ -969,138 +872,6 @@
               </p>
             </div>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!--FAQ SECTION START -->
-    <section class="faq-section-2" id="faq2">
-      <div class="container">
-        <h2>FAQ (Frequently Asked Questions)</h2>
-
-        <div class="faq-box-2">
-          <div class="accordion" id="faqAccordion2">
-            <div class="accordion-item-2">
-              <h2 class="accordion-header" id="q1-2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a1-2"
-                >
-                  Q1. What are these quizzes for?
-                </button>
-              </h2>
-              <div
-                id="a1-2"
-                class="accordion-collapse collapse"
-                data-bs-parent="#faqAccordion2"
-              >
-                <div class="accordion-body-2">
-                  Ans. These quizzes are designed to help students and
-                  professionals test and enhance their digital skills through
-                  fun, gamified challenges
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item-2">
-              <h2 class="accordion-header" id="q2-2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a2-2"
-                >
-                  Q2. Are the SkillSpace quizzes free to attempt?
-                </button>
-              </h2>
-              <div
-                id="a2-2"
-                class="accordion-collapse collapse"
-                data-bs-parent="#faqAccordion2"
-              >
-                <div class="accordion-body-2">
-                  Ans. Yes, all quizzes are completely free to access. You can
-                  attempt them anytime, track your score, and even retake
-                  quizzes to improve your performance.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item-2">
-              <h2 class="accordion-header" id="q3-2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a3-2"
-                >
-                  Q3. Who should take these quizzes?
-                </button>
-              </h2>
-              <div
-                id="a3-2"
-                class="accordion-collapse collapse"
-                data-bs-parent="#faqAccordion2"
-              >
-                <div class="accordion-body-2">
-                  Ans. Skillspace quizzes are perfect for students, job seekers,
-                  freelancers, and working professionals who want to benchmark
-                  their skills in Digital Marketing, Content Writing, Animation,
-                  and Web Development.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item-2">
-              <h2 class="accordion-header" id="q4-2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a4-2"
-                >
-                  Q4. Will these quizzes help in career growth?
-                </button>
-              </h2>
-              <div
-                id="a4-2"
-                class="accordion-collapse collapse"
-                data-bs-parent="#faqAccordion2"
-              >
-                <div class="accordion-body-2">
-                  Ans. Yes, our quizzes are designed to help you identify
-                  strengths and weaknesses, guiding you toward the right
-                  Skillwaala courses and workshops to grow your career.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item-2">
-              <h2 class="accordion-header" id="q5-2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a5-2"
-                >
-                  Q5. Can I get a certificate after completing the quizzes?
-                </button>
-              </h2>
-              <div
-                id="a5-2"
-                class="accordion-collapse collapse"
-                data-bs-parent="#faqAccordion2"
-              >
-                <div class="accordion-body-2">
-                  Ans. Currently, SkillSpace quizzes focus on practical learning
-                  and assessment. Certificates are offered for Skillwaala’s main
-                  courses and workshops.
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -1204,5 +975,22 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS to handle topic click -->
+    <script>
+      function showModule(topic) {
+        document
+          .querySelectorAll(".topics-box li")
+          .forEach((li) => li.classList.remove("active"));
+        event.target.classList.add("active");
+        document
+          .querySelectorAll(".module-section")
+          .forEach((section) => section.classList.add("d-none"));
+        document.getElementById(topic).classList.remove("d-none");
+      }
+    </script>
   </body>
 </html>
