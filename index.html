@@ -39,12 +39,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="./skillspace.html">Skill Space</a>
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
             </li>
             <span class="divider">|</span>
             <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="./course.html">Course</a>
+              <a class="nav-link" href="./course.html">Courses</a>
             </li>
 
             <span class="divider">|</span>
@@ -53,7 +55,7 @@
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hire from us</a>
+              <a class="nav-link" href="#">Hire From Us</a>
             </li>
             <span class="divider">|</span>
             <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
@@ -87,7 +89,9 @@
               Content Writing, Animation, and Web Development. Start learning
               today with zero investment.
             </p>
-            <a href="./course.html" class="btn-orange">Explore Our FREE Courses</a>
+            <a href="./course.html" class="btn-orange"
+              >Explore Our FREE Courses</a
+            >
           </div>
 
           <!-- Right Content -->
@@ -147,22 +151,37 @@
               </div>
             </div>
 
+            <div class="brands d-flex align-items-center mt-4 flex-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                alt="Google"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg"
+                alt="Udemy"
+              />
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyA_4IzEtEigtceW_EX6M1_ll6d4Y78EaNDA&s"
+                alt="Trustpilot"
+              />
+            </div>
+
             <!-- CTA Button -->
-            <a href="./loginreg.html"><button class="cta">Start Your Upskilling Journey Now</button></a>
+            <a href="./loginreg.html"
+              ><button class="cta">Start Your Upskilling Journey Now</button></a
+            >
           </div>
         </div>
       </div>
     </section>
-
     <!-- ✅ Courses Section -->
     <section class="course_section">
       <h2 class="section-title">Explore Our In-Demand Courses</h2>
 
       <div class="courses-wrapper">
-        <div class="arrow">&#9664;</div>
-        <!-- Left Arrow -->
+        <div class="arrow" id="left-arrow">&#9664;</div>
 
-        <div class="courses-container">
+        <div class="courses-container" id="coursesContainer">
           <div class="course-card">
             <img
               src="https://academylms.net/wp-content/uploads/2022/09/Structure-of-Online-Courses.png"
@@ -211,10 +230,39 @@
               games, and digital platforms.
             </p>
           </div>
+
+          <div class="course-card">
+            <img
+              src="https://academylms.net/wp-content/uploads/2022/09/Structure-of-Online-Courses.png"
+              alt="Web Development"
+              class="course-img"
+            />
+            <span class="tag blue">Web Development</span>
+            <h3>Full Stack Web Development</h3>
+            <p>
+              Learn frontend and backend development using HTML, CSS,
+              JavaScript, React, Node.js, and MongoDB — become a complete
+              full-stack web developer ready for industry challenges.
+            </p>
+          </div>
+
+          <div class="course-card">
+            <img
+              src="https://academylms.net/wp-content/uploads/2022/09/Structure-of-Online-Courses.png"
+              alt="UI UX Design"
+              class="course-img"
+            />
+            <span class="tag green">UI/UX Design</span>
+            <h3>UI/UX Design Essentials</h3>
+            <p>
+              Understand the principles of user interface and user experience
+              design. Learn tools like Figma and Adobe XD to design
+              professional, user-friendly interfaces.
+            </p>
+          </div>
         </div>
 
-        <div class="arrow">&#9654;</div>
-        <!-- Right Arrow -->
+        <div class="arrow" id="right-arrow">&#9654;</div>
       </div>
     </section>
 
@@ -288,6 +336,8 @@
       </div>
     </section>
 
+
+
     <section class="training-section p-4" id="internship">
       <h2 class="section-title">Skillwaala’s Offline Training Programs</h2>
 
@@ -336,7 +386,7 @@
       </ul>
 
       <!-- Tab Content -->
-      <div class="tab-content">
+      <div class="tab-content" >
         <!-- Digital Marketing -->
         <div class="tab-pane fade show active" id="digital" role="tabpanel">
           <div class="row g-4 align-items-center">
@@ -422,11 +472,107 @@
       </div>
     </section>
 
+    
+    <section class="course-college">
+      <div class="container py-5">
+        <div class="row  justify-content-center">
+          <div class="col-md-8 mb-4">
+            <h2 class="text-center fw-bold">Internship Opportunities</h2>
+            <p class="text-center">Our dedicated internship programs are designed to give learners real-world experience while applying the skills gained through our free online courses. Whether you are a course student or want to fulfill a college internship requirement, we provide structured opportunities for all students.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- First Card -->
+          <div class="col-md-6">
+            <div class="card p-4 h-100">
+              <div class="icon_one"><i class="bi bi-journal-text"></i></div><h5> Course + Internship</h5>
+              <p class="text-muted">
+                This internship is exclusively for Skillwaala course learners.
+                It allows students to apply what they have learned in our
+                comprehensive online courses.
+              </p>
+              <ul>
+                <li>Hands-on experience aligned with your Skillwaala course</li>
+                <li>Mentorship from industry professionals</li>
+                <li>Portfolio-ready projects and real-world exposure</li>
+                <li>Earn certifications to boost your career</li>
+              </ul>
+              <div class="mt-3">
+                <button class="btn btn-custom-blue w-100">
+                  Apply for Course Internship
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Card -->
+          <div class="col-md-6">
+            <div class="card p-4 h-100">
+             <div class="icon_two"><i class="bi bi-mortarboard"></i></div> <h5 >
+                 College Students Internship
+              </h5>
+              <p class="text-muted">
+                This internship program is specifically designed for college
+                students who require mandatory internships, providing real
+                industry exposure for learners pursuing B.Tech, BCA, MCA,
+                M.Tech, or any other degree.
+              </p>
+              <ul>
+                <li>Internships aligned with your degree requirements</li>
+                <li>Work on live projects under expert guidance</li>
+                <li>Certification recognized by BR Softech</li>
+                <li>Exposure to the corporate world</li>
+              </ul>
+              <div class="mt-3">
+                <button class="btn btn-custom-green w-100">
+                  Apply for College Internship
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trusted Section -->
+        <div class="trusted-section mt-5">
+          <h4 class="section-title text-center">
+            Trusted by Leading Colleges &
+            Institutions
+          </h4>
+          <div class="row text-center justify-content-center">
+            <div class="col-6 col-md-2 trusted-logo">
+              <i class="bi bi-award"></i>
+              Biyani
+            </div>
+            <div class="col-6 col-md-2 trusted-logo">
+              <i class="bi bi-award"></i>
+              Banasthali Vidyapith
+            </div>
+            <div class="col-6 col-md-2 trusted-logo">
+              <i class="bi bi-award"></i>
+              Lords University
+            </div>
+            <div class="col-6 col-md-2 trusted-logo">
+              <i class="bi bi-award"></i>
+              SKIT
+            </div>
+            <div class="col-6 col-md-2 trusted-logo">
+              <i class="bi bi-award"></i>
+              BSDU
+            </div>
+            <div class="col-6 col-md-2 trusted-logo">
+              <i class="bi bi-award"></i>
+              APEX
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Why Choose Box -->
     <section class="choose-skill">
       <div class="container my-5">
         <div class="card-box">
-          <h2>Why Choose <span class="text-warning">Skillwaala?</span></h2>
+          <h2>Why Choose <span style="color: #FF6900;">Skillwaala?</span></h2>
           <p>
             Skillwaala isn’t just another learning platform. We focus on
             providing career-focused, industry-relevant courses that are
@@ -437,9 +583,9 @@
         </div>
 
         <!-- Content Section -->
-        <div class="row">
+        <div class="row justify-content-center">
           <!-- Left Buttons -->
-          <div class="col-md-4">
+          <div class="col-md-5">
             <button
               class="why-btn bg-success active"
               data-target="free"
@@ -488,7 +634,7 @@
           </div>
 
           <!-- Right Content -->
-          <div class="col-md-8">
+          <div class="col-md-5">
             <div
               class="why-content"
               id="whyContent"
@@ -524,104 +670,31 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="course-college">
-      <div class="container py-5">
-        <div class="row g-4">
-          <!-- First Card -->
-          <div class="col-md-6">
-            <div class="card p-4 h-100">
-              <h5><i class="bi bi-journal-text"></i> Course + Internship</h5>
-              <p class="text-muted">
-                This internship is exclusively for Skillwaala course learners.
-                It allows students to apply what they have learned in our
-                comprehensive online courses.
-              </p>
-              <ul>
-                <li>Hands-on experience aligned with your Skillwaala course</li>
-                <li>Mentorship from industry professionals</li>
-                <li>Portfolio-ready projects and real-world exposure</li>
-                <li>Earn certifications to boost your career</li>
-              </ul>
-              <div class="mt-3">
-                <button class="btn btn-custom-blue w-100">
-                  Apply for Course Internship
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Second Card -->
-          <div class="col-md-6">
-            <div class="card p-4 h-100">
-              <h5>
-                <i class="bi bi-mortarboard"></i> College Students Internship
-              </h5>
-              <p class="text-muted">
-                This internship program is specifically designed for college
-                students who require mandatory internships, providing real
-                industry exposure for learners pursuing B.Tech, BCA, MCA,
-                M.Tech, or any other degree.
-              </p>
-              <ul>
-                <li>Internships aligned with your degree requirements</li>
-                <li>Work on live projects under expert guidance</li>
-                <li>Certification recognized by BR Softech</li>
-                <li>Exposure to the corporate world</li>
-              </ul>
-              <div class="mt-3">
-                <button class="btn btn-custom-green w-100">
-                  Apply for College Internship
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trusted Section -->
-        <div class="trusted-section mt-5">
-          <h4 class="text-center">
-            Trusted by Leading <span class="text-primary">Colleges</span> &
-            Institutions
-          </h4>
-          <div class="row text-center justify-content-center">
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              Biyani
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              Banasthali Vidyapith
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              Lords University
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              SKIT
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              BSDU
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              APEX
-            </div>
-          </div>
-        </div>
+          <div class="journey-card">
+      <div class="journey-icon">
+        <i class="bi bi-diamond-fill"></i>
       </div>
+      <h3 class="journey-title">Ready to Start Your Learning Journey?</h3>
+      <p class="journey-text" >
+        Join thousands of learners who have already transformed their careers
+        with Skillwaala's free courses.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <button class="btn btn-orange">Browse Free Courses</button>
+        <button class="btn btn-outline-orange">Apply for Internship</button>
+      </div>
+    </div>
     </section>
+
 
     <section class="testimonial-section">
       <div class="container">
         <h2>Hear From Our Learners</h2>
         <p>
-       At Skillwaala, nothing speaks louder than the success of our learners. From students to working professionals, thousands have upskilled and built their careers through our free online courses and certificates from BR Softech. 
-
-
+          At Skillwaala, nothing speaks louder than the success of our learners.
+          From students to working professionals, thousands have upskilled and
+          built their careers through our free online courses and certificates
+          from BR Softech.
         </p>
 
         <!-- Cards -->
@@ -686,8 +759,6 @@
             </div>
           </div>
         </div>
-
-  
       </div>
     </section>
 
@@ -909,13 +980,18 @@
     <!-- Footer -->
     <footer>
       <div class="container py-5">
-        <div class="row g-4">
-          <!-- Register Box Section -->
+        <div class="row">
+          <div class="col-md-12">
+                      <!-- Register Box Section -->
           <section class="register-section">
             <h2>Skillwaala Free Training Program</h2>
             <p>Kickstart your Career with Skillwaala.</p>
             <a href="#internship" class="btn">Register Now</a>
           </section>
+          </div>
+        </div>
+        <div class="row g-4">
+
 
           <!-- First Column -->
           <div class="col-lg-3 col-md-6 footer-logo">
@@ -979,7 +1055,7 @@
           </div>
 
           <!-- Fourth Column -->
-          <div class="col-lg-3 col-md-6 footer-column">
+          <div class="col-lg-2 col-md-6 footer-column">
             <h3>Industrial Trainings</h3>
             <ul>
               <li><a href="#">B.Tech</a></li>
@@ -1003,8 +1079,6 @@
         <p>Email: hr@skillwaala.com</p>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
       const buttons = document.querySelectorAll(".why-btn");
@@ -1105,6 +1179,27 @@
           imgBox.style.borderColor = color;
         });
       });
+
+      const container = document.getElementById("coursesContainer");
+      const leftArrow = document.getElementById("left-arrow");
+      const rightArrow = document.getElementById("right-arrow");
+
+      leftArrow.addEventListener("click", () => {
+        container.scrollBy({
+          left: -350,
+          behavior: "smooth",
+        });
+      });
+
+      rightArrow.addEventListener("click", () => {
+        container.scrollBy({
+          left: 350,
+          behavior: "smooth",
+        });
+      });
     </script>
   </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom right, #fff7f5, #fefefe);
+ 
 }
 
 .navbar {
@@ -34,42 +34,6 @@ body {
   color: #f26434;
   font-size: 20px;
   margin: 0 6px;
-}
-.dropbtn {
-  background-color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  border-radius: 5px;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-  color: #f26434;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .btn-login {
@@ -177,7 +141,7 @@ body {
   align-items: center;
 }
 
-.skillwaala-section a{
+.skillwaala-section a {
   text-decoration: none;
 }
 
@@ -229,7 +193,7 @@ body {
 
 .skillwaala-section .features li {
   margin-bottom: 7px;
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
   padding-left: 22px;
 }
@@ -241,6 +205,18 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.brands {
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brands img {
+  max-height: 40px;
+  margin-right: 25px;
 }
 
 .skillwaala-section .cta {
@@ -260,10 +236,82 @@ body {
   background: #e65c00;
 }
 
+/* ✅ Section Styling */
 .course_section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff6a00;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+/* ✅ Course Wrapper */
+.courses-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+/* ✅ Arrow Buttons */
+.arrow {
+  font-size: 35px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.arrow:hover {
+  color: #ff6a00;
+  transform: scale(1.2);
+}
+
+/* ✅ Scroll Container */
+.courses-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.courses-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ Card Styling */
+.course-card {
+  flex: 0 0 320px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-height: 480px;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
 }
 
 .course-img {
@@ -274,95 +322,52 @@ body {
   margin-bottom: 15px;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #d35400;
-  margin: 10px auto 0;
-  border-radius: 4px;
-}
-
-.courses-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.arrow {
-  font-size: 32px;
-  cursor: pointer;
-  user-select: none;
-  padding: 10px;
-  transition: 0.3s;
-}
-
-.arrow:hover {
-  color: #d35400;
-  transform: scale(1.2);
-}
-
-.courses-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.course-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-}
-
 .tag {
   display: inline-block;
   padding: 5px 12px;
-  font-size: 12px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
   color: #fff;
-  border-radius: 6px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .tag.blue {
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background-color: #007bff;
 }
+
 .tag.green {
-  background: linear-gradient(to right, #28a745, #5efc82);
+  background-color: #28a745;
 }
+
 .tag.purple {
-  background: linear-gradient(to right, #6f42c1, #d633ff);
+  background-color: #6f42c1;
 }
 
 .course-card h3 {
   font-size: 18px;
+  font-weight: 700;
   margin-bottom: 10px;
-  color: #333;
+  color: #222;
 }
 
 .course-card p {
   font-size: 15px;
   color: #555;
-  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .course-card {
+    flex: 0 0 260px;
+  }
+  .arrow {
+    font-size: 28px;
+  }
+}
+
+.course-college{
+ background-color: #EEF4FF;
+
 }
 
 .trending-section {
@@ -394,7 +399,7 @@ body {
   text-align: left;
   transition: transform 0.3s;
   min-height: 160px;
-
+  margin: 4px;
 }
 
 .course-card:hover {
@@ -414,9 +419,8 @@ body {
   line-height: 1.4;
 }
 
-
-
-.gray-card, .white-card {
+.gray-card,
+.white-card {
   background: #fff;
 }
 
@@ -436,12 +440,18 @@ body {
   background: #e23327;
 }
 
+.choose-skill {
+  background: linear-gradient(to right, #fff7ed, #fef4f3);
+  padding: 80px 20px;
+}
+
 .choose-skill .card-box {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-bottom: 40px;
+  height: 100%;
 }
 .choose-skill .card-box h2 {
   font-weight: 700;
@@ -493,6 +503,82 @@ ul {
   transition: border-color 0.3s ease;
 }
 
+.journey-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  text-align: center;
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
+.journey-card .journey-icon {
+  font-size: 24px;
+  color: #ff7a00;
+  margin-bottom: 15px;
+}
+
+.journey-card .journey-title {
+  font-weight: 700;
+  color: #2d2d2d;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.journey-card .journey-text {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.journey-card .btn-orange {
+  background-color: #ff7a00;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 22px;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.journey-card .btn-orange:hover {
+  background-color: #e86d00;
+}
+
+.journey-card .btn-outline-orange {
+  border: 1.8px solid #ff7a00;
+  color: #ff7a00;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.journey-card .btn-outline-orange:hover {
+  background-color: #ff7a00;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .journey-card {
+    padding: 40px 20px;
+  }
+  .journey-card .journey-title {
+    font-size: 20px;
+  }
+  .journey-card .journey-text {
+    font-size: 15px;
+  }
+  .journey-card .btn-orange,
+  .btn-outline-orange {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 .training-section {
   max-width: 1100px;
   margin: 50px auto;
@@ -516,6 +602,7 @@ ul {
 
 .nav-pills .nav-link.active {
   transform: scale(1.05);
+  background-color: #ff0000;
 }
 
 .nav-digital {
@@ -609,6 +696,24 @@ ul {
 }
 .animation-box {
   background: #8e44ad;
+}
+
+.course-college .icon_one i {
+  background: linear-gradient(to right, #1a4c99, #2b7fff);
+  color: white;
+  padding: 20px 25px;
+  float: left;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.course-college .icon_two i {
+  background: linear-gradient(to right, #005421, #00ba49);
+  color: white;
+  padding: 20px 25px;
+  float: left;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .course-college .card {
@@ -836,7 +941,7 @@ ul {
 }
 
 footer {
-  background: #fff5ef;
+  background: linear-gradient(to bottom, #ffffff, #ffbbac);
   color: #333;
   font-family: "Poppins", sans-serif;
 }
@@ -863,6 +968,13 @@ footer {
   color: #ff5722;
 }
 
+.footer-column {
+  background: #ffe9e1;
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin-right: 10px;
+}
+
 .footer-column h3 {
   background: #f6d5c4;
   text-align: center;
@@ -875,7 +987,7 @@ footer {
 
 .footer-column ul {
   list-style: none;
-  background: #ffe9e1;
+
   border-radius: 12px;
   padding: 20px;
 }
@@ -889,6 +1001,7 @@ footer {
   color: #333;
   font-size: 14px;
   transition: 0.3s;
+  text-align: center;
 }
 
 .footer-column ul li a:hover {
@@ -916,22 +1029,13 @@ footer {
   font-size: 14px;
 }
 
-.footer-bottom p{
+.footer-bottom p {
   text-align: center;
 }
 
 .footer-contacts p {
   margin: 0;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .courses-wrapper {
-    flex-direction: column;
-  }
-  .arrow {
-    display: none;
-  }
 }
 
 @media (max-width: 992px) {
