@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/homepage.css" />
   </head>
   <body>
-    <!-- Navbar -->
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -131,9 +131,9 @@
               </p>
             </div>
 
-            <!-- Features Box -->
-            <div class="features row">
-              <div class="col-md-6">
+            <!-- Features Box (Equal Size) -->
+            <div class="features">
+              <div class="feature-box">
                 <ul>
                   <li>Free Courses with No Hidden Costs</li>
                   <li>Learn Directly from Industry Experts</li>
@@ -141,7 +141,7 @@
                   <li>Exclusive Offline Internship Program</li>
                 </ul>
               </div>
-              <div class="col-md-6">
+              <div class="feature-box">
                 <ul>
                   <li>Career Counselling</li>
                   <li>Live Mentorship</li>
@@ -151,7 +151,8 @@
               </div>
             </div>
 
-            <div class="brands d-flex align-items-center mt-4 flex-wrap">
+            <!-- Brands -->
+            <div class="brands">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
                 alt="Google"
@@ -167,13 +168,14 @@
             </div>
 
             <!-- CTA Button -->
-            <a href="./loginreg.html"
-              ><button class="cta">Start Your Upskilling Journey Now</button></a
-            >
+            <a href="./loginreg.html">
+              <button class="cta">Start Your Upskilling Journey Now</button>
+            </a>
           </div>
         </div>
       </div>
     </section>
+
     <!-- ✅ Courses Section -->
     <section class="course_section">
       <h2 class="section-title">Explore Our In-Demand Courses</h2>
@@ -336,8 +338,6 @@
       </div>
     </section>
 
-
-
     <section class="training-section p-4" id="internship">
       <h2 class="section-title">Skillwaala’s Offline Training Programs</h2>
 
@@ -386,7 +386,7 @@
       </ul>
 
       <!-- Tab Content -->
-      <div class="tab-content" >
+      <div class="tab-content">
         <!-- Digital Marketing -->
         <div class="tab-pane fade show active" id="digital" role="tabpanel">
           <div class="row g-4 align-items-center">
@@ -472,20 +472,26 @@
       </div>
     </section>
 
-    
     <section class="course-college">
       <div class="container py-5">
-        <div class="row  justify-content-center">
+        <div class="row justify-content-center">
           <div class="col-md-8 mb-4">
             <h2 class="text-center fw-bold">Internship Opportunities</h2>
-            <p class="text-center">Our dedicated internship programs are designed to give learners real-world experience while applying the skills gained through our free online courses. Whether you are a course student or want to fulfill a college internship requirement, we provide structured opportunities for all students.</p>
+            <p class="text-center">
+              Our dedicated internship programs are designed to give learners
+              real-world experience while applying the skills gained through our
+              free online courses. Whether you are a course student or want to
+              fulfill a college internship requirement, we provide structured
+              opportunities for all students.
+            </p>
           </div>
         </div>
         <div class="row g-4">
           <!-- First Card -->
           <div class="col-md-6">
             <div class="card p-4 h-100">
-              <div class="icon_one"><i class="bi bi-journal-text"></i></div><h5> Course + Internship</h5>
+              <div class="icon_one"><i class="bi bi-journal-text"></i></div>
+              <h5>Course + Internship</h5>
               <p class="text-muted">
                 This internship is exclusively for Skillwaala course learners.
                 It allows students to apply what they have learned in our
@@ -508,9 +514,8 @@
           <!-- Second Card -->
           <div class="col-md-6">
             <div class="card p-4 h-100">
-             <div class="icon_two"><i class="bi bi-mortarboard"></i></div> <h5 >
-                 College Students Internship
-              </h5>
+              <div class="icon_two"><i class="bi bi-mortarboard"></i></div>
+              <h5 >College Students Internship</h5>
               <p class="text-muted">
                 This internship program is specifically designed for college
                 students who require mandatory internships, providing real
@@ -533,38 +538,90 @@
         </div>
 
         <!-- Trusted Section -->
-        <div class="trusted-section mt-5">
-          <h4 class="section-title text-center">
-            Trusted by Leading Colleges &
-            Institutions
-          </h4>
-          <div class="row text-center justify-content-center">
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              Biyani
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              Banasthali Vidyapith
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              Lords University
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              SKIT
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              BSDU
-            </div>
-            <div class="col-6 col-md-2 trusted-logo">
-              <i class="bi bi-award"></i>
-              APEX
+        <section class="trusted-section text-center">
+          <h2 class="trusted-title section-title" >
+            Trusted by Leading Colleges & Institutions
+          </h2>
+          <span></span>
+
+          <div class="mt-5 d-flex justify-content-center overflow-hidden">
+            <div class="marquee">
+              <!-- Duplicate for seamless scroll -->
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="Biyani Group Of Colleges"
+                />
+                <p class="mb-0 fw-semibold">Biyani Group Of Colleges</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="Banasthali Vidyapeeth"
+                />
+                <p class="mb-0 fw-semibold">Banasthali Vidyapeeth</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="Lords University"
+                />
+                <p class="mb-0 fw-semibold">Lords University</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="SKIT"
+                />
+                <p class="mb-0 fw-semibold">SKIT</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="APEX"
+                />
+                <p class="mb-0 fw-semibold">APEX</p>
+              </div>
+
+              <!-- Duplicate again for infinite smooth scrolling -->
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="Biyani Group Of Colleges"
+                />
+                <p class="mb-0 fw-semibold">Biyani Group Of Colleges</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="Banasthali Vidyapeeth"
+                />
+                <p class="mb-0 fw-semibold">Banasthali Vidyapeeth</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="Lords University"
+                />
+                <p class="mb-0 fw-semibold">Lords University</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="SKIT"
+                />
+                <p class="mb-0 fw-semibold">SKIT</p>
+              </div>
+              <div class="college-card">
+                <img
+                  src="https://thecriticalreader.com/wp-content/uploads/2018/08/university-2704306_640.jpg"
+                  alt="APEX"
+                />
+                <p class="mb-0 fw-semibold">APEX</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
@@ -572,7 +629,7 @@
     <section class="choose-skill">
       <div class="container my-5">
         <div class="card-box">
-          <h2>Why Choose <span style="color: #FF6900;">Skillwaala?</span></h2>
+          <h2>Why Choose <span style="color: #ff6900">Skillwaala?</span></h2>
           <p>
             Skillwaala isn’t just another learning platform. We focus on
             providing career-focused, industry-relevant courses that are
@@ -670,22 +727,21 @@
           </div>
         </div>
       </div>
-          <div class="journey-card">
-      <div class="journey-icon">
-        <i class="bi bi-diamond-fill"></i>
+      <div class="journey-card">
+        <div class="journey-icon">
+          <i class="bi bi-diamond-fill"></i>
+        </div>
+        <h3 class="journey-title">Ready to Start Your Learning Journey?</h3>
+        <p class="journey-text">
+          Join thousands of learners who have already transformed their careers
+          with Skillwaala's free courses.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <button class="btn btn-orange">Browse Free Courses</button>
+          <button class="btn btn-outline-orange">Apply for Internship</button>
+        </div>
       </div>
-      <h3 class="journey-title">Ready to Start Your Learning Journey?</h3>
-      <p class="journey-text" >
-        Join thousands of learners who have already transformed their careers
-        with Skillwaala's free courses.
-      </p>
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-        <button class="btn btn-orange">Browse Free Courses</button>
-        <button class="btn btn-outline-orange">Apply for Internship</button>
-      </div>
-    </div>
     </section>
-
 
     <section class="testimonial-section">
       <div class="container">
@@ -982,17 +1038,15 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-md-12">
-                      <!-- Register Box Section -->
-          <section class="register-section">
-            <h2>Skillwaala Free Training Program</h2>
-            <p>Kickstart your Career with Skillwaala.</p>
-            <a href="#internship" class="btn">Register Now</a>
-          </section>
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="#internship" class="btn">Register Now</a>
+            </section>
           </div>
         </div>
         <div class="row g-4">
-
-
           <!-- First Column -->
           <div class="col-lg-3 col-md-6 footer-logo">
             <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
