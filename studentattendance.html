@@ -4,91 +4,95 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Student Attendance</title>
+    <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="./css/studentattendance.css" />
   </head>
   <body>
-
-
-
-    <!-- Sidebar -->
-    <aside class="sidebar hide" id="sidebar">
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
       <div class="brand">
-        <img src="./media/ok quality logo.png" alt="logo" />
-        <div>
-          <div style="font-weight: 700">SKILLWAALA</div>
-          <div class="small text-muted">Student</div>
-        </div>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Student</span>
       </div>
-      <hr />
-      <div class="section-title">Main Menu</div>
       <nav class="nav flex-column">
-        <a href="./studentdashboard.html" class="nav-link active"
-          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        <a
+          class="nav-link active"
+          href="./studentdashboard.html"
+          data-title="Dashboard"
         >
-        <a href="./studentprofile.html" class="nav-link"
-          ><i class="bi bi-people"></i> My Profile</a
-        >
-        <a href="./studentenroll.html" class="nav-link"
-          ><i class="bi bi-book"></i>Enroll Courses</a
-        >
-        <a href="./studentcertificate.html" class="nav-link"
-          ><i class="bi bi-calendar"></i> My Certificate</a
-        >
-        <a href="./studentattendance.html" class="nav-link"
-          ><i class="bi bi-question-circle"></i> Attendance record</a
-        >
-          <a href="./studentwishlist.html" class="nav-link"
-          ><i class="bi bi-cart4"></i> Wishlist</a
-        >
-         <a href="./studentcoursepage.html" class="nav-link"
-          ><i class="bi bi-journal-check"></i> Courses Page </a
-        >
-      </nav>
-
-      <div class="section-title mt-3">Account</div>
-      <nav class="nav flex-column">
-        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
-        <a href="#" class="nav-link"
-          ><i class="bi bi-box-arrow-right"></i> Logout</a
-        >
-        <a href="#" class="nav-link"
-          ><i class="bi bi-life-preserver"></i> Support</a
-        >
-      </nav>
-    </aside>
-
-
-
-    <!-- Main Content -->
-    <main class="main">
-
-                  <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-          <!-- Sidebar Toggle Button -->
-    <div class="sidebar-toggle-btn" id="sidebarToggle">
-      <i class="bi bi-list"></i>
-    </div>
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="./index.html">
-              <img src="./media/ok quality logo.png" alt="Logo" width="100" />
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
         </a>
+        <a
+          class="nav-link"
+          href="./studentprofile.html"
+          data-title="My Profile"
+        >
+          <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentenroll.html"
+          data-title="Enroll Courses"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Enroll Courses</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentcertificate.html"
+          data-title="My Certificate"
+        >
+          <i class="fa-solid fa-calendar me-1"></i><span>My Certificate</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentattendance.html"
+          data-title="Attendance record"
+        >
+          <i class="fa-solid fa-file-lines me-1"></i
+          ><span>Attendance record</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentcoursepage.html"
+          data-title="Courses Page"
+        >
+          <i class="fa-solid fa-file-lines me-1"></i><span>Courses Page</span>
+        </a>
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="#" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a class="nav-link" href="#" data-title="Support">
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold ms-2" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,17 +100,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Skill Space</a>
-            </li>
-            <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-            <span class="divider">|</span>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Internship</a>
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hire from us</a>
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Hire from us</a>
             </li>
             <span class="divider">|</span>
             <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
@@ -118,6 +126,8 @@
       </div>
     </nav>
 
+    <!-- Main Content -->
+    <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
           <h6 class="mb-0 text-muted">Home / Attendance record</h6>
@@ -149,391 +159,404 @@
         </div>
       </div>
 
-   
-    <div class="dashboard-wrap">
-
-      <!-- Header controls (simulating tabs) -->
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <div class="top-controls">
-          <button class="btn btn-sm btn-outline-secondary">Courses</button>
-          <button class="btn btn-sm btn-outline-secondary">Course Pages</button>
-          <button class="btn btn-sm btn-outline-secondary">Instructor</button>
-          <button class="btn btn-sm btn-outline-secondary">Help</button>
+      <div class="dashboard-wrap">
+        <!-- Header controls (simulating tabs) -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="top-controls">
+            <button class="btn btn-sm btn-outline-secondary">Courses</button>
+            <button class="btn btn-sm btn-outline-secondary">
+              Course Pages
+            </button>
+            <button class="btn btn-sm btn-outline-secondary">Instructor</button>
+            <button class="btn btn-sm btn-outline-secondary">Help</button>
+          </div>
+          <div class="muted">Oct 2025</div>
         </div>
-        <div class="muted">Oct 2025</div>
-      </div>
 
-      <!-- Summary row + Chart -->
-      <div class="row g-3 mb-3">
-        <div class="col-lg-7">
-          <div class="white-panel">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <h5 class="mb-0">Student Attendance Dashboard</h5>
-              <small class="muted">Overview</small>
-            </div>
+        <!-- Summary row + Chart -->
+        <div class="row g-3 mb-3">
+          <div class="col-lg-7">
+            <div class="white-panel">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h5 class="mb-0">Student Attendance Dashboard</h5>
+                <small class="muted">Overview</small>
+              </div>
 
-            <div class="row g-2">
-              <div class="col-6 col-md-3">
-                <div class="summary-card sc-present">
-                  <div class="card-title-small">Present Days</div>
-                  <div class="card-value">18</div>
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <div class="summary-card sc-present">
+                    <div class="card-title-small">Present Days</div>
+                    <div class="card-value">18</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="summary-card sc-absent">
-                  <div class="card-title-small">Absent Days</div>
-                  <div class="card-value">2</div>
+                <div class="col-6 col-md-3">
+                  <div class="summary-card sc-absent">
+                    <div class="card-title-small">Absent Days</div>
+                    <div class="card-value">2</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="summary-card sc-recorded">
-                  <div class="card-title-small">Recorded</div>
-                  <div class="card-value">4</div>
+                <div class="col-6 col-md-3">
+                  <div class="summary-card sc-recorded">
+                    <div class="card-title-small">Recorded</div>
+                    <div class="card-value">4</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="summary-card sc-percent">
-                  <div class="card-title-small">Attendance</div>
-                  <div class="card-value">90%</div>
+                <div class="col-6 col-md-3">
+                  <div class="summary-card sc-percent">
+                    <div class="card-title-small">Attendance</div>
+                    <div class="card-value">90%</div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="white-panel h-100 d-flex flex-column">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <h6 class="mb-0">Attendance Chart</h6>
-              <small class="muted">Monthly</small>
-            </div>
-            <canvas id="attChart" style="max-height:180px"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <!-- Calendar View -->
-      <div class="white-panel mb-3">
-        <div class="d-flex align-items-center justify-content-between mb-3">
-          <div>
-            <h6 class="mb-0">Calendar View</h6>
-            <small class="muted">This Month</small>
-          </div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-outline-secondary">This Month</button>
-            <button class="btn btn-sm btn-outline-secondary">Last Month</button>
-            <button class="btn btn-sm btn-outline-secondary">Custom Range</button>
-            <button class="btn btn-sm btn-primary">Export as Pdf/Csv</button>
-          </div>
-        </div>
-
-        <div class="cal-weekdays mb-2">
-          <div class="text-center">Sun</div>
-          <div class="text-center">Mon</div>
-          <div class="text-center">Tue</div>
-          <div class="text-center">Wed</div>
-          <div class="text-center">Thu</div>
-          <div class="text-center">Fri</div>
-          <div class="text-center">Sat</div>
-        </div>
-
-        <div class="calendar-grid">
-          <!-- Row 1 -->
-          <div class="cal-cell"></div>
-          <div class="cal-cell present">1</div>
-          <div class="cal-cell present">2</div>
-          <div class="cal-cell present">3</div>
-          <div class="cal-cell present">4</div>
-          <div class="cal-cell absent">5</div>
-          <div class="cal-cell"></div>
-
-          <!-- Row 2 -->
-          <div class="cal-cell present">6</div>
-          <div class="cal-cell present">7</div>
-          <div class="cal-cell present">8</div>
-          <div class="cal-cell recorded">9</div>
-          <div class="cal-cell present">10</div>
-          <div class="cal-cell present">11</div>
-          <div class="cal-cell recorded">12</div>
-
-          <!-- Row 3 -->
-          <div class="cal-cell present">13</div>
-          <div class="cal-cell present">14</div>
-          <div class="cal-cell present">15</div>
-          <div class="cal-cell present">16</div>
-          <div class="cal-cell absent">17</div>
-          <div class="cal-cell present">18</div>
-          <div class="cal-cell present">19</div>
-
-          <!-- Row 4 -->
-          <div class="cal-cell present">20</div>
-          <div class="cal-cell present">21</div>
-          <div class="cal-cell recorded">22</div>
-          <div class="cal-cell present">23</div>
-          <div class="cal-cell present">24</div>
-          <div class="cal-cell present">25</div>
-          <div class="cal-cell absent">26</div>
-
-          <!-- Row 5 -->
-          <div class="cal-cell"></div>
-          <div class="cal-cell"></div>
-          <div class="cal-cell"></div>
-          <div class="cal-cell recorded">27</div>
-          <div class="cal-cell present">28</div>
-          <div class="cal-cell present">29</div>
-          <div class="cal-cell present">30</div>
-        </div>
-      </div>
-
-      <!-- Daily Attendance Details Table -->
-      <div class="white-panel">
-        <div class="d-flex align-items-center justify-content-between mb-3">
-          <h6 class="mb-0">Daily Attendance Details</h6>
-          <small class="muted">Recent records</small>
-        </div>
-
-        <div class="table-responsive">
-          <table class="table align-middle">
-            <thead>
-              <tr class="muted small">
-                <th>Date</th>
-                <th>Day</th>
-                <th>Status</th>
-                <th>Check-in</th>
-                <th>Check-Out</th>
-                <th>Total Hours</th>
-                <th>Remark</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>10 Oct 2025</td>
-                <td>Mon</td>
-                <td><span class="status-dot dot-present"></span> Present</td>
-                <td>9:00 AM</td>
-                <td>5:30 PM</td>
-                <td>8h 30m</td>
-                <td><span class="muted">On Time</span></td>
-              </tr>
-              <tr>
-                <td>09 Oct 2025</td>
-                <td>Sun</td>
-                <td><span class="status-dot dot-absent"></span> Absent</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td><span class="muted">Weekend</span></td>
-              </tr>
-              <tr>
-                <td>08 Oct 2025</td>
-                <td>Sat</td>
-                <td><span class="status-dot dot-recorded"></span> Recorded</td>
-                <td>9:05 AM</td>
-                <td>3:00 PM</td>
-                <td>5h 55m</td>
-                <td><span class="muted">Leave</span></td>
-              </tr>
-              <tr>
-                <td>07 Oct 2025</td>
-                <td>Fri</td>
-                <td><span class="status-dot dot-present"></span> Present</td>
-                <td>9:00 AM</td>
-                <td>5:20 PM</td>
-                <td>8h 20m</td>
-                <td><span class="muted">On Time</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="d-flex justify-content-between align-items-center mt-3">
-          <div class="muted">Month: Oct 2025</div>
-          <div class="muted">Subject: - &nbsp;&nbsp; Status: -</div>
-        </div>
-
-      </div>
-
-    </div>
-
-             <!-- Footer -->
-    <footer>
-      <div class="container py-5">
-        <div class="row g-4">
-
-          <!-- First Column -->
-          <div class="col-lg-3 col-md-6 footer-logo">
-            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
-            <p><strong>Social Links:</strong></p>
-            <p>
-              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-              <a href="#">LinkedIn</a> |
-              <a href="#">WhatsApp</a>
-            </p>
-            <p><strong>Email:</strong> info@skillwaala.com</p>
-            <p>
-              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
-              Jaipur
-            </p>
-            <p><strong>Contact:</strong> +91 7705697799</p>
-          </div>
-
-          <!-- Second Column -->
-          <div class="col-lg-2 col-md-6 footer-column">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Web Stories</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </div>
-
-          <!-- Third Column -->
-          <div class="col-lg-4 col-md-6 footer-column">
-            <h3>Trending Courses</h3>
-            <div class="row g-3">
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">SEO Course</a></li>
-                  <li><a href="#">Social Media Marketing</a></li>
-                  <li><a href="#">Performance Marketing</a></li>
-                  <li><a href="#">Animation Course</a></li>
-                  <li><a href="#">Graphic Design</a></li>
-                  <li><a href="#">Video Editing</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Content Writing</a></li>
-                  <li><a href="#">Full-Stack Web Dev</a></li>
-                  <li><a href="#">English Spoken</a></li>
-                  <li><a href="#">Mobile App Dev</a></li>
-                  <li><a href="#">Data Science</a></li>
-                  <li><a href="#">Business Analyst</a></li>
-                  <li><a href="#">2D Animation</a></li>
-                </ul>
               </div>
             </div>
           </div>
+          <div class="col-lg-5">
+            <div class="white-panel h-100 d-flex flex-column">
+              <div
+                class="d-flex align-items-center justify-content-between mb-2"
+              >
+                <h6 class="mb-0">Attendance Chart</h6>
+                <small class="muted">Monthly</small>
+              </div>
+              <canvas id="attChart" style="max-height: 180px"></canvas>
+            </div>
+          </div>
+        </div>
 
-          <!-- Fourth Column -->
-          <div class="col-lg-3 col-md-6 footer-column">
-            <h3>Industrial Trainings</h3>
-            <ul>
-              <li><a href="#">B.Tech</a></li>
-              <li><a href="#">M.Tech</a></li>
-              <li><a href="#">BCA</a></li>
-              <li><a href="#">MCA</a></li>
-              <li><a href="#">B.Sc</a></li>
-            </ul>
+        <!-- Calendar View -->
+        <div class="white-panel mb-3">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <div>
+              <h6 class="mb-0">Calendar View</h6>
+              <small class="muted">This Month</small>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-secondary">
+                This Month
+              </button>
+              <button class="btn btn-sm btn-outline-secondary">
+                Last Month
+              </button>
+              <button class="btn btn-sm btn-outline-secondary">
+                Custom Range
+              </button>
+              <button class="btn btn-sm btn-primary">Export as Pdf/Csv</button>
+            </div>
+          </div>
+
+          <div class="cal-weekdays mb-2">
+            <div class="text-center">Sun</div>
+            <div class="text-center">Mon</div>
+            <div class="text-center">Tue</div>
+            <div class="text-center">Wed</div>
+            <div class="text-center">Thu</div>
+            <div class="text-center">Fri</div>
+            <div class="text-center">Sat</div>
+          </div>
+
+          <div class="calendar-grid">
+            <!-- Row 1 -->
+            <div class="cal-cell"></div>
+            <div class="cal-cell present">1</div>
+            <div class="cal-cell present">2</div>
+            <div class="cal-cell present">3</div>
+            <div class="cal-cell present">4</div>
+            <div class="cal-cell absent">5</div>
+            <div class="cal-cell"></div>
+
+            <!-- Row 2 -->
+            <div class="cal-cell present">6</div>
+            <div class="cal-cell present">7</div>
+            <div class="cal-cell present">8</div>
+            <div class="cal-cell recorded">9</div>
+            <div class="cal-cell present">10</div>
+            <div class="cal-cell present">11</div>
+            <div class="cal-cell recorded">12</div>
+
+            <!-- Row 3 -->
+            <div class="cal-cell present">13</div>
+            <div class="cal-cell present">14</div>
+            <div class="cal-cell present">15</div>
+            <div class="cal-cell present">16</div>
+            <div class="cal-cell absent">17</div>
+            <div class="cal-cell present">18</div>
+            <div class="cal-cell present">19</div>
+
+            <!-- Row 4 -->
+            <div class="cal-cell present">20</div>
+            <div class="cal-cell present">21</div>
+            <div class="cal-cell recorded">22</div>
+            <div class="cal-cell present">23</div>
+            <div class="cal-cell present">24</div>
+            <div class="cal-cell present">25</div>
+            <div class="cal-cell absent">26</div>
+
+            <!-- Row 5 -->
+            <div class="cal-cell"></div>
+            <div class="cal-cell"></div>
+            <div class="cal-cell"></div>
+            <div class="cal-cell recorded">27</div>
+            <div class="cal-cell present">28</div>
+            <div class="cal-cell present">29</div>
+            <div class="cal-cell present">30</div>
+          </div>
+        </div>
+
+        <!-- Daily Attendance Details Table -->
+        <div class="white-panel">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h6 class="mb-0">Daily Attendance Details</h6>
+            <small class="muted">Recent records</small>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr class="muted small">
+                  <th>Date</th>
+                  <th>Day</th>
+                  <th>Status</th>
+                  <th>Check-in</th>
+                  <th>Check-Out</th>
+                  <th>Total Hours</th>
+                  <th>Remark</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10 Oct 2025</td>
+                  <td>Mon</td>
+                  <td><span class="status-dot dot-present"></span> Present</td>
+                  <td>9:00 AM</td>
+                  <td>5:30 PM</td>
+                  <td>8h 30m</td>
+                  <td><span class="muted">On Time</span></td>
+                </tr>
+                <tr>
+                  <td>09 Oct 2025</td>
+                  <td>Sun</td>
+                  <td><span class="status-dot dot-absent"></span> Absent</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td><span class="muted">Weekend</span></td>
+                </tr>
+                <tr>
+                  <td>08 Oct 2025</td>
+                  <td>Sat</td>
+                  <td>
+                    <span class="status-dot dot-recorded"></span> Recorded
+                  </td>
+                  <td>9:05 AM</td>
+                  <td>3:00 PM</td>
+                  <td>5h 55m</td>
+                  <td><span class="muted">Leave</span></td>
+                </tr>
+                <tr>
+                  <td>07 Oct 2025</td>
+                  <td>Fri</td>
+                  <td><span class="status-dot dot-present"></span> Present</td>
+                  <td>9:00 AM</td>
+                  <td>5:20 PM</td>
+                  <td>8h 20m</td>
+                  <td><span class="muted">On Time</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="muted">Month: Oct 2025</div>
+            <div class="muted">Subject: - &nbsp;&nbsp; Status: -</div>
           </div>
         </div>
       </div>
 
-      <!-- Bottom Copyright -->
-      <div class="footer-bottom">
-        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
-      </div>
+      <!-- Footer -->
+      <footer>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Register Box Section -->
+              <section class="register-section">
+                <h2>Skillwaala Free Training Program</h2>
+                <p>Kickstart your Career with Skillwaala.</p>
+                <a href="#internship" class="btn">Register Now</a>
+              </section>
+            </div>
+          </div>
+          <div class="row g-4 footer-main">
+            <!-- First Column -->
+            <div class="col-lg-3 col-md-12 footer-logo">
+              <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+              <p><strong>Social Links:</strong></p>
+              <p>
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a> |
+                <a href="#">WhatsApp</a>
+              </p>
+              <p><strong>Email:</strong> info@skillwaala.com</p>
+              <p>
+                <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
+                Jaipur
+              </p>
+              <p><strong>Contact:</strong> +91 7705697799</p>
+            </div>
 
-      <div class="footer-contacts">
-        <p>Business No: +91 7780879789</p>
-        <p>Email: info@skillwaala.com</p>
-        <p>Email: hr@skillwaala.com</p>
-      </div>
-    </footer>
+            <!-- Second Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Web Stories</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Gallery</a></li>
+              </ul>
+            </div>
 
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-12 footer-column">
+              <h3>Trending Courses</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <ul>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">SEO Course</a></li>
+                    <li><a href="#">Social Media Marketing</a></li>
+                    <li><a href="#">Performance Marketing</a></li>
+                    <li><a href="#">Animation Course</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Video Editing</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li><a href="#">Content Writing</a></li>
+                    <li><a href="#">Full-Stack Web Dev</a></li>
+                    <li><a href="#">English Spoken</a></li>
+                    <li><a href="#">Mobile App Dev</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Business Analyst</a></li>
+                    <li><a href="#">2D Animation</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Industrial Trainings</h3>
+              <ul>
+                <li><a href="#">B.Tech</a></li>
+                <li><a href="#">M.Tech</a></li>
+                <li><a href="#">BCA</a></li>
+                <li><a href="#">MCA</a></li>
+                <li><a href="#">B.Sc</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p>Business No: +91 7780879789</p>
+          <p>Email: info@skillwaala.com</p>
+          <p>Email: hr@skillwaala.com</p>
+        </div>
+      </footer>
     </main>
 
-
-
+    <!-- ✅ JS -->
     <script>
-      const sidebar = document.getElementById("sidebar");
-      const toggleBtn = document.getElementById("sidebarToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
 
+      // Sidebar toggle for desktop + mobile
       toggleBtn.addEventListener("click", () => {
-        if (window.innerWidth <= 991) {
+        if (window.innerWidth < 992) {
           sidebar.classList.toggle("show");
         } else {
-          sidebar.classList.toggle("hide");
+          sidebar.classList.toggle("collapsed");
         }
       });
 
-      document.addEventListener("click", (e) => {
-        if (window.innerWidth <= 991) {
-          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
-            sidebar.classList.remove("show");
-          }
-        }
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 991) {
-          sidebar.classList.remove("show");
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
         }
       });
     </script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const ctx = document.getElementById("attChart").getContext("2d");
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("attChart").getContext("2d");
 
-  const attChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
-      datasets: [
-        {
-          label: "Present Days",
-          data: [5, 4, 5, 4],
-          backgroundColor: "#4caf50",
-          borderRadius: 8,
+      const attChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+          datasets: [
+            {
+              label: "Present Days",
+              data: [5, 4, 5, 4],
+              backgroundColor: "#4caf50",
+              borderRadius: 8,
+            },
+            {
+              label: "Absent Days",
+              data: [1, 0, 1, 0],
+              backgroundColor: "#f44336",
+              borderRadius: 8,
+            },
+            {
+              label: "Recorded",
+              data: [0, 1, 0, 1],
+              backgroundColor: "#ff9800",
+              borderRadius: 8,
+            },
+          ],
         },
-        {
-          label: "Absent Days",
-          data: [1, 0, 1, 0],
-          backgroundColor: "#f44336",
-          borderRadius: 8,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: { boxWidth: 15, color: "#555" },
+            },
+            title: {
+              display: true,
+              text: "October 2025 Attendance Overview",
+              color: "#333",
+              font: { size: 14, weight: "bold" },
+            },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: "#333" },
+            },
+            y: {
+              grid: { color: "#eee" },
+              ticks: { stepSize: 1, color: "#333" },
+            },
+          },
         },
-        {
-          label: "Recorded",
-          data: [0, 1, 0, 1],
-          backgroundColor: "#ff9800",
-          borderRadius: 8,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: "bottom",
-          labels: { boxWidth: 15, color: "#555" },
-        },
-        title: {
-          display: true,
-          text: "October 2025 Attendance Overview",
-          color: "#333",
-          font: { size: 14, weight: "bold" },
-        },
-      },
-      scales: {
-        x: {
-          grid: { display: false },
-          ticks: { color: "#333" },
-        },
-        y: {
-          grid: { color: "#eee" },
-          ticks: { stepSize: 1, color: "#333" },
-        },
-      },
-    },
-  });
-</script>
-
+      });
+    </script>
   </body>
 </html>

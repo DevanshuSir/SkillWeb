@@ -116,7 +116,9 @@ body {
   background: var(--primary);
   color: #fff;
   font-weight: 600;
+  box-shadow: inset 4px 0px 0px #fff;
 }
+
 
 .sidebar .nav-link.active i {
   color: #fff;
@@ -377,10 +379,52 @@ body {
   color: #fff;
 }
 
+.register-section {
+  background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 1500px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.register-section h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.register-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.register-section .btn {
+  background: linear-gradient(90deg, #ff6600, #ff0000);
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.register-section .btn:hover {
+  opacity: 0.85;
+}
+
 footer {
-  background: #fff5ef;
+  background: linear-gradient(to bottom, #ffffff, #ffbbac);
   color: #333;
   font-family: "Poppins", sans-serif;
+}
+
+footer .footer-main{
+  max-width: 90%;
+  margin: auto;
 }
 
 .footer-logo img {
@@ -405,6 +449,13 @@ footer {
   color: #ff5722;
 }
 
+.footer-column {
+  background: #ffe9e1;
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin-right: 10px;
+}
+
 .footer-column h3 {
   background: #f6d5c4;
   text-align: center;
@@ -417,7 +468,7 @@ footer {
 
 .footer-column ul {
   list-style: none;
-  background: #ffe9e1;
+
   border-radius: 12px;
   padding: 20px;
 }
@@ -431,6 +482,7 @@ footer {
   color: #333;
   font-size: 14px;
   transition: 0.3s;
+  text-align: center;
 }
 
 .footer-column ul li a:hover {
@@ -441,7 +493,7 @@ footer {
   background: #222;
   color: #fff;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
   font-size: 14px;
   margin-top: 30px;
   width: 100%;
@@ -452,14 +504,19 @@ footer {
   color: #fff;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
-  padding: 12px;
+  padding: 12px 80px;
   font-size: 14px;
+}
+
+.footer-bottom p {
+  text-align: center;
 }
 
 .footer-contacts p {
   margin: 0;
+  text-align: center;
 }
 
 @media (max-width: 991px) {

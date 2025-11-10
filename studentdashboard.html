@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Student Dashboard</title>
-       <!-- Bootstrap & Icons -->
+    <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="./css/studentdashboard.css" />
   </head>
   <body>
-
-
-
     <!-- ✅ SIDEBAR -->
     <div class="sidebar">
       <div class="brand">
@@ -26,28 +23,56 @@
         <span>Student</span>
       </div>
       <nav class="nav flex-column">
-        <a class="nav-link active" href="./studentdashboard.html" data-title="Dashboard">
+        <a
+          class="nav-link active"
+          href="./studentdashboard.html"
+          data-title="Dashboard"
+        >
           <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
         </a>
-        <a class="nav-link" href="./studentprofile.html" data-title="My Profile">
+        <a
+          class="nav-link"
+          href="./studentprofile.html"
+          data-title="My Profile"
+        >
           <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
         </a>
-        <a class="nav-link" href="./studentenroll.html" data-title="Enroll Courses">
-          <i class="fa-solid fa-book me-1"></i></i> <span>Enroll Courses</span>
+        <a
+          class="nav-link"
+          href="./studentenroll.html"
+          data-title="Enroll Courses"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Enroll Courses</span>
         </a>
-        <a class="nav-link" href="./studentcertificate.html" data-title="My Certificate">
-         <i class="fa-solid fa-calendar me-1"></i><span>My Certificate</span>
+        <a
+          class="nav-link"
+          href="./studentcertificate.html"
+          data-title="My Certificate"
+        >
+          <i class="fa-solid fa-calendar me-1"></i><span>My Certificate</span>
         </a>
-          <a class="nav-link" href="./studentcoursepage.html" data-title="Courses Page">
-         <i class="fa-solid fa-file-lines me-1"></i><span>Courses Page</span>
+        <a
+          class="nav-link"
+          href="./studentattendance.html"
+          data-title="Attendance record"
+        >
+          <i class="fa-solid fa-file-lines me-1"></i
+          ><span>Attendance record</span>
         </a>
-        <hr>
+        <a
+          class="nav-link"
+          href="./studentcoursepage.html"
+          data-title="Courses Page"
+        >
+          <i class="fa-solid fa-file-lines me-1"></i><span>Courses Page</span>
+        </a>
+        <hr />
         <div class="m-2">Account</div>
-          <a class="nav-link" href="#" data-title="Logout">
-       <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        <a class="nav-link" href="#" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
         </a>
-          <a class="nav-link" href="#" data-title="Support">
-         <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        <a class="nav-link" href="#" data-title="Support">
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
         </a>
       </nav>
     </div>
@@ -58,7 +83,7 @@
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <a class="navbar-brand fw-bold ms-2" href="#">
+        <a class="navbar-brand fw-bold ms-2" href="./index.html">
           <img src="./media/ok quality logo.png" alt="Logo" width="130" />
         </a>
 
@@ -73,13 +98,23 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Skill Space</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
+            </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./course.html">Courses</a>
+            </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Internship</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Hire from us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Hire from us</a>
+            </li>
             <span class="divider">|</span>
             <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
             <span class="divider">|</span>
@@ -92,8 +127,6 @@
 
     <!-- Main Content -->
     <main class="main">
-
-
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
           <h6 class="mb-0 text-muted">Home / Dashboard</h6>
@@ -243,9 +276,11 @@
                       Oct 15, 2025 — 11:59 PM
                     </small>
                   </div>
-                  <button class="badge bg-light text-primary border"
-                    >Enroll Now</button
-                  >
+                  <div>
+                    <button class="badge bg-light text-primary border">
+                      Enroll Now
+                    </button>
+                  </div>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -256,9 +291,11 @@
                       Oct 15, 2025 — 11:59 PM
                     </small>
                   </div>
-                    <button class="badge bg-light text-primary border"
-                    >Enroll Now</button
-                  >
+                  <div>
+                    <button class="badge bg-light text-primary border">
+                      Enroll Now
+                    </button>
+                  </div>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -269,9 +306,11 @@
                       Oct 15, 2025 — 11:59 PM
                     </small>
                   </div>
-                    <button class="badge bg-light text-primary border"
-                    >Enroll Now</button
-                  >
+                  <div>
+                    <button class="badge bg-light text-primary border">
+                      Enroll Now
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -391,99 +430,106 @@
         </div>
       </div>
 
-
-         <!-- Footer -->
-    <footer>
-      <div class="container py-5">
-        <div class="row g-4">
-
-          <!-- First Column -->
-          <div class="col-lg-3 col-md-6 footer-logo">
-            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
-            <p><strong>Social Links:</strong></p>
-            <p>
-              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-              <a href="#">LinkedIn</a> |
-              <a href="#">WhatsApp</a>
-            </p>
-            <p><strong>Email:</strong> info@skillwaala.com</p>
-            <p>
-              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
-              Jaipur
-            </p>
-            <p><strong>Contact:</strong> +91 7705697799</p>
-          </div>
-
-          <!-- Second Column -->
-          <div class="col-lg-2 col-md-6 footer-column">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Web Stories</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </div>
-
-          <!-- Third Column -->
-          <div class="col-lg-4 col-md-6 footer-column">
-            <h3>Trending Courses</h3>
-            <div class="row g-3">
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">SEO Course</a></li>
-                  <li><a href="#">Social Media Marketing</a></li>
-                  <li><a href="#">Performance Marketing</a></li>
-                  <li><a href="#">Animation Course</a></li>
-                  <li><a href="#">Graphic Design</a></li>
-                  <li><a href="#">Video Editing</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Content Writing</a></li>
-                  <li><a href="#">Full-Stack Web Dev</a></li>
-                  <li><a href="#">English Spoken</a></li>
-                  <li><a href="#">Mobile App Dev</a></li>
-                  <li><a href="#">Data Science</a></li>
-                  <li><a href="#">Business Analyst</a></li>
-                  <li><a href="#">2D Animation</a></li>
-                </ul>
-              </div>
+      <!-- Footer -->
+      <footer>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Register Box Section -->
+              <section class="register-section">
+                <h2>Skillwaala Free Training Program</h2>
+                <p>Kickstart your Career with Skillwaala.</p>
+                <a href="#internship" class="btn">Register Now</a>
+              </section>
             </div>
           </div>
+          <div class="row g-4 footer-main">
+            <!-- First Column -->
+            <div class="col-lg-3 col-md-12 footer-logo">
+              <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+              <p><strong>Social Links:</strong></p>
+              <p>
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a> |
+                <a href="#">WhatsApp</a>
+              </p>
+              <p><strong>Email:</strong> info@skillwaala.com</p>
+              <p>
+                <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
+                Jaipur
+              </p>
+              <p><strong>Contact:</strong> +91 7705697799</p>
+            </div>
 
-          <!-- Fourth Column -->
-          <div class="col-lg-3 col-md-6 footer-column">
-            <h3>Industrial Trainings</h3>
-            <ul>
-              <li><a href="#">B.Tech</a></li>
-              <li><a href="#">M.Tech</a></li>
-              <li><a href="#">BCA</a></li>
-              <li><a href="#">MCA</a></li>
-              <li><a href="#">B.Sc</a></li>
-            </ul>
+            <!-- Second Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Web Stories</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Gallery</a></li>
+              </ul>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-12 footer-column">
+              <h3>Trending Courses</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <ul>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">SEO Course</a></li>
+                    <li><a href="#">Social Media Marketing</a></li>
+                    <li><a href="#">Performance Marketing</a></li>
+                    <li><a href="#">Animation Course</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Video Editing</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li><a href="#">Content Writing</a></li>
+                    <li><a href="#">Full-Stack Web Dev</a></li>
+                    <li><a href="#">English Spoken</a></li>
+                    <li><a href="#">Mobile App Dev</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Business Analyst</a></li>
+                    <li><a href="#">2D Animation</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Industrial Trainings</h3>
+              <ul>
+                <li><a href="#">B.Tech</a></li>
+                <li><a href="#">M.Tech</a></li>
+                <li><a href="#">BCA</a></li>
+                <li><a href="#">MCA</a></li>
+                <li><a href="#">B.Sc</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Bottom Copyright -->
-      <div class="footer-bottom">
-        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
-      </div>
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+        </div>
 
-      <div class="footer-contacts">
-        <p>Business No: +91 7780879789</p>
-        <p>Email: info@skillwaala.com</p>
-        <p>Email: hr@skillwaala.com</p>
-      </div>
-    </footer>
-
+        <div class="footer-contacts">
+          <p>Business No: +91 7780879789</p>
+          <p>Email: info@skillwaala.com</p>
+          <p>Email: hr@skillwaala.com</p>
+        </div>
+      </footer>
     </main>
 
     <!-- ✅ JS -->
@@ -501,19 +547,19 @@
         }
       });
 
-      // Active link highlight
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
       navLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          this.classList.add("active");
-        });
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
       });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
- 
 
     <!-- <script>
   // Learning Progress Chart
@@ -572,9 +618,5 @@
     },
   });
 </script> -->
-
-
-
-
   </body>
 </html>
