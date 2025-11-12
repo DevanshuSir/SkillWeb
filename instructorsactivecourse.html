@@ -4,90 +4,100 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Instructor Course Count</title>
+    <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="./css/instructoractivecourse.css">
   </head>
   <body>
 
 
 
-
-    <!-- Sidebar -->
-    <aside class="sidebar hide" id="sidebar">
+ <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
       <div class="brand">
-        <img src="./media/ok quality logo.png" alt="logo" />
-        <div>
-          <div style="font-weight: 700">SKILLWAALA</div>
-          <div class="small text-muted">Instructor</div>
-        </div>
+        <i class="fa-solid fa-user"></i>
+        <span> Trainer</span>
       </div>
-      <hr />
-      <div class="section-title">Main Menu</div>
       <nav class="nav flex-column">
-        <a href="./instructor.html" class="nav-link active"
-          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        <a
+          class="nav-link active"
+          href="./instructor.html"
+          data-title="Dashboard"
         >
-        <a href="./instructorprofile.html" class="nav-link"
-          ><i class="bi bi-people"></i> My Profile</a
-        >
-        <a href="./instructorsactivecourse.html" class="nav-link"
-          ><i class="bi bi-book"></i>Active Courses Count</a
-        >
-        <a href="./upcomingliveclass.html" class="nav-link"
-          ><i class="bi bi-badge-4k-fill"></i> Upcoming Live Classes</a
-        >
-        <a href="./uploadedvideos.html" class="nav-link"
-          ><i class="bi bi-box-arrow-in-down"></i> Uploded Videos</a
-        >
-          <a href="./instructornotification.html" class="nav-link"
-          ><i class="bi bi-bell-fill"></i> Notifications</a
-        >
-              <a href="#" class="nav-link"
-          ><i class="bi bi-chat-dots-fill"></i> Community Query</a
-        >
-      </nav>
-
-      <div class="section-title mt-3">Account</div>
-      <nav class="nav flex-column">
-        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
-        <a href="#" class="nav-link"
-          ><i class="bi bi-box-arrow-right"></i> Logout</a
-        >
-        <a href="#" class="nav-link"
-          ><i class="bi bi-life-preserver"></i> Support</a
-        >
-      </nav>
-    </aside>
-
-
-
-    <!-- Main Content -->
-    <main class="main">
-                  <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-          <!-- Sidebar Toggle Button -->
-    <div class="sidebar-toggle-btn" id="sidebarToggle">
-      <i class="bi bi-list"></i>
-    </div>
-      <div class="container">
-                <a class="navbar-brand fw-bold" href="#">
-          <img src="./media/ok quality logo.png" alt="Logo" width="100" />
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
         </a>
+        <a
+          class="nav-link"
+          href="./instructorprofile.html"
+          data-title="My Profile"
+        >
+          <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructorsactivecourse.html"
+          data-title="Active Courses Count"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Active Courses Count</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./upcomingliveclass.html"
+          data-title="Upcoming Live Classes"
+        >
+         <i class="fa-brands fa-youtube me-1"></i><span>Upcoming Live Classes</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./uploadedvideos.html"
+          data-title="Uploaded Videos"
+        >
+          <i class="fa-solid fa-cloud-arrow-up me-1"></i><span>Uploaded Videos</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./instructornotification.html"
+          data-title="Notifications"
+        >
+          <i class="fa-solid fa-bell me-1"></i><span>Notifications</span>
+        </a>
+        <a class="nav-link" href="#" data-title="Community Quarry">
+          <i class="fa-solid fa-comments me-1"></i><span>Community Quarry</span>
+        </a>
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="#" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a class="nav-link" href="#" data-title="Support">
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold ms-2" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -95,20 +105,35 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Skill Space</a>
-            </li>
-            <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-            <span class="divider">|</span>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Internship</a>
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hire from us</a>
+              <a class="nav-link" href="./course.html">Courses</a>
             </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
             <span class="divider">|</span>
             <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
           </ul>
@@ -116,6 +141,13 @@
         </div>
       </div>
     </nav>
+
+
+
+
+
+    <!-- Main Content -->
+    <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
           <h6 class="mb-0 text-muted">Home / Active Courses Count</h6>
@@ -154,7 +186,7 @@
     
       </div>
 
-        <div class="container py-4">
+        <div class="container py-4 active-main">
 
 
     <!-- Course Cards Grid -->
@@ -233,128 +265,154 @@
   </div>
 
 
-          <!-- Footer -->
-    <footer>
-      <div class="container py-5">
-        <div class="row g-4">
-
-          <!-- First Column -->
-          <div class="col-lg-3 col-md-6 footer-logo">
-            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
-            <p><strong>Social Links:</strong></p>
-            <p>
-              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-              <a href="#">LinkedIn</a> |
-              <a href="#">WhatsApp</a>
-            </p>
-            <p><strong>Email:</strong> info@skillwaala.com</p>
-            <p>
-              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
-              Jaipur
-            </p>
-            <p><strong>Contact:</strong> +91 7705697799</p>
-          </div>
-
-          <!-- Second Column -->
-          <div class="col-lg-2 col-md-6 footer-column">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Web Stories</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </div>
-
-          <!-- Third Column -->
-          <div class="col-lg-4 col-md-6 footer-column">
-            <h3>Trending Courses</h3>
-            <div class="row g-3">
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">SEO Course</a></li>
-                  <li><a href="#">Social Media Marketing</a></li>
-                  <li><a href="#">Performance Marketing</a></li>
-                  <li><a href="#">Animation Course</a></li>
-                  <li><a href="#">Graphic Design</a></li>
-                  <li><a href="#">Video Editing</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Content Writing</a></li>
-                  <li><a href="#">Full-Stack Web Dev</a></li>
-                  <li><a href="#">English Spoken</a></li>
-                  <li><a href="#">Mobile App Dev</a></li>
-                  <li><a href="#">Data Science</a></li>
-                  <li><a href="#">Business Analyst</a></li>
-                  <li><a href="#">2D Animation</a></li>
-                </ul>
-              </div>
+      <!-- Footer -->
+      <footer>
+        <div class="container-fluid py-5">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Register Box Section -->
+              <section class="register-section">
+                <h2>Skillwaala Free Training Program</h2>
+                <p>Kickstart your Career with Skillwaala.</p>
+                <a href="#internship" class="btn">Register Now</a>
+              </section>
             </div>
           </div>
+          <div class="row g-4 footer-main">
+            <!-- First Column -->
+            <div class="col-lg-3 col-md-12 footer-logo">
+              <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+              <p><strong>Social Links:</strong></p>
+              <p>
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a> |
+                <a href="#">WhatsApp</a>
+              </p>
+              <p><strong>Email:</strong>hro@skillwaala.com</p>
+              <p>
+                <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+                Scheme, Triveni Nagar Jaipur, 302018
+              </p>
+              <p><strong>Contact:</strong>+91 7766967799</p>
+            </div>
 
-          <!-- Fourth Column -->
-          <div class="col-lg-3 col-md-6 footer-column">
-            <h3>Industrial Trainings</h3>
-            <ul>
-              <li><a href="#">B.Tech</a></li>
-              <li><a href="#">M.Tech</a></li>
-              <li><a href="#">BCA</a></li>
-              <li><a href="#">MCA</a></li>
-              <li><a href="#">B.Sc</a></li>
-            </ul>
+            <!-- Second Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/about-us">About Us</a>
+                </li>
+                <li><a href="#">Testimonials</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </li>
+                <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/privacy-policy"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+                </li>
+                <li><a href="#">Gallery</a></li>
+              </ul>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-12 footer-column">
+              <h3>Trending Courses</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <ul>
+                    <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                    <li>
+                      <a href="./contentwriting.html">Content Writing </a>
+                    </li>
+                    <li><a href="./seo.html">SEO Course </a></li>
+                    <li>
+                      <a href="./performancemarketing.html"
+                        >Social Media Marketing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./webbatch.html">Full-Stack Web Development </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      <a href="./performancemarketing.html"
+                        >Performance Marketing
+                      </a>
+                    </li>
+                    <li><a href="./englishcourse.html">English Spoken </a></li>
+                    <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                    <li><a href="./videoediting.html">Video Editing </a></li>
+                    <li><a href="./2danimation.html">2D Animation </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Training Program</h3>
+              <ul>
+                <li><a href="#">Digital Marketing </a></li>
+                <li><a href="#">Content Writing </a></li>
+                <li><a href="#">Animation </a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Bottom Copyright -->
-      <div class="footer-bottom">
-        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
-      </div>
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+        </div>
 
-      <div class="footer-contacts">
-        <p>Business No: +91 7780879789</p>
-        <p>Email: info@skillwaala.com</p>
-        <p>Email: hr@skillwaala.com</p>
-      </div>
-    </footer>
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+        
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
 
     </main>
 
 
 
+    <!-- ✅ JS -->
     <script>
-      const sidebar = document.getElementById("sidebar");
-      const toggleBtn = document.getElementById("sidebarToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
 
+      // Sidebar toggle for desktop + mobile
       toggleBtn.addEventListener("click", () => {
-        if (window.innerWidth <= 991) {
+        if (window.innerWidth < 992) {
           sidebar.classList.toggle("show");
         } else {
-          sidebar.classList.toggle("hide");
+          sidebar.classList.toggle("collapsed");
         }
       });
 
-      document.addEventListener("click", (e) => {
-        if (window.innerWidth <= 991) {
-          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
-            sidebar.classList.remove("show");
-          }
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
         }
       });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 991) {
-          sidebar.classList.remove("show");
-        }
-      });
-    </script>
+    </script> 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

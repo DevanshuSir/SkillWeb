@@ -73,11 +73,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  
   padding-top: 90px;
   border-right: 1px solid #ddd;
   transition: all 0.3s ease;
   z-index: 1040;
 }
+
+
 
 .sidebar .brand {
   text-align: center;
@@ -94,6 +97,7 @@ body {
   border-radius: 8px;
   transition: 0.3s;
   margin: 4px 8px;
+  
 }
 
 .sidebar .nav-link i {
