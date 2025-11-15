@@ -17,13 +17,10 @@ body {
   font-size: 16px;
   border: none;
   cursor: pointer;
-
 }
 
 .dropdown {
   position: relative;
-
-
 }
 
 .dropdown-content {
@@ -31,8 +28,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 200px;
-      border-radius: 17px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -50,7 +46,6 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 .custom-nav {
   border: 2px solid #ccc;
@@ -110,7 +105,7 @@ body {
   margin: 15px 0 25px;
 }
 .btn-orange {
-  background: #FF6900;
+  background: #ff6900;
   color: #fff;
   padding: 12px 28px;
   border-radius: 8px;
@@ -544,10 +539,10 @@ ul {
   transition: border-color 0.3s ease;
 }
 
-.journey-icon img{
-      width: 100px;
-    height: 100px;
-    border-radius: 100%;
+.journey-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
 }
 
 .journey-card {
@@ -560,8 +555,6 @@ ul {
   width: 90%;
   margin: auto;
 }
-
-
 
 .journey-card .journey-title {
   font-weight: 700;
@@ -578,7 +571,7 @@ ul {
 }
 
 .journey-card .btn-orange {
-  background-color: #FF6900;
+  background-color: #ff6900;
   color: white;
   border-radius: 8px;
   padding: 10px 22px;
@@ -592,7 +585,7 @@ ul {
 }
 
 .journey-card .btn-outline-orange {
-  border: 1.8px solid #FF6900;
+  border: 1.8px solid #ff6900;
   color: #ff7a00;
   border-radius: 8px;
   padding: 10px 22px;
@@ -601,7 +594,7 @@ ul {
 }
 
 .journey-card .btn-outline-orange:hover {
-  background-color: #FF6900;
+  background-color: #ff6900;
   color: white;
 }
 
@@ -1009,7 +1002,7 @@ ul {
 }
 
 .faq-section .accordion-button:not(.collapsed) {
-  color: #FF6900;
+  color: #ff6900;
   font-weight: bold;
   background-color: #fff;
   box-shadow: none;

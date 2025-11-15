@@ -16,369 +16,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        background: #eef5ff;
-        color: #222;
-      }
-
-      .navbar {
-        background: #fff;
-        padding: 10px 25px;
-        box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 18%);
-        position: sticky;
-        top: 0px;
-        left: 0px;
-        z-index: 2000;
-      }
-
-      .custom-nav {
-        border: 2px solid #ccc;
-        border-radius: 15px;
-        padding: 2px 10px;
-        margin: 2px;
-      }
-
-      .custom-nav .nav-link {
-        font-weight: 500;
-        color: #333;
-        padding: 6px 12px;
-      }
-
-      .custom-nav .nav-link:hover {
-        color: #f26434;
-      }
-
-      .custom-nav .divider {
-        color: #f26434;
-        font-size: 20px;
-        margin: 0 6px;
-      }
-
-      .btn-login {
-        border: 1px solid #f36f45;
-        color: #f36f45;
-        border-radius: 10px;
-        padding: 6px 18px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        text-align: center;
-      }
-
-      .btn-login:hover {
-        background: #f36f45;
-        color: #fff;
-      }
-
-      /* Section Title */
-      .job-section h2 {
-        font-weight: 700;
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-
-      .filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-bottom: 40px;
-      }
-
-      .filter-input {
-        flex: 1;
-        min-width: 220px;
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 10px 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      .filter-input input {
-        border: none;
-        outline: none;
-        width: 100%;
-        background: transparent;
-        font-size: 14px;
-      }
-
-      .job-details-container {
-        background-color: #0d1224;
-        color: white;
-        border-radius: 10px;
-        padding: 30px;
-        margin-top: 30px;
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .job-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        background-color: #2d2e5f;
-        padding: 10px 20px;
-        border-radius: 6px;
-        display: inline-block;
-      }
-
-      .job-meta {
-        color: #ccc;
-        margin-top: 10px;
-      }
-
-      .job-tags span {
-        background-color: #2d2e5f;
-        border-radius: 5px;
-        padding: 6px 15px;
-        margin-right: 8px;
-        font-size: 0.85rem;
-        display: inline-block;
-      }
-
-      .tab-buttons {
-        margin-top: 25px;
-      }
-
-      .tab-buttons button {
-        border: none;
-        padding: 10px 25px;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: 0.3s;
-        margin-right: 10px;
-      }
-
-      .tab-buttons .active-tab {
-        background: linear-gradient(90deg, #ff6b35, #ff3c00);
-        color: white;
-      }
-
-      .tab-buttons button:not(.active-tab) {
-        background-color: #2d2e5f;
-        color: white;
-      }
-
-      .tab-content-section {
-        margin-top: 25px;
-      }
-
-      .apply-btn {
-        background: linear-gradient(90deg, #ff6b35, #ff3c00);
-        border: none;
-        color: white;
-        padding: 10px 25px;
-        border-radius: 30px;
-        font-weight: 600;
-        margin-top: 20px;
-      }
-
-      .company-info-box {
-        background-color: #2d2e5f;
-        padding: 15px;
-        border-radius: 8px;
-        color: #d1d1d1;
-        font-size: 0.9rem;
-      }
-
-      .right-sidebar {
-        background-color: #cde3ff;
-        padding: 20px;
-        border-radius: 20px;
-        height: fit-content;
-      }
-
-      .right-sidebar h5 {
-        font-weight: 600;
-        margin-bottom: 20px;
-      }
-
-      .company-card {
-        background-color: white;
-        border-radius: 10px;
-        padding: 12px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-weight: 600;
-        color: #007bff;
-      }
-
-      /* ✅ Image Responsiveness */
-      .job-image {
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        border-radius: 10px;
-        object-fit: cover;
-      }
-
-      .sidebar-img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-        object-fit: cover;
-      }
-
-      @media (max-width: 768px) {
-        .job-details-container {
-          padding: 20px;
-        }
-        .job-image {
-          max-width: 100%;
-          margin-top: 15px;
-        }
-      }
-
-      .register-section {
-        background: linear-gradient(135deg, #5c2dab, #7d4ed1);
-        color: #fff;
-        border-radius: 15px;
-        text-align: center;
-        padding: 40px 20px;
-        margin: 30px auto;
-        max-width: 900px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      }
-
-      .register-section h2 {
-        font-size: 28px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-
-      .register-section p {
-        font-size: 16px;
-        margin-bottom: 25px;
-        text-align: center;
-      }
-
-      .register-section .btn {
-        background: linear-gradient(90deg, #ff6600, #ff0000);
-        border: none;
-        padding: 12px 30px;
-        font-size: 18px;
-        border-radius: 8px;
-        color: #fff;
-        transition: all 0.3s ease;
-      }
-
-      .register-section .btn:hover {
-        opacity: 0.85;
-      }
-
-      footer {
-        background: linear-gradient(to bottom, #ffffff, #ffbbac);
-        color: #333;
-        font-family: "Poppins", sans-serif;
-      }
-
-      .footer-logo img {
-        width: 200px;
-        margin-bottom: 10px;
-      }
-
-      .footer-logo p {
-        font-size: 14px;
-        margin: 4px 0;
-        color: #444;
-      }
-
-      .footer-logo a {
-        color: #e65a29;
-        text-decoration: none;
-        margin: 0 4px;
-        font-size: 14px;
-      }
-
-      .footer-logo a:hover {
-        color: #ff5722;
-      }
-
-      .footer-column {
-        background: #ffe9e1;
-        border-radius: 15px;
-        padding: 25px 20px;
-        margin-right: 10px;
-      }
-
-      .footer-column h3 {
-        background: #f6d5c4;
-        text-align: center;
-        padding: 10px;
-        border-radius: 6px;
-        margin-bottom: 15px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      .footer-column ul {
-        list-style: none;
-
-        border-radius: 12px;
-        padding: 20px;
-      }
-
-      .footer-column ul li {
-        margin: 8px 0;
-      }
-
-      .footer-column ul li a {
-        text-decoration: none;
-        color: #333;
-        font-size: 14px;
-        transition: 0.3s;
-        text-align: center;
-      }
-
-      .footer-column ul li a:hover {
-        color: #ff5722;
-      }
-
-      .footer-bottom {
-        background: #222;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        font-size: 14px;
-        margin-top: 30px;
-        width: 100%;
-      }
-
-      .footer-contacts {
-        background: #ff5722;
-        color: #fff;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 12px 80px;
-        font-size: 14px;
-      }
-
-      .footer-bottom p {
-        text-align: center;
-      }
-
-      .footer-contacts p {
-        margin: 0;
-        text-align: center;
-      }
-
-      @media (max-width: 992px) {
-        .sidebar {
-          margin-top: 30px;
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/jobalertapply.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand fw-bold" href="./index.html">
-          <img src="./media/ok quality logo.png" alt="Logo" width="150" />
+          <img src="./media/ok quality logo.png" alt="Logo" width="180" />
         </a>
         <button
           class="navbar-toggler"
@@ -402,21 +51,38 @@
             <span class="divider">|</span>
             <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="./course.html">Course</a>
+              <a class="nav-link" href="./course.html">Courses</a>
             </li>
 
             <span class="divider">|</span>
             <li class="nav-item">
-              <a class="nav-link" href="#">Internship</a>
+              <a class="nav-link" href="./internship.html">Internship</a>
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hire from us</a>
+              <a class="nav-link" href="./hirepage.html">Hire From Us</a>
             </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.skillwaala.com/">Blog</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Portal</a>
+            </li>
           </ul>
           <a href="./loginreg.html" class="btn btn-login">Login</a>
         </div>
@@ -546,85 +212,127 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container py-5">
-        <div class="row g-4">
-          <!-- Register Box Section -->
-          <section class="register-section">
-            <h2>Skillwaala Free Training Program</h2>
-            <p>Kickstart your Career with Skillwaala.</p>
-            <a href="#internship" class="btn">Register Now</a>
-          </section>
-
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Register Box Section -->
+            <section class="register-section">
+              <h2>Skillwaala Free Training Program</h2>
+              <p>Kickstart your Career with Skillwaala.</p>
+              <a href="#internship" class="btn">Register Now</a>
+            </section>
+          </div>
+        </div>
+        <div class="row g-4 footer-main">
           <!-- First Column -->
-          <div class="col-lg-3 col-md-6 footer-logo">
+          <div class="col-lg-3 col-md-12 footer-logo">
             <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
+
+            <p class="m-2"></p>
             <p><strong>Social Links:</strong></p>
+            <a href="https://www.facebook.com/skillwaala/"
+              ><i
+                class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.instagram.com/skillwaala"
+              ><i
+                class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a href="https://www.linkedin.com/company/skillwaala/"
+              ><i
+                class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+            |
+            <a
+              href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+              ><i
+                class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+              ></i
+            ></a>
+
+            <p><strong>Email:</strong>hro@skillwaala.com</p>
             <p>
-              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-              <a href="#">LinkedIn</a> |
-              <a href="#">WhatsApp</a>
+              <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+              Scheme, Triveni Nagar Jaipur, 302018
             </p>
-            <p><strong>Email:</strong> info@skillwaala.com</p>
-            <p>
-              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
-              Jaipur
-            </p>
-            <p><strong>Contact:</strong> +91 7705697799</p>
+            <p><strong>Contact:</strong>+91 7766967799</p>
           </div>
 
           <!-- Second Column -->
-          <div class="col-lg-2 col-md-6 footer-column">
+          <div class="col-lg-2 col-md-12 footer-column">
             <h3>Company</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Web Stories</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Gallery</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/web-stories">Web Stories</a>
+              </li>
+              <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+              <li>
+                <a href="https://www.skillwaala.com/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+              </li>
+              <li><a href="https://www.skillwaala.com/gallery">Gallery</a></li>
             </ul>
           </div>
 
           <!-- Third Column -->
-          <div class="col-lg-4 col-md-6 footer-column">
+          <div class="col-lg-4 col-md-12 footer-column">
             <h3>Trending Courses</h3>
             <div class="row g-3">
               <div class="col-6">
                 <ul>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">SEO Course</a></li>
-                  <li><a href="#">Social Media Marketing</a></li>
-                  <li><a href="#">Performance Marketing</a></li>
-                  <li><a href="#">Animation Course</a></li>
-                  <li><a href="#">Graphic Design</a></li>
-                  <li><a href="#">Video Editing</a></li>
+                  <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                  <li><a href="./contentwriting.html">Content Writing </a></li>
+                  <li><a href="./seo.html">SEO Course </a></li>
+                  <li>
+                    <a href="./socialmediamarketing.html"
+                      >Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./webbatch.html">Full-Stack Web Development </a>
+                  </li>
                 </ul>
               </div>
+
               <div class="col-6">
                 <ul>
-                  <li><a href="#">Content Writing</a></li>
-                  <li><a href="#">Full-Stack Web Dev</a></li>
-                  <li><a href="#">English Spoken</a></li>
-                  <li><a href="#">Mobile App Dev</a></li>
-                  <li><a href="#">Data Science</a></li>
-                  <li><a href="#">Business Analyst</a></li>
-                  <li><a href="#">2D Animation</a></li>
+                  <li>
+                    <a href="./performancemarketing.html"
+                      >Performance Marketing
+                    </a>
+                  </li>
+                  <li><a href="./englishcourse.html">English Spoken </a></li>
+                  <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                  <li><a href="./videoediting.html">Video Editing </a></li>
+                  <li><a href="./2danimation.html">2D Animation </a></li>
                 </ul>
               </div>
             </div>
           </div>
 
           <!-- Fourth Column -->
-          <div class="col-lg-2 col-md-6 footer-column">
-            <h3>Industrial Trainings</h3>
+          <div class="col-lg-2 col-md-12 footer-column">
+            <h3>Training Program</h3>
             <ul>
-              <li><a href="#">B.Tech</a></li>
-              <li><a href="#">M.Tech</a></li>
-              <li><a href="#">BCA</a></li>
-              <li><a href="#">MCA</a></li>
-              <li><a href="#">B.Sc</a></li>
+              <li><a href="./hirepage.html">Digital Marketing </a></li>
+              <li><a href="./hirepage.html">Content Writing </a></li>
+              <li><a href="./hirepage.html">Animation </a></li>
             </ul>
           </div>
         </div>
@@ -632,13 +340,12 @@
 
       <!-- Bottom Copyright -->
       <div class="footer-bottom">
-        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
+        <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
       </div>
 
       <div class="footer-contacts">
-        <p>Business No: +91 7780879789</p>
-        <p>Email: info@skillwaala.com</p>
-        <p>Email: hr@skillwaala.com</p>
+        <p>Business No: +91 7766967799</p>
+        <p>Email: hro@skillwaala.com</p>
       </div>
     </footer>
 
