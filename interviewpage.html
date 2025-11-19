@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workshop</title>
+    <title>Interview Page</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/workshop.css" />
+    <link rel="stylesheet" href="./css/interviewpage.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -83,241 +81,129 @@
           <a href="./loginreg.html" class="btn btn-login">Login</a>
         </div>
       </div>
+     
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero-section">
-      <div class="hero-card">
-        <div class="row">
-          <div class="col-lg-8">
-            <h1>
-              Unlock Career-Ready Skills with
-              <span class="learingtext"> Skillwaala Workshops </span>
-            </h1>
-
-            <p>
-              Skillwaala workshops bring you immersive, instructor-led learning
-              experiences focused on real-world application and skill mastery.
-              Whether you are a student exploring your career path or a working
-              professional looking for a career switch, our workshop helps you
-              gain practical, job-ready skills. 
-            </p>
-            <div class="">
-              <a href="./loginreg.html"
-                ><button class="btn-learn">Join Workshop</button></a
-              >
-            </div>
-          </div>
-          <!-- Right Image -->
-          <div class="col-lg-4 text-center mt-4 mt-lg-0">
-            <img
-              src="https://img.freepik.com/premium-vector/word-cloud-background-concept-workshop-business-training-seminar-employee-brainstorming-information-concept-vector-illustration_616200-4488.jpg"
-              alt="Learning Illustration"
-              class="hero-image"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ---------- Our Workshop Section ---------- -->
-    <section class="container py-5">
-      <h3 class="section-title">Our Workshop</h3>
-      <div class="row g-4">
-        <div class="col-md-4 col-sm-6">
-          <div class="workshop-card">
-            <i class="fa-solid fa-bullhorn"></i>
-            <h6>Digital Marketing</h6>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="workshop-card">
-            <i class="fa-solid fa-shapes"></i>
-            <h6>Animation</h6>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="workshop-card">
-            <i class="fa-solid fa-pen-nib"></i>
-            <h6>Content Writing</h6>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="workshop-card">
-            <i class="fa-solid fa-code"></i>
-            <h6>Web Development</h6>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="workshop-card">
-            <i class="fa-solid fa-robot"></i>
-            <h6>AI Tools</h6>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="workshop-card">
-            <i class="fa-solid fa-bullhorn"></i>
-            <h6>Digital Marketing</h6>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ---------- Upcoming Workshop Section ---------- -->
-    <section class="container upcoming-section">
-      <h3 class="section-title">Upcoming Workshops</h3>
-      <div class="row g-4">
-        <div class="col-lg-6 col-md-12">
-          <div class="upcoming-card">
-            <img
-              src="https://almashines.s3.dualstack.ap-southeast-1.amazonaws.com/assets/images/eventlogos/sizea/36176231726652028.jpg"
-              alt="AI Tools"
-            />
-            <div class="upcoming-content">
-              <h5>AI Tools</h5>
-              <p>Learn AI tool in this workshop</p>
-              <div class="d-flex align-items-center gap-2">
-                <button class="btn-live">Live</button>
-                <span>Nov 13</span>
-                <a href="./loginreg.html"
-                  ><button class="btn-register ms-auto">Register</button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12">
-          <div class="upcoming-card">
-            <img
-              src="https://almashines.s3.dualstack.ap-southeast-1.amazonaws.com/assets/images/eventlogos/sizea/36176231726652028.jpg"
-              alt="App Development"
-            />
-            <div class="upcoming-content">
-              <h5>App Development</h5>
-              <p>Learn app development in this workshop</p>
-              <div class="d-flex align-items-center gap-2">
-                <button class="btn-live">Live</button>
-                <span>Nov 13</span>
-                <a href="./loginreg.html"
-                  ><button class="btn-register ms-auto">Register</button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <h3>Transform Your Skill, Shape Your Career With Skillwaala</h3>
-    </section>
-
-    <section class="courses-section">
       <div class="container">
-        <h2>Discover More Courses on Skillwaala</h2>
-        <div class="slider d-flex">
-          <a
-            href="./dmbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
-            <div class="course-img">
-              <span class="live-tag">Live</span>
-            </div>
-            <div class="course-content">
-              <h5>Digital Marketing</h5>
-              <p>
-                Learn everything from SEO, Google Ads, and Social Media
-                Marketing to AI-powered marketing strategies.
-              </p>
-            </div>
-          </a>
+        <h2>
+          Crack Your Next Interview With Skillwaala’s Complete Preparation
+          System
+        </h2>
+        <p>
+          Skillwaala brings you a complete interview preparation system covering
+          Digital Marketing, Web Development, Animation, and Content Writing.
+          Learn real interview formats, practice with curated questions, and
+          build the clarity and confidence companies look for.
+        </p>
+        <a href="#interview">
+          <button class="btn btn-custom">
+            Explore Interview Questions for Your Niche
+          </button>
+        </a>
+      </div>
+    </section>
 
-          <a
-            href="./contentwriting.html"
-            class="course-card text-decoration-none text-dark"
-          >
-            <div class="course-img">
-              <span class="live-tag">Live</span>
-            </div>
-            <div class="course-content">
-              <h5>Content Writing</h5>
-              <p>
-                Master the art of storytelling, brand voice, and persuasive
-                writing with hands-on content marketing tools and frameworks .
-              </p>
-            </div>
-          </a>
+    <!-- INTERVIEW PREPARATION SECTION -->
+    <section class="interview-section text-center" id="interview">
+      <div class="container">
+        <h3><i class="bi bi-lightbulb-fill"></i> Interview Preparation</h3>
+        <p class="mb-5">Select a course to start your learning journey</p>
 
-          <a
-            href="./animationbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
-            <div class="course-img">
-              <span class="live-tag">Live</span>
-            </div>
-            <div class="course-content">
-              <h5>Animation Mastery Course</h5>
-              <p>
-                Bring your creativity to life with 2D Animation, motion
-                graphics, and video storytelling using industry-standard tools.
-              </p>
-            </div>
-          </a>
+        <div class="row equal-height">
+          <!-- CARD 1 -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex">
+            <a href="./dminterviewprep.html" class="course-card w-100">
+              <img
+                src="https://i0.wp.com/www.admecindia.co.in/wp-content/uploads/2024/10/why-graphic-design-about-creativity-not-just-tools-1.jpg?fit=2000%2C1112&ssl=1"
+                alt="Graphic Design"
+              />
+              <div class="card-body">
+                <h5>Graphic Design</h5>
+                <p>
+                  Prepare for creative interviews with questions on design
+                  thinking, video editing, and animation workflows.
+                </p>
+              </div>
+            </a>
+          </div>
 
-          <a
-            href="./webbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
-            <div class="course-img">
-              <span class="live-tag">Live</span>
-            </div>
-            <div class="course-content">
-              <h5>Full-Stack Web Development Program</h5>
-              <p>
-                Go from beginner to pro with a complete roadmap covering HTML,
-                CSS, JavaScript, React, Node.js, and backend integration.
-              </p>
-            </div>
-          </a>
+          <!-- CARD 2 -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex">
+            <a href="./dminterviewprep.html" class="course-card w-100">
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60"
+                alt="Digital Marketing"
+              />
+              <div class="card-body">
+                <h5>Digital Marketing</h5>
+                <p>
+                  Master SEO, SMO, and Ads interview questions with real company
+                  scenarios.
+                </p>
+              </div>
+            </a>
+          </div>
 
-          <a
-            href="./englishcourse.html"
-            class="course-card text-decoration-none text-dark"
-          >
-            <div class="course-img">
-              <span class="live-tag">Live</span>
-            </div>
-            <div class="course-content">
-              <h5>English Speaking</h5>
-              <p>
-                Interactive lessons and quizzes that make English learning easy
-                and fun.
-              </p>
-            </div>
-          </a>
+          <!-- CARD 3 -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex">
+            <a href="./dminterviewprep.html" class="course-card w-100">
+              <img
+                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=60"
+                alt="Content Writing"
+              />
+              <div class="card-body">
+                <h5>Content Writing</h5>
+                <p>
+                  Learn editorial-style questions, writing tasks, editing
+                  rounds, and portfolio-based evaluations.
+                </p>
+              </div>
+            </a>
+          </div>
 
-          <!-- Duplicate cards for seamless scrolling -->
-          <a
-            href="./dmbatch.html"
-            class="course-card text-decoration-none text-dark"
-          >
-            <div class="course-img">
-              <span class="live-tag">Live</span>
-            </div>
-            <div class="course-content">
-              <h5>Digital Marketing</h5>
-              <p>
-                Learn everything from SEO, Google Ads, and Social Media
-                Marketing to AI-powered marketing strategies.
-              </p>
-            </div>
-          </a>
+          <!-- CARD 4 -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex">
+            <a href="./dminterviewprep.html" class="course-card w-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmk1Qv7tJOx1wQicxZ0SpZB0NB9wK4LkOYFA&s"
+                alt="Animation"
+              />
+              <div class="card-body">
+                <h5>Animation</h5>
+                <p>3 sub-courses available</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex">
+            <a href="./dminterviewprep.html" class="course-card w-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5aKVFX1HPkkKVWuZSQV9pl8whPX1PVM7ghQ&s"
+                alt="Web Development"
+              />
+              <div class="card-body">
+                <h5>Web Development</h5>
+                <p>3 sub-courses available</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="col-lg-4 col-md-6 mb-4 d-flex">
+            <a href="./dminterviewprep.html" class="course-card w-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLv-DEa_BTwR1XlW3WafLqTulEB8kMLHKx7g&s"
+                alt="Data Science"
+              />
+              <div class="card-body">
+                <h5>Data Science</h5>
+                <p>3 sub-courses available</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -460,6 +346,8 @@
         <p>Email: hro@skillwaala.com</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

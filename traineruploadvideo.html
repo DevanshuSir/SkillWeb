@@ -3,74 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Student Profile</title>
+    <title>Upload Videos</title>
+    <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
 
-    <link rel="stylesheet" href="css/studentprofile.css" />
+    <link rel="stylesheet" href="./css/traineruploadvideo.css" />
   </head>
   <body>
     <!-- ✅ SIDEBAR -->
     <div class="sidebar">
       <div class="brand">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <span>Student</span>
+        <i class="fa-solid fa-user"></i>
+        <span> Trainer</span>
       </div>
       <nav class="nav flex-column">
         <a
           class="nav-link active"
-          href="./studentdashboard.html"
+          href="./instructor.html"
           data-title="Dashboard"
         >
           <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
         </a>
         <a
           class="nav-link"
-          href="./studentprofile.html"
+          href="./instructorprofile.html"
           data-title="My Profile"
         >
           <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
         </a>
         <a
           class="nav-link"
-          href="./studentenroll.html"
-          data-title="Enroll Courses"
+          href="./instructorsactivecourse.html"
+          data-title="Active Courses Count"
         >
-          <i class="fa-solid fa-book me-1"></i><span>Enroll Courses</span>
+          <i class="fa-solid fa-book me-1"></i><span>Active Courses Count</span>
         </a>
         <a
           class="nav-link"
-          href="./studentcertificate.html"
-          data-title="My Certificate"
+          href="./upcomingliveclass.html"
+          data-title="Upcoming Live Classes"
         >
-          <i class="fa-solid fa-calendar me-1"></i><span>My Certificate</span>
+          <i class="fa-brands fa-youtube me-1"></i
+          ><span>Upcoming Live Classes</span>
         </a>
         <a
           class="nav-link"
-          href="./studentattendance.html"
-          data-title="Attendance record"
+          href="./uploadedvideos.html"
+          data-title="Uploaded Videos"
         >
-          <i class="fa-solid fa-file-lines me-1"></i
-          ><span>Attendance record</span>
+          <i class="fa-solid fa-cloud-arrow-up me-1"></i
+          ><span>Uploaded Videos</span>
         </a>
-               <a
+        <a
           class="nav-link"
-          href="./studentrecordedcourse.html"
-          data-title="Courses Page"
+          href="./instructornotification.html"
+          data-title="Notifications"
         >
-          <i class="fa-solid fa-clapperboard me-1"></i
-          ><span>Recorded Course</span>
+          <i class="fa-solid fa-bell me-1"></i><span>Notifications</span>
+        </a>
+        <a class="nav-link" href="#" data-title="Community Quarry">
+          <i class="fa-solid fa-comments me-1"></i><span>Community Quarry</span>
         </a>
         <hr />
         <div class="m-2">Account</div>
@@ -82,6 +85,7 @@
         </a>
       </nav>
     </div>
+
     <!-- ✅ NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -150,9 +154,15 @@
     <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
-          <h6 class="mb-0 text-muted">Home / My Profile</h6>
+          <h6 class="mb-0 text-muted">
+            Home / Uploaded videos / Upload new video
+          </h6>
           <div class="d-flex align-items-center gap-2 flex-wrap">
-            
+            <input
+              class="form-control form-control-sm"
+              style="width: 220px"
+              placeholder="Search..."
+            />
             <i class="bi bi-bell fs-5"></i>
           </div>
         </div>
@@ -164,107 +174,225 @@
               class="profile-avatar"
             />
             <div>
-              <h6 class="mb-0 fs-4">Welcome, Ranjeet Singh!</h6>
-              <div class="small text-light">Student</div>
+              <h6 class="mb-0 fs-2">Devanshu Sir</h6>
+              <div class="fs-5 text-light">Instructor</div>
+              <p class="fs-6">
+                “Empowering learners through creativity & technology”
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container profile-container">
-        <!-- Left Section -->
-        <div class="left-section">
-          <h6 class="mb-3">Account Management</h6>
-          <div class="profile-pic">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
-              alt="User"
+      <div class="container py-5" style="max-width: 98%">
+        <h4 class="fw-bold mb-4">
+          <i class="bi bi-upload text-primary me-2"></i>Upload New Video
+        </h4>
+
+        <div class="upload-section">
+          <!-- Basic Info -->
+          <h5 class="section-title">Basic Information</h5>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Video Title</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter video title"
             />
           </div>
 
-          <input type="file" name="" id="" class="upload-btn mt-3" />
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Description</label>
+            <textarea
+              rows="4"
+              class="form-control"
+              placeholder="Add brief description of your video"
+            ></textarea>
+          </div>
 
-          <div class="mt-4">
-            <label class="form-label">Old Password</label>
-            <input
-              type="password"
-              class="form-control"
-              placeholder="********"
-            />
-            <label class="form-label mt-3">New Password</label>
-            <input
-              type="password"
-              class="form-control"
-              placeholder="********"
-            />
-            <button class="upload-btn mt-3">Change Password</button>
+          <!-- Visibility -->
+          <h5 class="section-title">Visibility</h5>
+          <div class="mb-4">
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="visibility"
+                id="private"
+                checked
+              />
+              <label class="form-check-label" for="private">
+                <i class="bi bi-lock-fill text-secondary me-1"></i> Private
+              </label>
+            </div>
+
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="visibility"
+                id="unlisted"
+              />
+              <label class="form-check-label" for="unlisted">
+                <i class="bi bi-eye-slash-fill text-warning me-1"></i> Unlisted
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="visibility"
+                id="public"
+              />
+              <label class="form-check-label" for="public">
+                <i class="bi bi-globe text-success me-1"></i> Public
+              </label>
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <h5 class="section-title">Schedule</h5>
+          <div class="row g-3 align-items-end mb-4">
+            <div class="col-md-4">
+              <label class="form-label fw-semibold"
+                ><i class="bi bi-calendar3 me-1"></i> Schedule Date</label
+              >
+              <input type="date" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold"
+                ><i class="bi bi-clock me-1"></i> Time</label
+              >
+              <input type="time" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold"
+                ><i class="bi bi-geo-alt me-1"></i> Timezone</label
+              >
+              <select class="form-select">
+                <option>UTC +05:30 (India)</option>
+                <option>UTC +00:00 (GMT)</option>
+                <option>UTC +01:00 (Europe)</option>
+                <option>UTC -05:00 (US Eastern)</option>
+                <option>UTC -08:00 (US Pacific)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Upload Section -->
+          <h5 class="section-title">Upload Files</h5>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <div class="upload-box">
+                <i class="bi bi-image"></i>
+                <p class="mt-2 mb-1 fw-semibold">Video Thumbnail</p>
+                <p class="text-muted small mb-2">
+                  Click or browse to upload thumbnail
+                </p>
+                <input type="file" class="form-control mt-2" />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="upload-box">
+                <i class="bi bi-camera-video"></i>
+                <p class="mt-2 mb-1 fw-semibold">Upload Video</p>
+                <p class="text-muted small mb-2">
+                  Drag & drop or click to browse video file
+                </p>
+                <input type="file" class="form-control mt-2" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Playlist Section -->
+          <div class="accordion" id="playlistAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button collapsed fw-semibold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  <i class="bi bi-collection-play me-2 text-primary"></i>
+                  Create a Playlist
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#playlistAccordion"
+              >
+                <div class="accordion-body">
+                  <button
+                    class="btn btn-create"
+                    data-bs-toggle="modal"
+                    data-bs-target="#playlistModal"
+                  >
+                    <i class="bi bi-plus-circle"></i> New Playlist
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mb-4 mt-4">
+            <button class="btn btn-upload">
+              <i class="bi bi-cloud-arrow-up"></i> Upload
+            </button>
           </div>
         </div>
+      </div>
 
-        <!-- Right Section -->
-        <div class="right-section">
-          <!-- Profile Info -->
-          <div class="section-box">
-            <h5>Profile Information</h5>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">User name</label>
-                <input type="text" class="form-control" />
+      <!-- Playlist Modal -->
+      <div
+        class="modal fade"
+        id="playlistModal"
+        tabindex="-1"
+        aria-labelledby="playlistModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h5 class="modal-title" id="playlistModalLabel">
+                <i class="bi bi-music-note-list me-2 text-primary"></i>Create
+                New Playlist
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Title (Required)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter playlist title"
+                />
               </div>
-              <div class="col-md-6">
-                <label class="form-label">First name</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Nick name</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Role</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Last name</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Display Name Publicly as</label>
-                <input type="text" class="form-control" />
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Description</label>
+                <textarea
+                  rows="3"
+                  class="form-control"
+                  placeholder="Add playlist description"
+                ></textarea>
               </div>
             </div>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="section-box">
-            <h5>Contact Info</h5>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">Email Require</label>
-                <input type="email" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Whatsapp</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Website</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Insta / Telegram</label>
-                <input type="text" class="form-control" />
-              </div>
+            <div class="modal-footer">
+              <button class="btn btn-create">
+                <i class="bi bi-check-circle"></i> Create
+              </button>
             </div>
           </div>
-
-          <!-- About -->
-          <div class="section-box">
-            <h5>About The User</h5>
-            <label class="form-label">Biographical Info</label>
-            <textarea class="form-control" rows="4"></textarea>
-          </div>
-
-          <button class="submit-btn">Submit</button>
         </div>
       </div>
 
@@ -414,8 +542,6 @@
       </footer>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- ✅ JS -->
     <script>
       const sidebar = document.querySelector(".sidebar");
@@ -441,5 +567,6 @@
         }
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

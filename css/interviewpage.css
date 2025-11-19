@@ -1,7 +1,5 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: #eef5ff;
-  color: #222;
 }
 
 .navbar {
@@ -30,7 +28,6 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 200px;
-  border-radius: 17px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -88,142 +85,130 @@ body {
   color: #fff;
 }
 
-/* Section Title */
-.job-section h2 {
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
+    /* HERO SECTION */
+    .hero-section {
+      background: #fff4ec;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 40px;
-}
+    .hero-section h2 {
+      font-weight: 700;
+      color: #e63900;
+      line-height: 1.4;
+    }
 
-.filter-input {
-  flex: 1;
-  min-width: 220px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
+    .hero-section p {
+      color: #444;
+      max-width: 750px;
+      margin: 20px auto;
+      font-size: 16px;
+    }
 
-.filter-input input {
-  border: none;
-  outline: none;
-  width: 100%;
-  background: transparent;
-  font-size: 14px;
-}
+    .hero-section .btn-custom {
+      background: linear-gradient(to right, #ff6600, #ff3300);
+      color: #fff;
+      padding: 14px 40px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 6px 0 #b13a00;
+      transition: all 0.3s ease;
+      border: none;
+    }
 
-/* Job Card */
-.job-card {
-  background: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 18px;
-  position: relative;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
-}
+    .hero-section .btn-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
 
-.job-card:hover {
-  transform: translateY(-4px);
-}
+    /* INTERVIEW SECTION */
+    .interview-section {
+      background: #e8f0ff;
+      padding: 70px 0;
+    }
 
-.job-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .interview-section h3 {
+      font-weight: 700;
+      color: #002a8d;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.job-card h5 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
-}
+    .interview-section p {
+      color: #5c6c8c;
+    }
 
-.job-card p {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #555;
-}
+    .interview-section i {
+      font-size: 30px;
+      color: #002a8d;
+    }
 
-.job-card small {
-  font-size: 12px;
-  color: #777;
-}
+    /* CARD STYLING */
+    .course-card {
+      background: #0d1b2a;
+      color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
 
-.apply-btn {
-  background: #3b82f6;
-  color: #fff;
-  border: none;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-  transition: 0.3s;
-}
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-.apply-btn:hover {
-  background: #2563eb;
-}
+    .course-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
 
-.whatsapp-icon {
-  color: #25d366;
-  font-size: 20px;
-}
+    .course-card .card-body {
+      padding: 18px;
+      background: #14253d;
+      height: 140px;
+    }
 
-/* Right Sidebar */
-.sidebar {
-  background: #cde0ff;
-  border-radius: 20px;
-  padding: 20px;
-  height: 100%;
-}
+    .course-card h5 {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
 
-.sidebar h4 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
+    .course-card p {
+      color: #cfd6e6;
+      font-size: 14px;
+      line-height: 1.5;
+    }
 
-.company-btn {
-  background: #fff;
-  border: none;
-  width: 100%;
-  border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color: #2563eb;
-  transition: 0.3s;
-}
+    .equal-height {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.company-btn:hover {
-  background: #2563eb;
-  color: #fff;
-}
+    .equal-height .col-md-4 {
+      display: flex;
+    }
 
-.sidebar img {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 10px;
-}
-
-.Disclaimer{
-  background-color: white;
-  padding: 20px;
-  border-radius: 7px;
-  margin-top: 20px;
-}
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 60px 15px;
+      }
+      .hero-section h2 {
+        font-size: 22px;
+      }
+      .course-card img {
+        height: 180px;
+      }
+    }
 
 .register-section {
   background: linear-gradient(135deg, #5c2dab, #7d4ed1);
@@ -364,8 +349,29 @@ footer .footer-main {
   margin: 0;
   text-align: center;
 }
+
 @media (max-width: 992px) {
-  .sidebar {
-    margin-top: 30px;
+  .custom-nav {
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .custom-nav .divider {
+    display: none;
+  }
+
+  .custom-nav .nav-link {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
   }
 }
