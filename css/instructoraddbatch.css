@@ -256,7 +256,6 @@ body {
   padding: 0 1.25rem;
   flex-wrap: wrap;
 }
-
 .profile-hero {
   background: var(--brand-gradient);
   color: #fff;
@@ -302,34 +301,46 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.profile-container {
-  display: flex;
-  flex-wrap: wrap;
+.courses-list .course-item {
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin: 20px;
-}
-
-.tab-buttons {
+  padding: 12px;
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  flex-wrap: wrap;
+}
+.course-thumb {
+  width: 64px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.course-meta {
+  flex: 1;
+  min-width: 0;
+}
+.course-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+.course-sub {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
-.tab-buttons button {
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 20px;
-  padding: 6px 18px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.tab-buttons button.active {
-  background: #000;
+.badge-published {
+  background: #111827;
   color: #fff;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
 }
 
 @media (max-width: 991px) {
@@ -359,122 +370,94 @@ body {
   }
 }
 
- .wishlist-container {
-        /* max-width: 1150px; */
-        margin: 30px auto;
-        padding: 20px;
-      }
+.table img {
+  border: 3px solid #eee;
+}
 
-      .summary-card {
-        border-radius: 10px;
-        padding: 18px 15px;
-        color: #fff;
-        text-align: center;
-        font-weight: 600;
-      }
+.table td {
+  vertical-align: middle;
+}
 
-      .wishlist-green { background: linear-gradient(90deg, #2ecc71, #27ae60); }
-      .wishlist-blue { background: linear-gradient(90deg, #3498db, #2e86c1); }
-      .wishlist-yellow { background: linear-gradient(90deg, #f1c40f, #f39c12); }
-      .wishlist-pink { background: linear-gradient(90deg, #e67e22, #d35400); }
+/* Badge soft color */
+.badge-soft-success {
+  background: #d4f7d4;
+  color: #27a844;
+}
 
-      .summary-card h5 {
-        font-size: 14px;
-        margin-bottom: 5px;
-        color: rgba(255,255,255,0.9);
-      }
+.badge-soft-primary {
+  background: #dce8ff;
+  color: #1a5fff;
+}
 
-      .summary-card p {
-        font-size: 18px;
-        font-weight: 700;
-        margin: 0;
-      }
+.search-box {
+  border-radius: 10px;
+  width: 85%;
+  border: 1px solid rgb(171, 170, 170);
+  outline: none;
+  padding: 5px 10px;
+}
+.create-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e0e6f0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
 
-      .search-filter {
-        background: #fff;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      }
+.thumb-preview {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
 
-      .search-filter input {
-        border-radius: 8px;
-      }
+.btn-orange {
+  background: linear-gradient(to right, #ff6600, #fb3232);
+  color: #fff;
+  border: none;
+}
 
-      .wishlist-section, .recommended-section {
-        background: #fff;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      }
+.btn-orange:hover {
+  opacity: 0.9;
+  color: #fff;
+}
 
-      .wishlist-item {
-        border-radius: 12px;
-        overflow: hidden;
-        background: #f9fafb;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
-      }
+.register-section {
+  background: linear-gradient(135deg, #5c2dab, #7d4ed1);
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 90%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
-      .wishlist-item:hover {
-        transform: translateY(-5px);
-      }
+.register-section h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-      .wishlist-item img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-      }
+.register-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+}
 
-      .wishlist-body {
-        padding: 12px 14px;
-      }
+.register-section .btn {
+  background: linear-gradient(90deg, #ff6600, #ff0000);
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
 
-      .wishlist-body h6 {
-        font-size: 15px;
-        font-weight: 600;
-      }
-
-      .wishlist-progress {
-        height: 6px;
-        background: #e9ecef;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .wishlist-progress .progress-bar {
-        background: #3498db;
-      }
-
-      @media (max-width: 767px) {
-        .summary-card p { font-size: 16px; }
-        .wishlist-body h6 { font-size: 14px; }
-      }
-
-      @media (max-width: 992px) {
-  .custom-nav {
-    border: none;
-    border-radius: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 0;
-  }
-
-  .custom-nav .divider {
-    display: none;
-  }
-
-  .custom-nav .nav-link {
-    padding: 10px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
-
-  .btn-login {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
+.register-section .btn:hover {
+  opacity: 0.85;
 }
 
 footer {
@@ -579,37 +562,3 @@ footer .footer-main {
   margin: 0;
   text-align: center;
 }
-
-@media (max-width: 991px) {
-  .details .dashboard-row {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 991px) {
-  .main {
-    margin-left: 0;
-  }
-  .sidebar {
-    transform: translateX(-100%);
-  }
-  .sidebar.show {
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 576px) {
-  .sidebar-toggle-btn {
-    width: 36px;
-    height: 36px;
-    top: 10px;
-    left: 10px;
-  }
-  .topbar input {
-    width: 100% !important;
-  }
-  .profile-hero button {
-    flex: 1 1 100%;
-  }
-}
-

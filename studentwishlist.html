@@ -4,91 +4,102 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Student Wishlist</title>
+   <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./css/studentwishlist.css" />
   </head>
   <body>
 
 
-    <!-- Sidebar -->
-    <aside class="sidebar hide" id="sidebar">
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
       <div class="brand">
-        <img src="./media/ok quality logo.png" alt="logo" />
-        <div>
-          <div style="font-weight: 700">SKILLWAALA</div>
-          <div class="small text-muted">Student</div>
-        </div>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Student</span>
       </div>
-      <hr />
-      <div class="section-title">Main Menu</div>
       <nav class="nav flex-column">
-        <a href="./studentdashboard.html" class="nav-link active"
-          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        <a
+          class="nav-link active"
+          href="./studentdashboard.html"
+          data-title="Dashboard"
         >
-        <a href="./studentprofile.html" class="nav-link"
-          ><i class="bi bi-people"></i> My Profile</a
-        >
-        <a href="./studentenroll.html" class="nav-link"
-          ><i class="bi bi-book"></i>Enroll Courses</a
-        >
-        <a href="./studentcertificate.html" class="nav-link"
-          ><i class="bi bi-calendar"></i> My Certificate</a
-        >
-        <a href="./studentattendance.html" class="nav-link"
-          ><i class="bi bi-question-circle"></i> Attendance record</a
-        >
-          <a href="./studentwishlist.html" class="nav-link"
-          ><i class="bi bi-cart4"></i> Wishlist</a
-        >
-         <a href="./studentcoursepage.html" class="nav-link"
-          ><i class="bi bi-journal-check"></i> Courses Page </a
-        >
-      </nav>
-
-      <div class="section-title mt-3">Account</div>
-      <nav class="nav flex-column">
-        <a href="#" class="nav-link"><i class="bi bi-gear"></i> Setting</a>
-        <a href="#" class="nav-link"
-          ><i class="bi bi-box-arrow-right"></i> Logout</a
-        >
-        <a href="#" class="nav-link"
-          ><i class="bi bi-life-preserver"></i> Support</a
-        >
-      </nav>
-    </aside>
-
- 
-
-    <!-- Main Content -->
-    <main class="main">
-
-      
-            <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-         <!-- Sidebar Toggle Button -->
-    <div class="sidebar-toggle-btn" id="sidebarToggle">
-      <i class="bi bi-list"></i>
-    </div>
-      <div class="container">
-     <a class="navbar-brand fw-bold" href="./index.html">
-          <img src="./media/ok quality logo.png" alt="Logo" width="100" />
+          <i class="fa-solid fa-gauge me-1"></i> <span>Dashboard</span>
         </a>
+        <a
+          class="nav-link"
+          href="./studentprofile.html"
+          data-title="My Profile"
+        >
+          <i class="fa-solid fa-user-check me-1"></i> <span>My Profile</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentenroll.html"
+          data-title="Enroll Courses"
+        >
+          <i class="fa-solid fa-book me-1"></i><span>Enroll Courses</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentcertificate.html"
+          data-title="My Certificate"
+        >
+          <i class="fa-solid fa-calendar me-1"></i><span>My Certificate</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentattendance.html"
+          data-title="Attendance record"
+        >
+          <i class="fa-solid fa-file-lines me-1"></i
+          ><span>Attendance record</span>
+        </a>
+        <a
+          class="nav-link"
+          href="./studentrecordedcourse.html"
+          data-title="Recorded Course"
+        >
+          <i class="fa-solid fa-clapperboard me-1"></i
+          ><span>Recorded Course</span>
+        </a>
+        <hr />
+        <div class="m-2">Account</div>
+        <a class="nav-link" href="./index.html" data-title="Logout">
+          <i class="fa-solid fa-right-from-bracket me-1"></i><span>Logout</span>
+        </a>
+        <a class="nav-link" href="https://www.skillwaala.com/contact-us" data-title="Support">
+          <i class="fa-solid fa-circle-info me-1"></i><span>Support</span>
+        </a>
+      </nav>
+    </div>
+
+        <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="sidebar-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand fw-bold ms-2" href="./index.html">
+          <img src="./media/ok quality logo.png" alt="Logo" width="130" />
+        </a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,37 +107,54 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center custom-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Skill Space</a>
-            </li>
-            <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-            <span class="divider">|</span>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Internship</a>
+              <a class="nav-link active" href="./skillspace.html"
+                >Skill Space</a
+              >
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hire from us</a>
+              <a class="nav-link" href="./course.html">Courses</a>
             </li>
             <span class="divider">|</span>
-            <li class="nav-item"><a class="nav-link" href="#">Showcase</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./internship.html">Internship</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./hirepage.html">Hire from us</a>
+            </li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="dropbtn">Showcase</button>
+                <div class="dropdown-content">
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </div>
+              </div>
+            </li>
             <span class="divider">|</span>
             <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <span class="divider">|</span>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobalerthome.html">Job Search</a>
+            </li>
           </ul>
           <a href="./loginreg.html" class="btn btn-login">Login</a>
         </div>
       </div>
     </nav>
 
+    <!-- Main Content -->
+    <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
-          <h6 class="mb-0 text-muted">Home / Wishlist</h6>
+          <h6 class="mb-0 text-muted">Home / Dashboard / Upcoming Course</h6>
           <div class="d-flex align-items-center gap-2 flex-wrap">
-            <input
-              class="form-control form-control-sm"
-              style="width: 220px"
-              placeholder="Search..."
-            />
+           
             <i class="bi bi-bell fs-5"></i>
           </div>
         </div>
@@ -142,288 +170,257 @@
               <div class="small text-light">Student</div>
             </div>
           </div>
-          <div class="d-flex flex-wrap gap-2">
-            <button class="btn btn-light btn-sm">Became an Instructor</button>
-            <button class="btn btn-danger btn-sm">Instrustor Dashboard</button>
-          </div>
+         
         </div>
       </div>
 
    
     <div class="wishlist-container">
-      <!-- Header Summary -->
-      <div class="row g-3 mb-3">
-        <div class="col-6 col-md-3">
-          <div class="summary-card wishlist-green">
-            <h5>Total Wishlist</h5>
-            <p>12 Items</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="summary-card wishlist-blue">
-            <h5>Course Saved</h5>
-            <p>08</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="summary-card wishlist-yellow">
-            <h5>Workshop Saved</h5>
-            <p>03</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="summary-card wishlist-pink">
-            <h5>Resources</h5>
-            <p>01</p>
-          </div>
-        </div>
-      </div>
+ 
 
-      <!-- Search and Filters -->
-      <div class="search-filter mb-4">
-        <div class="row g-3 align-items-center">
-          <div class="col-lg-4 col-md-6">
-            <input type="text" class="form-control" placeholder="Search Wishlist Items...">
-          </div>
-          <div class="col-lg-4 col-md-3">
-            <select class="form-select">
-              <option>Recently Added</option>
-              <option>Oldest</option>
-              <option>Most Viewed</option>
-            </select>
-          </div>
-          <div class="col-lg-4 col-md-3">
-            <select class="form-select">
-              <option>Sort by: Alphabetical</option>
-              <option>Newest First</option>
-              <option>Rating</option>
-            </select>
-          </div>
-        </div>
-      </div>
+ 
 
       <!-- Wishlist Items -->
       <div class="wishlist-section mb-4">
-        <h5 class="mb-3">Wishlist Item List</h5>
+        <h5 class="mb-3">Upcoming Courses</h5>
         <div class="row g-3">
           <div class="col-md-4 col-sm-6">
             <div class="wishlist-item">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Item">
               <div class="wishlist-body">
-                <h6>Free Training Course</h6>
+                <h6>Web Development Batch -4</h6>
                 <p class="text-muted small mb-2">Category: Web Development</p>
                 <div class="wishlist-progress mb-2">
                   <div class="progress-bar" style="width: 75%"></div>
                 </div>
-                <small class="text-muted">Progress: 75%</small>
+                <button class="btn btn-success">Enroll Now</button>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6">
             <div class="wishlist-item">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Item">
               <div class="wishlist-body">
-                <h6>Career Growth Workshop</h6>
-                <p class="text-muted small mb-2">Category: Business</p>
+                <h6>Web Development Batch -4</h6>
+                <p class="text-muted small mb-2">Category: Web Development</p>
                 <div class="wishlist-progress mb-2">
-                  <div class="progress-bar" style="width: 60%"></div>
+                  <div class="progress-bar" style="width: 75%"></div>
                 </div>
-                <small class="text-muted">Progress: 60%</small>
+                <button class="btn btn-success">Enroll Now</button>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4 col-sm-6">
-            <div class="wishlist-item">
-               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Item">
-              <div class="wishlist-body">
-                <h6>Workshop Placeholder</h6>
-                <p class="text-muted small mb-2">Category: Design</p>
-                <div class="wishlist-progress mb-2">
-                  <div class="progress-bar" style="width: 45%"></div>
-                </div>
-                <small class="text-muted">Progress: 45%</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6">
             <div class="wishlist-item">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Item">
               <div class="wishlist-body">
-                <h6>Advanced Resource</h6>
-                <p class="text-muted small mb-2">Category: Resource</p>
+                <h6>Web Development Batch -4</h6>
+                <p class="text-muted small mb-2">Category: Web Development</p>
                 <div class="wishlist-progress mb-2">
-                  <div class="progress-bar" style="width: 30%"></div>
+                  <div class="progress-bar" style="width: 75%"></div>
                 </div>
-                <small class="text-muted">Progress: 30%</small>
+                <button class="btn btn-success">Enroll Now</button>
               </div>
             </div>
           </div>
+
+            <div class="col-md-4 col-sm-6">
+            <div class="wishlist-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Item">
+              <div class="wishlist-body">
+                <h6>Web Development Batch -4</h6>
+                <p class="text-muted small mb-2">Category: Web Development</p>
+                <div class="wishlist-progress mb-2">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+                <button class="btn btn-success">Enroll Now</button>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-md-4 col-sm-6">
+            <div class="wishlist-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Item">
+              <div class="wishlist-body">
+                <h6>Web Development Batch -4</h6>
+                <p class="text-muted small mb-2">Category: Web Development</p>
+                <div class="wishlist-progress mb-2">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+                <button class="btn btn-success">Enroll Now</button>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
-
-      <!-- Recommended Course -->
-      <div class="recommended-section">
-        <h5 class="mb-3">Recommended Course</h5>
-        <div class="row g-3">
-          <div class="col-md-4 col-sm-6">
-            <div class="wishlist-item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Course">
-              <div class="wishlist-body">
-                <h6>Cost Reduction</h6>
-                <p class="text-muted small mb-2">Business Strategy</p>
-                <small class="text-muted">Duration: 5h</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6">
-            <div class="wishlist-item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Course">
-              <div class="wishlist-body">
-                <h6>Python Workshop</h6>
-                <p class="text-muted small mb-2">Programming</p>
-                <small class="text-muted">Duration: 6h</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6">
-            <div class="wishlist-item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzb-tHLTy_x3v4ZB57K-ufNqxXyHPT3AARmQ&s" alt="Course">
-              <div class="wishlist-body">
-                <h6>UI/UX Design Basics</h6>
-                <p class="text-muted small mb-2">Design</p>
-                <small class="text-muted">Duration: 4h</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-             <!-- Footer -->
-    <footer>
-      <div class="container py-5">
-        <div class="row g-4">
+      <!-- Footer -->
+      <footer>
+        <div class="container-fluid py-5">
+  
+          <div class="row g-4 footer-main">
+            <!-- First Column -->
+            <div class="col-lg-3 col-md-12 footer-logo">
+              <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
 
-          <!-- First Column -->
-          <div class="col-lg-3 col-md-6 footer-logo">
-            <img src="./media/ok quality logo.png" alt="Skillwaala Logo" />
-            <p><strong>Social Links:</strong></p>
-            <p>
-              <a href="#">Facebook</a> | <a href="#">Instagram</a> |
-              <a href="#">LinkedIn</a> |
-              <a href="#">WhatsApp</a>
-            </p>
-            <p><strong>Email:</strong> info@skillwaala.com</p>
-            <p>
-              <strong>Address:</strong> 1/6 Gandhi Vihar, Vidhyadhar Nagar,
-              Jaipur
-            </p>
-            <p><strong>Contact:</strong> +91 7705697799</p>
-          </div>
+              <p class="m-2"></p>
+              <p><strong>Social Links:</strong></p>
+              <a href="https://www.facebook.com/skillwaala/"
+                ><i
+                  class="bi bi-facebook bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a href="https://www.instagram.com/skillwaala"
+                ><i
+                  class="bi bi-instagram bg-danger px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a href="https://www.linkedin.com/company/skillwaala/"
+                ><i
+                  class="bi bi-linkedin bg-primary px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
+              |
+              <a
+                href="https://api.whatsapp.com/send/?phone=917766967799&text=Hello+SkillWaala+Team&type=phone_number&app_absent"
+                ><i
+                  class="bi bi-whatsapp bg-success px-2 py-2 opacity-75 text-light rounded-circle"
+                ></i
+              ></a>
 
-          <!-- Second Column -->
-          <div class="col-lg-2 col-md-6 footer-column">
-            <h3>Company</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Web Stories</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </div>
+              <p><strong>Email:</strong>hro@skillwaala.com</p>
+              <p>
+                <strong>Address:</strong> - 16A Govind Vatika, Usha Vihar, 10B
+                Scheme, Triveni Nagar Jaipur, 302018
+              </p>
+              <p><strong>Contact:</strong>+91 7766967799</p>
+            </div>
 
-          <!-- Third Column -->
-          <div class="col-lg-4 col-md-6 footer-column">
-            <h3>Trending Courses</h3>
-            <div class="row g-3">
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">SEO Course</a></li>
-                  <li><a href="#">Social Media Marketing</a></li>
-                  <li><a href="#">Performance Marketing</a></li>
-                  <li><a href="#">Animation Course</a></li>
-                  <li><a href="#">Graphic Design</a></li>
-                  <li><a href="#">Video Editing</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li><a href="#">Content Writing</a></li>
-                  <li><a href="#">Full-Stack Web Dev</a></li>
-                  <li><a href="#">English Spoken</a></li>
-                  <li><a href="#">Mobile App Dev</a></li>
-                  <li><a href="#">Data Science</a></li>
-                  <li><a href="#">Business Analyst</a></li>
-                  <li><a href="#">2D Animation</a></li>
-                </ul>
+            <!-- Second Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/about-us">About Us</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/reviews">Testimonials</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/web-stories"
+                    >Web Stories</a
+                  >
+                </li>
+                <li><a href="https://blog.skillwaala.com/">Blog</a></li>
+                <li>
+                  <a href="https://www.skillwaala.com/privacy-policy"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/contact-us">Contact Us</a>
+                </li>
+                <li>
+                  <a href="https://www.skillwaala.com/gallery">Gallery</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col-lg-4 col-md-12 footer-column">
+              <h3>Trending Courses</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <ul>
+                    <li><a href="./dmbatch.html">Digital Marketing</a></li>
+                    <li>
+                      <a href="./contentwriting.html">Content Writing </a>
+                    </li>
+                    <li><a href="./seo.html">SEO Course </a></li>
+                    <li>
+                      <a href="./socialmediamarketing.html"
+                        >Social Media Marketing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./webbatch.html">Full-Stack Web Development </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      <a href="./performancemarketing.html"
+                        >Performance Marketing
+                      </a>
+                    </li>
+                    <li><a href="./englishcourse.html">English Spoken </a></li>
+                    <li><a href="./graphicdesign.html">Graphic Design </a></li>
+                    <li><a href="./videoediting.html">Video Editing </a></li>
+                    <li><a href="./2danimation.html">2D Animation </a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Fourth Column -->
-          <div class="col-lg-3 col-md-6 footer-column">
-            <h3>Industrial Trainings</h3>
-            <ul>
-              <li><a href="#">B.Tech</a></li>
-              <li><a href="#">M.Tech</a></li>
-              <li><a href="#">BCA</a></li>
-              <li><a href="#">MCA</a></li>
-              <li><a href="#">B.Sc</a></li>
-            </ul>
+            <!-- Fourth Column -->
+            <div class="col-lg-2 col-md-12 footer-column">
+              <h3>Training Program</h3>
+              <ul>
+                <li><a href="./hirepage.html">Digital Marketing </a></li>
+                <li><a href="./hirepage.html">Content Writing </a></li>
+                <li><a href="./hirepage.html">Animation </a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Bottom Copyright -->
-      <div class="footer-bottom">
-        <p>Copyright ©2025 SkillWaala. All Rights Reserved.</p>
-      </div>
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+          <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
+        </div>
 
-      <div class="footer-contacts">
-        <p>Business No: +91 7780879789</p>
-        <p>Email: info@skillwaala.com</p>
-        <p>Email: hr@skillwaala.com</p>
-      </div>
-    </footer>
+        <div class="footer-contacts">
+          <p>Business No: +91 7766967799</p>
+          <p>Email: hro@skillwaala.com</p>
+        </div>
+      </footer>
 
     </main>
 
 
 
+   <!-- ✅ JS -->
     <script>
-      const sidebar = document.getElementById("sidebar");
-      const toggleBtn = document.getElementById("sidebarToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+      const navLinks = document.querySelectorAll(".sidebar .nav-link");
 
+      // Sidebar toggle for desktop + mobile
       toggleBtn.addEventListener("click", () => {
-        if (window.innerWidth <= 991) {
+        if (window.innerWidth < 992) {
           sidebar.classList.toggle("show");
         } else {
-          sidebar.classList.toggle("hide");
+          sidebar.classList.toggle("collapsed");
         }
       });
 
-      document.addEventListener("click", (e) => {
-        if (window.innerWidth <= 991) {
-          if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
-            sidebar.classList.remove("show");
-          }
-        }
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 991) {
-          sidebar.classList.remove("show");
+      // ✅ Auto set active link based on URL
+      const currentLocation = window.location.href;
+      navLinks.forEach((link) => {
+        if (link.href === currentLocation) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
         }
       });
     </script>

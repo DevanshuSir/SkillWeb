@@ -283,6 +283,56 @@ body {
   object-fit: cover;
 }
 
+.profile-img {
+  width: 100px;
+
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.upload-btn {
+  width: 50%;
+  font-size: 14px;
+}
+
+.change-password-popup {
+  font-family: "Poppins", sans-serif;
+}
+
+.change-password-popup body {
+  background-color: #f8f9fa;
+}
+
+.change-password-popup .btn-custom {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.change-password-popup .btn-custom:hover {
+  background-color: #0056b3;
+}
+
+.change-password-popup .modal-content {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.change-password-popup .modal-header {
+  border-bottom: none;
+}
+
+.change-password-popup .modal-footer {
+  border-top: none;
+}
+
+.change-password-popup .form-control {
+  border-radius: 8px;
+}
+
 .dashboard-card {
   border-radius: 15px;
   color: #fff;

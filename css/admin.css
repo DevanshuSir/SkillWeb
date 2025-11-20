@@ -509,3 +509,14 @@ footer .footer-main {
   margin: 0;
   text-align: center;
 }
+
+.selected-trainers .badge {
+  background-color: #007bff !important;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.selected-trainers .badge:hover {
+  background-color: #0056b3 !important;
+}
+

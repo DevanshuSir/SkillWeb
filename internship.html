@@ -12,12 +12,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-      <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
 
-<link rel="stylesheet" href="./css/internship.css">
+    <link rel="stylesheet" href="./css/internship.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -99,7 +99,7 @@
               real-world challenges.
             </p>
             <div class="btn-group d-flex gap-3 flex-wrap">
-              <a href="#coursequiz"
+              <a href="#internship"
                 ><button class="btn-learn">Apply Now</button></a
               >
             </div>
@@ -116,7 +116,7 @@
       </div>
     </section>
 
-    <section class="courses-section-new">
+    <section class="courses-section-new" id="internship">
       <div class="container">
         <div class="row g-4">
           <!-- Card 1 -->
@@ -133,7 +133,7 @@
                   Learn SEO, SMO, Google Ads, and Meta Ads - boost brand online
                 </p>
                 <p class="course-duration">Duration: 1 Month</p>
-                <button class="course-btn">Apply Now</button>
+                <button class="course-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
               </div>
             </div>
           </div>
@@ -152,7 +152,9 @@
                   Learn SEO, SMO, Google Ads, and Meta Ads - boost brand online
                 </p>
                 <p class="course-duration">Duration: 1 Month</p>
-                <button class="course-btn">Apply Now</button>
+                <button class="course-btn"
+                data-bs-toggle="modal" data-bs-target="#enrollModal"
+                >Apply Now</button>
               </div>
             </div>
           </div>
@@ -171,7 +173,9 @@
                   Learn SEO, SMO, Google Ads, and Meta Ads - boost brand online
                 </p>
                 <p class="course-duration">Duration: 1 Month</p>
-                <button class="course-btn">Apply Now</button>
+                <button class="course-btn"
+                data-bs-toggle="modal" data-bs-target="#enrollModal"
+                >Apply Now</button>
               </div>
             </div>
           </div>
@@ -190,7 +194,9 @@
                   Learn SEO, SMO, Google Ads, and Meta Ads - boost brand online
                 </p>
                 <p class="course-duration">Duration: 1 Month</p>
-                <button class="course-btn">Apply Now</button>
+                <button class="course-btn"
+                data-bs-toggle="modal" data-bs-target="#enrollModal"
+                >Apply Now</button>
               </div>
             </div>
           </div>
@@ -209,7 +215,9 @@
                   Learn SEO, SMO, Google Ads, and Meta Ads - boost brand online
                 </p>
                 <p class="course-duration">Duration: 1 Month</p>
-                <button class="course-btn">Apply Now</button>
+                <button class="course-btn"
+                data-bs-toggle="modal" data-bs-target="#enrollModal"
+                >Apply Now</button>
               </div>
             </div>
           </div>
@@ -228,7 +236,9 @@
                   Learn SEO, SMO, Google Ads, and Meta Ads - boost brand online
                 </p>
                 <p class="course-duration">Duration: 1 Month</p>
-                <button class="course-btn">Apply Now</button>
+                <button class="course-btn"
+                data-bs-toggle="modal" data-bs-target="#enrollModal"
+                >Apply Now</button>
               </div>
             </div>
           </div>
@@ -336,6 +346,87 @@
               </p>
             </div>
           </a>
+        </div>
+      </div>
+    </section>
+
+        <section class="popup-section">
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="enrollModal"
+        tabindex="-1"
+        aria-labelledby="enrollModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- Close button -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
+            <h4 class="text-center mb-3 mt-3">Enroll Form</h4>
+            <form>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Whatsapp no"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <select class="form-select" required>
+                  <option value="">Select Course</option>
+                  <option value="webdev">Web Development</option>
+                  <option value="mern">MERN Stack</option>
+                  <option value="uiux">UI/UX Design</option>
+                  <option value="dm">Digital Marketing</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Write Message"
+                ></textarea>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="termsCheck"
+                  required
+                />
+                <label class="form-check-label" for="termsCheck">
+                  I agree with the terms and conditions
+                </label>
+              </div>
+              <div class="text-end">
+                <button type="submit" class="btn-enroll">Enroll Now</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -478,6 +569,8 @@
         <p>Email: hro@skillwaala.com</p>
       </div>
     </footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

@@ -34,7 +34,7 @@ body {
   font-weight: 500;
 }
 
-.dropbtn:hover{
+.dropbtn:hover {
   color: #e65a29;
 }
 
@@ -306,6 +306,10 @@ body {
   border: none;
   border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.details a {
+  text-decoration: none;
 }
 .details .btn-primary {
   background: linear-gradient(90deg, #6c63ff, #9b6bff);
