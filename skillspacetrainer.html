@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Add New Class</title>
+    <title>SkillSpace Trainer</title>
     <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -18,7 +18,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
 
-    <link rel="stylesheet" href="./css/adminaddnewclass.css" />
+
+
+    <link rel="stylesheet" href="./css/skillspacetrainer.css" />
   </head>
   <body>
     <!-- ✅ SIDEBAR -->
@@ -101,7 +103,6 @@
         </a>
       </nav>
     </div>
-
     <!-- ✅ NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -170,11 +171,8 @@
     <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
-          <h6 class="mb-0 text-muted">
-            Home / Upcoming live class / Add Class
-          </h6>
+          <h6 class="mb-0 text-muted">Home / SkillSpace</h6>
           <div class="d-flex align-items-center gap-2 flex-wrap">
-          
             <i class="bi bi-bell fs-5"></i>
           </div>
         </div>
@@ -186,212 +184,41 @@
               class="profile-avatar"
             />
             <div>
-              <h6 class="mb-0 fs-2">Devanshu Sir</h6>
-              <div class="fs-5 text-light">Trainer</div>
+              <h6 class="mb-0">Devanshu Sir</h6>
+              <div class="small text-light">Trainer</div>
+            </div>
+          </div>
+          
+        </div>
+
+
+        <div class="action-section mt-3">
+          <h4>Skillwaala Management Panel</h4>
+
+          <div class="row g-3">
+            <div class="col-md-4 col-12">
+                <a href="./traineruploadquiz.html">
+                     <button class="btn-action btn-quiz">
+                <i class="bi bi-cloud-upload"></i> Upload Quiz
+              </button>
+                </a>
              
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container py-5" style="max-width: 98%">
-        <h4 class="fw-bold mb-4">
-          <i class="bi bi-upload text-primary me-2"></i>Upload New Video
-        </h4>
-
-        <div class="upload-section">
-          <!-- Basic Info -->
-          <h5 class="section-title">Basic Information</h5>
-          <div class="mb-3">
-            <label class="form-label fw-semibold">Class Title</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter video title"
-            />
-          </div>
-
-          <div class="mb-4">
-            <label class="form-label fw-semibold">Description</label>
-            <textarea
-              rows="4"
-              class="form-control"
-              placeholder="Add brief description of your video"
-            ></textarea>
-          </div>
-
-          <!-- Visibility -->
-          <h5 class="section-title">Visibility</h5>
-          <div class="mb-4">
-            <div class="form-check mb-2">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="visibility"
-                id="private"
-                checked
-              />
-              <label class="form-check-label" for="private">
-                <i class="bi bi-lock-fill text-secondary me-1"></i> Private
-              </label>
-            </div>
-
-            <div class="form-check mb-2">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="visibility"
-                id="unlisted"
-              />
-              <label class="form-check-label" for="unlisted">
-                <i class="bi bi-eye-slash-fill text-warning me-1"></i> Unlisted
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="visibility"
-                id="public"
-              />
-              <label class="form-check-label" for="public">
-                <i class="bi bi-globe text-success me-1"></i> Public
-              </label>
-            </div>
-          </div>
-
-          <!-- Schedule -->
-          <h5 class="section-title">Schedule</h5>
-          <div class="row g-3 align-items-end mb-4">
-            <div class="col-md-4">
-              <label class="form-label fw-semibold"
-                ><i class="bi bi-calendar3 me-1"></i> Schedule Date</label
-              >
-              <input type="date" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-semibold"
-                ><i class="bi bi-clock me-1"></i> Time</label
-              >
-              <input type="time" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-semibold"
-                ><i class="bi bi-geo-alt me-1"></i> Timezone</label
-              >
-              <select class="form-select">
-                <option>UTC +05:30 (India)</option>
-                <option>UTC +00:00 (GMT)</option>
-                <option>UTC +01:00 (Europe)</option>
-                <option>UTC -05:00 (US Eastern)</option>
-                <option>UTC -08:00 (US Pacific)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Upload Section -->
-          <h5 class="section-title">Upload Files</h5>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6">
-              <div class="upload-box">
-                <i class="bi bi-image"></i>
-                <p class="mt-2 mb-1 fw-semibold">Class Thumbnail</p>
-                <p class="text-muted small mb-2">
-                  Click or browse to upload thumbnail
-                </p>
-                <input type="file" class="form-control mt-2" />
-              </div>
-            </div>
-
-          
-          </div>
-
-          <!-- Playlist Section -->
-          <div class="accordion" id="playlistAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button collapsed fw-semibold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                >
-                  <i class="bi bi-collection-play me-2 text-primary"></i>
-                  Create a Playlist
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse"
-                data-bs-parent="#playlistAccordion"
-              >
-                <div class="accordion-body">
-                  <button
-                    class="btn btn-create"
-                    data-bs-toggle="modal"
-                    data-bs-target="#playlistModal"
-                  >
-                    <i class="bi bi-plus-circle"></i> New Playlist
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center mb-4 mt-4">
-            <button class="btn btn-upload">
-              <i class="bi bi-cloud-arrow-up"></i> Upload
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Playlist Modal -->
-      <div
-        class="modal fade"
-        id="playlistModal"
-        tabindex="-1"
-        aria-labelledby="playlistModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content p-3">
-            <div class="modal-header">
-              <h5 class="modal-title" id="playlistModalLabel">
-                <i class="bi bi-music-note-list me-2 text-primary"></i>Create
-                New Playlist
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Title (Required)</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter playlist title"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Description</label>
-                <textarea
-                  rows="3"
-                  class="form-control"
-                  placeholder="Add playlist description"
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-create">
-                <i class="bi bi-check-circle"></i> Create
+            <div class="col-md-4 col-12">
+                <a href="./trainerworkshopschedule.html">
+                     <button class="btn-action btn-workshop">
+                <i class="bi bi-calendar2-event"></i> Schedule Workshop
               </button>
+                </a>
+             
+            </div>
+            <div class="col-md-4 col-12">
+                <a href="./trainercareersatsangschedule.html">
+                    <button class="btn-action btn-sitting">
+                <i class="bi bi-clock-history"></i> Schedule Satsang
+              </button>
+                </a>
+              
             </div>
           </div>
         </div>
@@ -400,7 +227,6 @@
       <!-- Footer -->
       <footer>
         <div class="container-fluid py-5">
-
           <div class="row g-4 footer-main">
             <!-- First Column -->
             <div class="col-lg-3 col-md-12 footer-logo">
@@ -534,6 +360,8 @@
       </footer>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- ✅ JS -->
     <script>
       const sidebar = document.querySelector(".sidebar");
@@ -559,6 +387,5 @@
         }
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

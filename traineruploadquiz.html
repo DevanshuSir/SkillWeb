@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Add New Class</title>
+    <title>Quiz Upload</title>
     <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -17,8 +17,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-
-    <link rel="stylesheet" href="./css/adminaddnewclass.css" />
+    <link rel="stylesheet" href="./css/traineruploadquiz.css" />
   </head>
   <body>
     <!-- ✅ SIDEBAR -->
@@ -81,7 +80,11 @@
         >
           <i class="fa-solid fa-bell me-1"></i><span>Notifications</span>
         </a>
-        <a class="nav-link" href="./skillspacetrainer.html" data-title="SkillSpace">
+        <a
+          class="nav-link"
+          href="./skillspacetrainer.html"
+          data-title="SkillSpace"
+        >
           <i class="fa-solid fa-briefcase"></i><span>SkillSpace</span>
         </a>
         <a class="nav-link" href="#" data-title="Community Quarry">
@@ -101,7 +104,6 @@
         </a>
       </nav>
     </div>
-
     <!-- ✅ NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -170,237 +172,90 @@
     <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
-          <h6 class="mb-0 text-muted">
-            Home / Upcoming live class / Add Class
-          </h6>
+          <h6 class="mb-0 text-muted">Home / SkillSpace / Upload Quiz</h6>
           <div class="d-flex align-items-center gap-2 flex-wrap">
-          
             <i class="bi bi-bell fs-5"></i>
           </div>
         </div>
 
-        <div class="profile-hero mt-3">
+        <div class="profile-hero mt-3 mb-3">
           <div class="profile-left">
             <img
               src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
               class="profile-avatar"
             />
             <div>
-              <h6 class="mb-0 fs-2">Devanshu Sir</h6>
-              <div class="fs-5 text-light">Trainer</div>
-             
+              <h6 class="mb-0">Devanshu Sir</h6>
+              <div class="small text-light">Trainer</div>
             </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="./uploadedvideos.html"
+              ><button class="btn btn-light btn-sm">+ Add Video</button></a
+            >
           </div>
         </div>
-      </div>
 
-      <div class="container py-5" style="max-width: 98%">
-        <h4 class="fw-bold mb-4">
-          <i class="bi bi-upload text-primary me-2"></i>Upload New Video
-        </h4>
-
-        <div class="upload-section">
-          <!-- Basic Info -->
-          <h5 class="section-title">Basic Information</h5>
-          <div class="mb-3">
-            <label class="form-label fw-semibold">Class Title</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter video title"
-            />
+        <!-- Question Create Box -->
+        <div class="question-box">
+          <div class="profile mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <span>Quiz Post</span>
+            </div>
+            <small class="text-muted">Visibility: Public</small>
+            <select name="" id="" class="form-control my-1">
+              <option value="">--Select Quiz Type--</option>
+              <option value="">Course Quiz</option>
+              <option value="">Knowledge btn-quiz</option>
+              <option value="">Gk Quiz</option>
+            </select>
           </div>
 
-          <div class="mb-4">
-            <label class="form-label fw-semibold">Description</label>
-            <textarea
-              rows="4"
-              class="form-control"
-              placeholder="Add brief description of your video"
-            ></textarea>
-          </div>
+          <textarea
+            id="questionInput"
+            placeholder="Ask your question..."
+          ></textarea>
 
-          <!-- Visibility -->
-          <h5 class="section-title">Visibility</h5>
-          <div class="mb-4">
-            <div class="form-check mb-2">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="visibility"
-                id="private"
-                checked
-              />
-              <label class="form-check-label" for="private">
-                <i class="bi bi-lock-fill text-secondary me-1"></i> Private
-              </label>
-            </div>
-
-            <div class="form-check mb-2">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="visibility"
-                id="unlisted"
-              />
-              <label class="form-check-label" for="unlisted">
-                <i class="bi bi-eye-slash-fill text-warning me-1"></i> Unlisted
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="visibility"
-                id="public"
-              />
-              <label class="form-check-label" for="public">
-                <i class="bi bi-globe text-success me-1"></i> Public
-              </label>
-            </div>
-          </div>
-
-          <!-- Schedule -->
-          <h5 class="section-title">Schedule</h5>
-          <div class="row g-3 align-items-end mb-4">
-            <div class="col-md-4">
-              <label class="form-label fw-semibold"
-                ><i class="bi bi-calendar3 me-1"></i> Schedule Date</label
-              >
-              <input type="date" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-semibold"
-                ><i class="bi bi-clock me-1"></i> Time</label
-              >
-              <input type="time" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-semibold"
-                ><i class="bi bi-geo-alt me-1"></i> Timezone</label
-              >
-              <select class="form-select">
-                <option>UTC +05:30 (India)</option>
-                <option>UTC +00:00 (GMT)</option>
-                <option>UTC +01:00 (Europe)</option>
-                <option>UTC -05:00 (US Eastern)</option>
-                <option>UTC -08:00 (US Pacific)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Upload Section -->
-          <h5 class="section-title">Upload Files</h5>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6">
-              <div class="upload-box">
-                <i class="bi bi-image"></i>
-                <p class="mt-2 mb-1 fw-semibold">Class Thumbnail</p>
-                <p class="text-muted small mb-2">
-                  Click or browse to upload thumbnail
-                </p>
-                <input type="file" class="form-control mt-2" />
+          <div class="answers-list" id="answersList">
+            <div class="answer-item">
+              <div class="d-flex align-items-center w-100">
+                <input type="radio" name="options" class="me-2" />
+                <input type="text" placeholder="Answer 1" />
               </div>
+              <i class="bi bi-trash3 text-danger delete-answer"></i>
             </div>
-
-          
-          </div>
-
-          <!-- Playlist Section -->
-          <div class="accordion" id="playlistAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button collapsed fw-semibold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                >
-                  <i class="bi bi-collection-play me-2 text-primary"></i>
-                  Create a Playlist
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse"
-                data-bs-parent="#playlistAccordion"
-              >
-                <div class="accordion-body">
-                  <button
-                    class="btn btn-create"
-                    data-bs-toggle="modal"
-                    data-bs-target="#playlistModal"
-                  >
-                    <i class="bi bi-plus-circle"></i> New Playlist
-                  </button>
-                </div>
+            <div class="answer-item">
+              <div class="d-flex align-items-center w-100">
+                <input type="radio" name="options" class="me-2" />
+                <input type="text" placeholder="Answer 2" />
               </div>
+              <i class="bi bi-trash3 text-danger delete-answer"></i>
             </div>
           </div>
 
-          <div class="text-center mb-4 mt-4">
-            <button class="btn btn-upload">
-              <i class="bi bi-cloud-arrow-up"></i> Upload
+          <div class="add-answer" id="addAnswer">+ Add Answer</div>
+
+          <div class="action-buttons mt-3">
+            <button
+              class="btn btn-outline-secondary btn-sm me-2"
+              id="cancelBtn"
+            >
+              Cancel
             </button>
+            <button class="btn btn-primary btn-sm" id="postBtn">Post</button>
           </div>
         </div>
-      </div>
 
-      <!-- Playlist Modal -->
-      <div
-        class="modal fade"
-        id="playlistModal"
-        tabindex="-1"
-        aria-labelledby="playlistModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content p-3">
-            <div class="modal-header">
-              <h5 class="modal-title" id="playlistModalLabel">
-                <i class="bi bi-music-note-list me-2 text-primary"></i>Create
-                New Playlist
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Title (Required)</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter playlist title"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Description</label>
-                <textarea
-                  rows="3"
-                  class="form-control"
-                  placeholder="Add playlist description"
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-create">
-                <i class="bi bi-check-circle"></i> Create
-              </button>
-            </div>
-          </div>
+        <!-- Posted Questions -->
+        <div class="question-list mt-5">
+          <h5>Total Questions Post : <span id="totalQ">0</span></h5>
+          <div id="postedQuestions"></div>
         </div>
       </div>
 
       <!-- Footer -->
       <footer>
         <div class="container-fluid py-5">
-
           <div class="row g-4 footer-main">
             <!-- First Column -->
             <div class="col-lg-3 col-md-12 footer-logo">
@@ -534,6 +389,8 @@
       </footer>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- ✅ JS -->
     <script>
       const sidebar = document.querySelector(".sidebar");
@@ -559,6 +416,93 @@
         }
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script>
+      const addAnswerBtn = document.getElementById("addAnswer");
+      const answersList = document.getElementById("answersList");
+      const postBtn = document.getElementById("postBtn");
+      const questionInput = document.getElementById("questionInput");
+      const postedQuestions = document.getElementById("postedQuestions");
+      const totalQ = document.getElementById("totalQ");
+
+      let questionCount = 0;
+
+      // Add new answer field
+      addAnswerBtn.addEventListener("click", () => {
+        const div = document.createElement("div");
+        div.classList.add("answer-item");
+        div.innerHTML = `
+        <div class="d-flex align-items-center w-100">
+          <input type="radio" name="options"  class="me-2">
+          <input type="text" placeholder="Answer ${
+            answersList.children.length + 1
+          }">
+        </div>
+        <i class="bi bi-trash3 text-danger delete-answer"></i>
+      `;
+        answersList.appendChild(div);
+      });
+
+      // Delete answer input
+      answersList.addEventListener("click", (e) => {
+        if (e.target.classList.contains("delete-answer")) {
+          e.target.parentElement.remove();
+        }
+      });
+
+      // Post Question
+      postBtn.addEventListener("click", () => {
+        const question = questionInput.value.trim();
+        if (!question) return alert("Please enter a question!");
+
+        const answers = [...answersList.querySelectorAll("input[type='text']")]
+          .map((a) => a.value)
+          .filter((a) => a.trim() !== "");
+        if (answers.length === 0)
+          return alert("Please add at least one answer!");
+
+        questionCount++;
+        totalQ.textContent = questionCount;
+
+        const card = document.createElement("div");
+        card.classList.add("question-card");
+        card.innerHTML = `
+        <h6>${question}</h6>
+        ${answers
+          .map(
+            (a) => `
+          <div class="form-check mb-1">
+            <input class="form-check-input" type="radio" name="q${questionCount}">
+            <label class="form-check-label">${a}</label>
+          </div>
+        `
+          )
+          .join("")}
+        <span class="edit-btn"><i class="bi bi-pencil-square me-1"></i>Edit</span>
+      `;
+
+        postedQuestions.prepend(card);
+
+        // Reset fields
+        questionInput.value = "";
+        answersList.innerHTML = `
+        <div class="answer-item">
+          <div class="d-flex align-items-center w-100">
+            <input type="radio" name="options" class="me-2">
+            <input type="text" placeholder="Answer 1">
+          </div>
+          <i class="bi bi-trash3 text-danger delete-answer"></i>
+        </div>
+        <div class="answer-item">
+          <div class="d-flex align-items-center w-100">
+            <input type="radio" name="options" disabled class="me-2">
+            <input type="text" placeholder="Answer 2">
+          </div>
+          <i class="bi bi-trash3 text-danger delete-answer"></i>
+        </div>
+      `;
+      });
+    </script>
   </body>
 </html>
