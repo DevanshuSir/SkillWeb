@@ -210,7 +210,7 @@
             <h3 class="fw-bold">Student Enrollment Management</h3>
           </div>
 
-          <div class="container py-4">
+          <div class="container py-4" style="max-width: 98%;">
             <!-- Search & Filter Row -->
             <div class="d-flex flex-column flex-md-row gap-2 mb-4">
               <input
@@ -277,7 +277,12 @@
                       <span class="badge badge-soft-success">1 Course</span>
                     </td>
 
-                    <td><span class="badge bg-success">Active</span></td>
+                    <td>
+                    <select name="" id="" class="badge bg-success">
+                      <option value="">Active</option>
+                      <option value="">Deactivate</option>
+                    </select>
+                    </td>
 
                     <td>15 Jan 2025</td>
                     <td>Jaipur</td>
@@ -320,54 +325,18 @@
                       <span class="badge badge-soft-success">1 Course</span>
                     </td>
 
-                    <td><span class="badge bg-danger">Inactive</span></td>
+                    <td>
+                      <select name="" id="" class="badge bg-success">
+                      <option value="">Active</option>
+                      <option value="">Deactivate</option>
+                    </select>
+                    </td>
 
                     <td>15 Jan 2025</td>
                     <td>Jaipur</td>
                   </tr>
 
-                  <!-- Row 3 -->
-                  <tr>
-                    <td><input type="checkbox" /></td>
-
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img
-                          src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80"
-                          width="45"
-                          height="45"
-                          class="rounded-circle me-2"
-                        />
-                        <div>
-                          <strong>Ranjeet</strong> <br />
-                          <small>ID: #153455FF9</small>
-                        </div>
-                      </div>
-                    </td>
-
-                    <td>
-                      RanjeetSharma@gmail.com <br />
-                      <small>+91 98769988526</small>
-                    </td>
-
-                    <td>
-                      <button
-                        class="btn btn-sm btn-success enrolled-btn"
-                        data-courses="Digital Marketing, Web Development, Graphic Designing"
-                      >
-                        3 Courses
-                      </button>
-                    </td>
-
-                    <td>
-                      <span class="badge badge-soft-success">1 Course</span>
-                    </td>
-
-                    <td><span class="badge bg-success">Active</span></td>
-
-                    <td>15 Jan 2025</td>
-                    <td>Jaipur</td>
-                  </tr>
+          
                 </tbody>
               </table>
             </div>

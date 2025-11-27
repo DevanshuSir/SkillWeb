@@ -282,67 +282,6 @@ body {
   object-fit: cover;
 }
 
-.stats-row {
-  margin-top: 16px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.stat-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 18px;
-  flex: 1 1 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 3px 10px rgba(16, 24, 40, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.courses-list .course-item {
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  flex-wrap: wrap;
-}
-.course-thumb {
-  width: 64px;
-  height: 48px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.course-meta {
-  flex: 1;
-  min-width: 0;
-}
-.course-title {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #0f172a;
-  margin-bottom: 4px;
-}
-.course-sub {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.badge-published {
-  background: #111827;
-  color: #fff;
-  padding: 0.45rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-}
-
 @media (max-width: 991px) {
   .main {
     margin-left: 0;
@@ -368,49 +307,6 @@ body {
   .profile-hero button {
     flex: 1 1 100%;
   }
-}
-
-.card-stat {
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.table img {
-  border: 3px solid #eee;
-}
-
-.table td {
-  vertical-align: middle;
-}
-
-/* Badge soft color */
-.badge-soft-success {
-  background: #d4f7d4;
-  color: #27a844;
-}
-
-.badge-soft-primary {
-  background: #dce8ff;
-  color: #1a5fff;
-}
-
-.search-box {
-  border-radius: 10px;
-  width: 85%;
-  border: 1px solid rgb(171, 170, 170);
-  outline: none;
-  padding: 5px 10px;
-}
-
-.table img {
-  border: 3px solid #eee;
-}
-
-.table td {
-  vertical-align: middle;
 }
 
 .register-section {
@@ -553,82 +449,97 @@ footer .footer-main {
   text-align: center;
 }
 
-/* 🔹 Section Container */
-.popupform-section {
-  padding: 30px;
+body {
+  background: #f5f6fa;
+  font-family: "Poppins", sans-serif;
 }
 
-/* 🔹 Button */
-.popupform-btn {
-  background: linear-gradient(135deg, #007bff, #6610f2);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 22px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.trainerinfo-section {
+  padding: 40px 15px;
+}
+
+.trainerinfo-container {
+  max-width: 98%;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+/* 🔹 Header Section */
+.trainerinfo-photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.trainerinfo-header h4 {
+  font-weight: 700;
+}
+
+.trainerinfo-header p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* 🔹 Stat Cards */
+.trainerinfo-stat {
+  background: #f1f7ff;
+  border-radius: 12px;
+  padding: 20px 10px;
   transition: all 0.3s ease;
 }
 
-.popupform-btn:hover {
-  background: linear-gradient(135deg, #0056b3, #520dc2);
-  transform: scale(1.05);
+.trainerinfo-stat:hover {
+  background: #e7f1ff;
+  transform: translateY(-3px);
 }
 
-/* 🔹 Modal Animation */
-.popupform-modal .modal-content {
-  border-radius: 16px;
-  animation: popupform-zoomIn 0.25s ease-in-out;
+.trainerinfo-stat h5 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.trainerinfo-stat small {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 🔹 Table Section */
+.trainerinfo-batches h5 {
+  font-weight: 600;
+  color: #222;
+}
+
+.trainerinfo-batches table {
+  border-radius: 8px;
   overflow: hidden;
 }
 
-@keyframes popupform-zoomIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
+.trainerinfo-batches thead {
+  background: #007bff;
+  color: #fff;
+}
+
+.trainerinfo-batches tbody tr:hover {
+  background: #f8f9ff;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .trainerinfo-container {
+    padding: 25px;
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+
+  .trainerinfo-photo {
+    width: 70px;
+    height: 70px;
   }
-}
 
-/* 🔹 Modal Header */
-.popupform-modal .modal-header {
-  background: linear-gradient(135deg, #007bff, #6610f2);
-  color: white;
-}
-
-/* 🔹 Form Input Focus */
-.popupform-modal .form-control:focus {
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
-  border-color: #007bff;
-}
-
-/* 🔹 Save Button */
-.popupform-modal .btn-save {
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 20px;
-  transition: 0.3s ease;
-  font-weight: 500;
-}
-
-.popupform-modal .btn-save:hover {
-  background: #218838;
-}
-
-/* 🔹 Label Style */
-.popupform-modal .form-label {
-  font-weight: 500;
-}
-
-/* 🔹 Responsive Adjust */
-@media (max-width: 576px) {
-  .popupform-modal .modal-dialog {
-    margin: 20px;
+  .trainerinfo-stat h5 {
+    font-size: 1.3rem;
   }
 }
