@@ -19,10 +19,6 @@
     />
 
     <link rel="stylesheet" href="./css/trainerinfo.css" />
-
-
-
-
   </head>
   <body>
     <!-- ✅ SIDEBAR -->
@@ -104,8 +100,6 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-     
       </div>
     </nav>
 
@@ -113,7 +107,9 @@
     <main class="main">
       <div class="container-fluid p-3 p-md-4">
         <div class="topbar">
-          <h6 class="mb-0 text-muted">Home / Trainer Dashboard / Trainer Info</h6>
+          <h6 class="mb-0 text-muted">
+            Home / Trainer Dashboard / Trainer Info
+          </h6>
           <div class="d-flex align-items-center gap-2 flex-wrap">
             <i class="bi bi-bell fs-5"></i>
           </div>
@@ -137,116 +133,102 @@
         >
           <div>
             <h4 class="fw-bold">Trainer Information</h4>
-           
-          </div>
-
-         
-        </div>
-
-            <!-- ✅ Trainer Details Section -->
-    <section class="trainerinfo-section">
-      <div class="container trainerinfo-container">
-        <!-- Header -->
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-between trainerinfo-header mb-4"
-        >
-          <div class="d-flex align-items-center gap-3">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
-              alt="Trainer Photo"
-              class="trainerinfo-photo rounded-circle"
-            />
-            <div>
-              <h4 class="mb-1">Devanshu Sir</h4>
-              <p class="mb-0">Full Stack Web Developer | SkillWaala</p>
-            </div>
-          </div>
-
-          <div>
-         
           </div>
         </div>
 
-        <hr />
+        <!-- ✅ Trainer Details Section -->
+        <section class="trainerinfo-section">
+          <div class="container trainerinfo-container">
+            <!-- Header -->
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-between trainerinfo-header mb-4"
+            >
+              <div class="d-flex align-items-center gap-3">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
+                  alt="Trainer Photo"
+                  class="trainerinfo-photo rounded-circle"
+                />
+                <div>
+                  <h4 class="mb-1">Devanshu Sir</h4>
+                  <p class="mb-0">Full Stack Web Developer | SkillWaala</p>
+                </div>
+              </div>
 
-        <!-- Trainer Stats -->
-        <div class="row text-center my-4">
-          <div class="col-md-4 col-6 mb-3">
-            <div class="trainerinfo-stat shadow-sm">
-              <h5 class="text-primary fw-bold mb-0">08</h5>
-              <small>Total Batches</small>
+              <div></div>
+            </div>
+
+            <hr />
+
+            <!-- Trainer Stats -->
+            <div class="row text-center my-4">
+              <div class="col-md-4 col-6 mb-3">
+                <div class="trainerinfo-stat shadow-sm">
+                  <h5 class="text-primary fw-bold mb-0">08</h5>
+                  <small>Total Batches</small>
+                </div>
+              </div>
+              <div class="col-md-4 col-6 mb-3">
+                <div class="trainerinfo-stat shadow-sm">
+                  <h5 class="text-success fw-bold mb-0">05</h5>
+                  <small>Active Batches</small>
+                </div>
+              </div>
+              <div class="col-md-4 col-12 mb-3">
+                <div class="trainerinfo-stat shadow-sm">
+                  <h5 class="text-info fw-bold mb-0">03</h5>
+                  <small>Completed Batches</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Running Batches List -->
+            <div class="trainerinfo-batches mt-4">
+              <h5 class="mb-3">Batches</h5>
+
+              <div class="table-responsive">
+                <table class="table align-middle table-hover text-center">
+                  <thead>
+                    <tr>
+                      <th>Batch Name</th>
+                      <th>Course</th>
+                      <th>Start Date</th>
+                      <th>Students</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Full stack web development batch-1</td>
+                      <td>Full Stack Web Development</td>
+                      <td>10 Nov 2025</td>
+                      <td>24</td>
+                      <td><span class="badge bg-success">Running</span></td>
+                    </tr>
+                    <tr>
+                      <td>Full stack web development batch-2</td>
+                      <td>Full Stack Web Development</td>
+                      <td>15 Oct 2025</td>
+                      <td>30</td>
+                      <td><span class="badge bg-success">Running</span></td>
+                    </tr>
+                    <tr>
+                      <td>Full stack web development batch-3</td>
+                      <td>Full Stack Web Development</td>
+                      <td>01 Sep 2025</td>
+                      <td>18</td>
+                      <td><span class="badge bg-danger">Complete </span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 col-6 mb-3">
-            <div class="trainerinfo-stat shadow-sm">
-              <h5 class="text-success fw-bold mb-0">05</h5>
-              <small>Active Batches</small>
-            </div>
-          </div>
-          <div class="col-md-4 col-12 mb-3">
-            <div class="trainerinfo-stat shadow-sm">
-              <h5 class="text-info fw-bold mb-0">03</h5>
-              <small>Completed Batches</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Running Batches List -->
-        <div class="trainerinfo-batches mt-4">
-          <h5 class="mb-3">Batches</h5>
-
-          <div class="table-responsive">
-            <table class="table align-middle table-hover text-center">
-              <thead>
-                <tr>
-                  <th>Batch Name</th>
-                  <th>Course</th>
-                  <th>Start Date</th>
-                  <th>Students</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Full stack web development batch-1</td>
-                  <td>Full Stack Web Development</td>
-                  <td>10 Nov 2025</td>
-                  <td>24</td>
-                  <td><span class="badge bg-success">Running</span></td>
-                </tr>
-                <tr>
-                  <td>Full stack web development batch-2</td>
-                  <td>Full Stack Web Development</td>
-                  <td>15 Oct 2025</td>
-                  <td>30</td>
-                  <td><span class="badge bg-success">Running</span></td>
-                </tr>
-                <tr>
-                  <td>Full stack web development batch-3</td>
-                  <td>Full Stack Web Development</td>
-                  <td>01 Sep 2025</td>
-                  <td>18</td>
-                  <td><span class="badge bg-danger">Complete </span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
+        </section>
       </div>
-    </section>
-
-      
-
- 
-      </div>
-
-     
 
       <!-- Footer -->
       <footer>
-     
-
         <!-- Bottom Copyright -->
         <div class="footer-bottom">
           <p>Copyright ©2027 SkillWaala. All Rights Reserved.</p>
