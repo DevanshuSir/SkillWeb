@@ -299,6 +299,9 @@ body {
   align-items: center;
   box-shadow: 0 3px 10px rgba(16, 24, 40, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.03);
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .courses-list .course-item {

@@ -4,6 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Quiz Upload</title>
+
+      <style>
+      body {
+        background: #f5f7fb;
+      }
+      .section-title {
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #333;
+      }
+      .question-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        border-left: 5px solid #0d6efd;
+      }
+      .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .quiz-type {
+        background: #e7f0ff;
+        color: #0d6efd;
+        font-size: 0.85rem;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-weight: 600;
+      }
+      .answers-list li {
+        list-style: none;
+        margin-bottom: 4px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        background: #f1f3f9;
+      }
+      .answers-list li.correct {
+        background: #d4edda;
+        color: #155724;
+        font-weight: 600;
+        border-left: 4px solid #28a745;
+      }
+      .add-answer {
+        color: #0d6efd;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
     <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -178,82 +228,123 @@
           </div>
         </div>
 
-        <div class="profile-hero mt-3 mb-3">
-          <div class="profile-left">
-            <img
-              src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?semt=ais_hybrid&w=740&q=80"
-              class="profile-avatar"
-            />
-            <div>
-              <h6 class="mb-0">Devanshu Sir</h6>
-              <div class="small text-light">Trainer</div>
-            </div>
-          </div>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="./uploadedvideos.html"
-              ><button class="btn btn-light btn-sm">+ Add Video</button></a
-            >
-          </div>
-        </div>
-
-        <!-- Question Create Box -->
-        <div class="question-box">
-          <div class="profile mb-2">
-            <div class="d-flex align-items-center gap-2">
-              <span>Quiz Post</span>
-            </div>
-            <small class="text-muted">Visibility: Public</small>
-            <select name="" id="" class="form-control my-1">
-              <option value="">--Select Quiz Type--</option>
-              <option value="">Course Quiz</option>
-              <option value="">Knowledge btn-quiz</option>
-              <option value="">Gk Quiz</option>
-            </select>
-          </div>
-
-          <textarea
-            id="questionInput"
-            placeholder="Ask your question..."
-          ></textarea>
-
-          <div class="answers-list" id="answersList">
-            <div class="answer-item">
-              <div class="d-flex align-items-center w-100">
-                <input type="radio" name="options" class="me-2" />
-                <input type="text" placeholder="Answer 1" />
-              </div>
-              <i class="bi bi-trash3 text-danger delete-answer"></i>
-            </div>
-            <div class="answer-item">
-              <div class="d-flex align-items-center w-100">
-                <input type="radio" name="options" class="me-2" />
-                <input type="text" placeholder="Answer 2" />
-              </div>
-              <i class="bi bi-trash3 text-danger delete-answer"></i>
-            </div>
-          </div>
-
-          <div class="add-answer" id="addAnswer">+ Add Answer</div>
-
-          <div class="action-buttons mt-3">
-            <button
-              class="btn btn-outline-secondary btn-sm me-2"
-              id="cancelBtn"
-            >
-              Cancel
-            </button>
-            <button class="btn btn-primary btn-sm" id="postBtn">Post</button>
-          </div>
-        </div>
-
-        <!-- Posted Questions -->
-        <div class="question-list mt-5">
-          <h5>Total Questions Post : <span id="totalQ">0</span></h5>
-          <div id="postedQuestions"></div>
-        </div>
+            <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>Trainer Quiz Panel</h3>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#quizModal"
+        >
+          + Add New Quiz
+        </button>
       </div>
 
-      <!-- Footer -->
+      <!-- Temporary Questions -->
+      <h5 class="section-title">📝 Questions Added (Not Published Yet)</h5>
+      <div id="postedQuestions" class="mt-3"></div>
+
+      <div class="text-end mb-5">
+        <button id="publishBtn" class="btn btn-success d-none">
+          ✅ Publish Quiz
+        </button>
+      </div>
+
+      <!-- Published Quizzes -->
+      <h5 class="section-title">📚 Published Quizzes</h5>
+      <div id="publishedList"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="quizModal"
+      tabindex="-1"
+      aria-labelledby="quizModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="quizModalLabel">Add Question</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <select id="quizType" class="form-control mb-2">
+                <option value="">--Select Quiz Type--</option>
+                <option>Course Quiz</option>
+                <option>Knowledge Quiz</option>
+                <option>GK Quiz</option>
+                <option>How to Decide</option>
+              </select>
+
+              <select id="quizType" class="form-control mb-2">
+                <option value="">--Select Course Type--</option>
+                <option>Web Development</option>
+                <option>Content Writing</option>
+                <option>Animation</option>
+                <option>Digital Marketing</option>
+              </select>
+
+              <textarea
+                id="questionInput"
+                placeholder="Enter your question..."
+                class="form-control"
+              ></textarea>
+
+              <div class="answers-list mt-3" id="answersList">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-2"
+                >
+                  <div class="d-flex align-items-center w-100 gap-2">
+                    <input type="radio" name="correctOption" />
+                    <input
+                      type="text"
+                      placeholder="Answer 1"
+                      class="form-control"
+                    />
+                  </div>
+                  <i class="bi bi-trash3 text-danger delete-answer"></i>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-2"
+                >
+                  <div class="d-flex align-items-center w-100 gap-2">
+                    <input type="radio" name="correctOption" />
+                    <input
+                      type="text"
+                      placeholder="Answer 2"
+                      class="form-control"
+                    />
+                  </div>
+                  <i class="bi bi-trash3 text-danger delete-answer"></i>
+                </div>
+              </div>
+
+              <div class="add-answer" id="addAnswer">+ Add Answer</div>
+              <small class="text-muted d-block mt-2"
+                >Select one correct answer by clicking radio button</small
+              >
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-primary" id="addQuestionBtn">
+              Add Question
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+    </main>
+
+         <!-- Footer -->
       <footer>
         <div class="container-fluid py-5">
           <div class="row g-4 footer-main">
@@ -387,10 +478,8 @@
           <p>Email: hro@skillwaala.com</p>
         </div>
       </footer>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+   
     <!-- ✅ JS -->
     <script>
       const sidebar = document.querySelector(".sidebar");
@@ -417,92 +506,206 @@
       });
     </script>
 
-    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
       const addAnswerBtn = document.getElementById("addAnswer");
       const answersList = document.getElementById("answersList");
-      const postBtn = document.getElementById("postBtn");
+      const addQuestionBtn = document.getElementById("addQuestionBtn");
       const questionInput = document.getElementById("questionInput");
       const postedQuestions = document.getElementById("postedQuestions");
-      const totalQ = document.getElementById("totalQ");
+      const quizTypeInput = document.getElementById("quizType");
+      const quizModal = new bootstrap.Modal(document.getElementById("quizModal"));
+      const publishBtn = document.getElementById("publishBtn");
+      const publishedList = document.getElementById("publishedList");
 
-      let questionCount = 0;
+      let tempQuestions = [];
+      let publishedQuizzes = [];
 
-      // Add new answer field
+      // ➕ Add new answer
       addAnswerBtn.addEventListener("click", () => {
         const div = document.createElement("div");
-        div.classList.add("answer-item");
+        div.classList.add(
+          "d-flex",
+          "align-items-center",
+          "justify-content-between",
+          "mb-2"
+        );
         div.innerHTML = `
-        <div class="d-flex align-items-center w-100">
-          <input type="radio" name="options"  class="me-2">
-          <input type="text" placeholder="Answer ${
-            answersList.children.length + 1
-          }">
-        </div>
-        <i class="bi bi-trash3 text-danger delete-answer"></i>
-      `;
+          <div class="d-flex align-items-center w-100 gap-2">
+            <input type="radio" name="correctOption" />
+            <input type="text" placeholder="Answer ${
+              answersList.children.length + 1
+            }" class="form-control" />
+          </div>
+          <i class="bi bi-trash3 text-danger delete-answer"></i>`;
         answersList.appendChild(div);
       });
 
-      // Delete answer input
+      // 🗑️ Delete answer
       answersList.addEventListener("click", (e) => {
         if (e.target.classList.contains("delete-answer")) {
           e.target.parentElement.remove();
         }
       });
 
-      // Post Question
-      postBtn.addEventListener("click", () => {
+      // ➕ Add Question
+      addQuestionBtn.addEventListener("click", () => {
         const question = questionInput.value.trim();
-        if (!question) return alert("Please enter a question!");
+        const quizType = quizTypeInput.value.trim();
+        const answerInputs = [...answersList.querySelectorAll("input[type='text']")];
+        const correctIndex = [...answersList.querySelectorAll("input[type='radio']")].findIndex(
+          (r) => r.checked
+        );
 
-        const answers = [...answersList.querySelectorAll("input[type='text']")]
-          .map((a) => a.value)
-          .filter((a) => a.trim() !== "");
-        if (answers.length === 0)
-          return alert("Please add at least one answer!");
+        const answers = answerInputs.map((a) => a.value.trim()).filter((a) => a !== "");
 
-        questionCount++;
-        totalQ.textContent = questionCount;
+        if (!quizType) return alert("Select quiz type!");
+        if (!question) return alert("Enter question!");
+        if (answers.length === 0) return alert("Add at least one answer!");
+        if (correctIndex === -1) return alert("Select one correct answer!");
 
-        const card = document.createElement("div");
-        card.classList.add("question-card");
-        card.innerHTML = `
-        <h6>${question}</h6>
-        ${answers
-          .map(
-            (a) => `
-          <div class="form-check mb-1">
-            <input class="form-check-input" type="radio" name="q${questionCount}">
-            <label class="form-check-label">${a}</label>
-          </div>
-        `
-          )
-          .join("")}
-        <span class="edit-btn"><i class="bi bi-pencil-square me-1"></i>Edit</span>
-      `;
+        tempQuestions.push({
+          quizType,
+          question,
+          answers,
+          correctIndex,
+        });
 
-        postedQuestions.prepend(card);
+        displayTempQuestions();
+        publishBtn.classList.remove("d-none");
 
-        // Reset fields
+        // Reset
         questionInput.value = "";
+        quizTypeInput.value = "";
         answersList.innerHTML = `
-        <div class="answer-item">
-          <div class="d-flex align-items-center w-100">
-            <input type="radio" name="options" class="me-2">
-            <input type="text" placeholder="Answer 1">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center w-100 gap-2">
+              <input type="radio" name="correctOption" />
+              <input type="text" placeholder="Answer 1" class="form-control" />
+            </div>
+            <i class="bi bi-trash3 text-danger delete-answer"></i>
           </div>
-          <i class="bi bi-trash3 text-danger delete-answer"></i>
-        </div>
-        <div class="answer-item">
-          <div class="d-flex align-items-center w-100">
-            <input type="radio" name="options" disabled class="me-2">
-            <input type="text" placeholder="Answer 2">
-          </div>
-          <i class="bi bi-trash3 text-danger delete-answer"></i>
-        </div>
-      `;
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center w-100 gap-2">
+              <input type="radio" name="correctOption" />
+              <input type="text" placeholder="Answer 2" class="form-control" />
+            </div>
+            <i class="bi bi-trash3 text-danger delete-answer"></i>
+          </div>`;
+        quizModal.hide();
       });
+
+      // 🖼️ Display temporary questions
+      function displayTempQuestions() {
+        postedQuestions.innerHTML = tempQuestions
+          .map(
+            (q, i) => `
+          <div class="question-card">
+            <div class="quiz-header">
+              <span class="quiz-type">${q.quizType}</span>
+              <small>#${i + 1}</small>
+            </div>
+            <div class="fw-bold mt-2">❓ ${q.question}</div>
+            <ul class="answers-list">
+              ${q.answers
+                .map(
+                  (a, idx) =>
+                    `<li ${
+                      idx === q.correctIndex
+                        ? 'class="correct"'
+                        : ""
+                    }>${a} ${
+                      idx === q.correctIndex
+                        ? "✅ (Correct Answer)"
+                        : ""
+                    }</li>`
+                )
+                .join("")}
+            </ul>
+            <div class="text-end">
+              <button class="btn btn-sm btn-outline-danger" onclick="deleteTemp(${i})">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </div>
+          </div>`
+          )
+          .join("");
+      }
+
+      function deleteTemp(index) {
+        tempQuestions.splice(index, 1);
+        if (tempQuestions.length === 0) publishBtn.classList.add("d-none");
+        displayTempQuestions();
+      }
+
+      // ✅ Publish all questions
+      publishBtn.addEventListener("click", () => {
+        if (tempQuestions.length === 0) return alert("No questions added!");
+
+        const type = tempQuestions[0].quizType;
+        const quizGroup = tempQuestions.filter((q) => q.quizType === type);
+        publishedQuizzes.push({ quizType: type, questions: quizGroup });
+
+        displayPublished();
+        tempQuestions = [];
+        postedQuestions.innerHTML = "";
+        publishBtn.classList.add("d-none");
+      });
+
+      // 🎯 Show published quizzes
+      function displayPublished() {
+        publishedList.innerHTML = publishedQuizzes
+          .map(
+            (quiz, i) => `
+          <div class="question-card border-success">
+            <div class="quiz-header">
+              <h6 class="quiz-type">${quiz.quizType}</h6>
+              <div>
+                <button class="btn btn-sm btn-outline-primary me-1" onclick="editQuiz(${i})"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-sm btn-outline-danger" onclick="deletePublished(${i})"><i class="bi bi-trash"></i></button>
+              </div>
+            </div>
+            ${quiz.questions
+              .map(
+                (q, idx) => `
+              <div class="mt-2">
+                <b>Q${idx + 1}:</b> ${q.question}
+                <ul class="answers-list mt-1">
+                  ${q.answers
+                    .map(
+                      (a, aIndex) =>
+                        `<li ${
+                          aIndex === q.correctIndex ? 'class="correct"' : ""
+                        }>${a}${
+                          aIndex === q.correctIndex
+                            ? " ✅ (Correct Answer)"
+                            : ""
+                        }</li>`
+                    )
+                    .join("")}
+                </ul>
+              </div>`
+              )
+              .join("")}
+          </div>`
+          )
+          .join("");
+      }
+
+      // 🗑️ Delete published quiz
+      function deletePublished(index) {
+        if (confirm("Delete this published quiz?")) {
+          publishedQuizzes.splice(index, 1);
+          displayPublished();
+        }
+      }
+
+      // ✏️ Edit published quiz
+      function editQuiz(index) {
+        const quiz = publishedQuizzes[index];
+        alert(`Edit feature coming soon for: ${quiz.quizType}`);
+      }
     </script>
   </body>
 </html>

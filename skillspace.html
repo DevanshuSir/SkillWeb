@@ -226,7 +226,7 @@
             <i class="fa-solid fa-people-group text-primary icon"></i>
             <h5>Community</h5>
             <p><i class="fa-solid fa-list text-center"></i></p>
-            <button class="enter-btn">Enter Now</button>
+            <a href="./community.html"><button class="enter-btn">Enter Now</button></a>
           </div>
         </div>
 
@@ -268,7 +268,10 @@
             <i class="fa-solid fa-user-check text-success icon"></i>
             <h5>How to Decide</h5>
             <p><i class="fa-solid fa-list"></i> NO. questions: 30</p>
-            <button class="enter-btn">Enter Now</button>
+            <button class="enter-btn"
+            data-bs-toggle="modal"
+      data-bs-target="#quizCourseModal"
+            >Enter Now</button>
           </div>
         </div>
 
@@ -580,6 +583,119 @@
       </div>
     </section>
 
+
+ <!-- ✅ Courses Modal -->
+    <div class="modal fade" id="quizCourseModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4">
+          <div class="modal-header border-0">
+            <h5 class="fw-bold mb-0">Choose Your Course</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div
+                  class="quiz-card"
+                  data-course="Web Development"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quizMainModal"
+                >
+                  <h6>Web Development</h6>
+                  <p class="small text-muted">HTML, CSS, JS, React</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="quiz-card"
+                  data-course="Digital Marketing"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quizMainModal"
+                >
+                  <h6>Digital Marketing</h6>
+                  <p class="small text-muted">SEO, Ads, Social Media</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="quiz-card"
+                  data-course="Graphic Design"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quizMainModal"
+                >
+                  <h6>Graphic Design</h6>
+                  <p class="small text-muted">Photoshop, Illustrator</p>
+                </div>
+              </div>
+               <div class="col-md-4">
+                <div
+                  class="quiz-card"
+                  data-course="Content Writing"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quizMainModal"
+                >
+                  <h6>Content Writing</h6>
+                  <p class="small text-muted">Photoshop, Illustrator</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Quiz Modal -->
+    <div class="modal fade" id="quizMainModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4">
+          <div class="modal-header border-0">
+            <h5 class="fw-bold" id="quizCourseTitle">Quiz</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body text-center">
+            <p class="fs-5 fw-semibold text-dark mb-4">
+              Rating
+            </p>
+
+            <div class="d-flex justify-content-between mb-2 px-5">
+              <span class="quiz-agree-text">Agree</span>
+              <span class="quiz-neutral-text">Neutral</span>
+              <span class="quiz-disagree-text">Disagree</span>
+            </div>
+
+            <div class="quiz-option-row">
+              <div class="quiz-circle" data-side="agree">
+                <span class="quiz-checkmark">✔</span>
+              </div>
+              <div class="quiz-circle" data-side="agree">
+                <span class="quiz-checkmark">✔</span>
+              </div>
+              <div class="quiz-circle" data-side="neutral">
+                <span class="quiz-checkmark">✔</span>
+              </div>
+              <div class="quiz-circle" data-side="disagree">
+                <span class="quiz-checkmark">✔</span>
+              </div>
+              <div class="quiz-circle" data-side="disagree">
+                <span class="quiz-checkmark">✔</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer border-0 justify-content-between">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button class="btn btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer>
       <div class="container-fluid py-5">
@@ -720,5 +836,48 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+       <script>
+      const quizCards = document.querySelectorAll(".quiz-card");
+      const quizCourseTitle = document.getElementById("quizCourseTitle");
+      const quizCircles = document.querySelectorAll(".quiz-circle");
+
+      // Show quiz title
+      quizCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const course = card.getAttribute("data-course");
+          quizCourseTitle.textContent = `${course} — Personality Quiz`;
+
+          // close course modal
+          const firstModal = bootstrap.Modal.getInstance(
+            document.getElementById("quizCourseModal")
+          );
+          firstModal.hide();
+        });
+      });
+
+      // Selection logic with ✅ tick
+      quizCircles.forEach((circle) => {
+        circle.addEventListener("click", () => {
+          quizCircles.forEach((c) =>
+            c.classList.remove(
+              "quiz-active-agree",
+              "quiz-active-disagree",
+              "quiz-active-neutral",
+              "quiz-selected"
+            )
+          );
+
+          if (circle.dataset.side === "agree") {
+            circle.classList.add("quiz-active-agree", "quiz-selected");
+          } else if (circle.dataset.side === "disagree") {
+            circle.classList.add("quiz-active-disagree", "quiz-selected");
+          } else if (circle.dataset.side === "neutral") {
+            circle.classList.add("quiz-active-neutral", "quiz-selected");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
