@@ -223,6 +223,8 @@ body {
   padding: 60px 0;
 }
 
+
+
 .custom-card {
   background-color: #fff;
   border: none;
@@ -240,8 +242,8 @@ body {
 
 .custom-card img,
 .custom-card i {
-  width: 55px;
-  height: 55px;
+  width: 70px;
+  height:70px;
   margin-bottom: 15px;
 }
 
@@ -665,6 +667,7 @@ footer .footer-main {
       .quiz-card {
         cursor: pointer;
         border-radius: 12px;
+        border: 1px solid orange;
         transition: all 0.3s ease;
         text-align: center;
         padding: 20px;
@@ -688,8 +691,8 @@ footer .footer-main {
       }
 
       .quiz-circle {
-        width: 72px;
-        height: 72px;
+        width: 52px;
+        height: 52px;
         border-radius: 50%;
         border: 2px solid #bbb;
         cursor: pointer;
